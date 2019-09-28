@@ -9,7 +9,7 @@ import PropTypes from 'prop-types';
 import Tab from '@material-ui/core/Tab';
 import AppBar from '@material-ui/core/AppBar';
 
-class LeagueTablePage extends React.Component {
+class LeaguePage extends React.Component {
 
     constructor(props) {
         super(props);
@@ -60,4 +60,4 @@ function mapStateToProps(store) {
     return {store};
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(LeagueTablePage);
+export default connect(mapStateToProps, mapDispatchToProps)(LeaguePage);

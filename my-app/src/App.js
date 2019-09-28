@@ -7,7 +7,7 @@ import {BrowserRouter, Route, Switch} from 'react-router-dom'
 
 //import pages
 import Page1 from 'pages/Page1'
-import LeagueTablePage from 'pages/LeagueTablePage'
+import LeaguePage from 'pages/LeaguePage'
 import FavoritesPage from 'pages/FavoritesPage'
 import LoginPage from 'pages/account/LoginPage'
 import CreateAccount from 'pages/account/CreateAccount'
@@ -49,7 +49,7 @@ class App extends Component {
                                 <NavBar />
                                 <Switch>
                                     <Route path="/Favorites" component={FavoritesPage}/>
-                                    <Route path="/LeagueInfo" component={LeagueTablePage}/>
+                                    <Route path="/LeagueInfo" component={LeaguePage}/>
                                     <Route path="/MatchInfo" component={MatchPage}/>
                                     <Route path="/" component={Page1} />
                                 </Switch>

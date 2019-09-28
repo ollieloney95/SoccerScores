@@ -3,6 +3,7 @@ import Paper from '@material-ui/core/Paper';
 import ClubIcon from './ClubIcon';
 import { connect } from 'react-redux';
 import ScoreIcon from 'components/ScoreIcon';
+import { Redirect } from 'react-router';
 
 class Result extends React.Component {
 
@@ -13,13 +14,11 @@ class Result extends React.Component {
         }
     }
 
-
-
     handleClick = (match_id) => {
         console.log('handle click to set ', match_id)
         this.props.changeMatchId(match_id)
+        this.setState({redirect: true});
     }
-
 
   onMouseOver = () => this.setState({ shadow: 2 });
   onMouseOut = () => this.setState({ shadow: 0 });
@@ -38,7 +37,9 @@ class Result extends React.Component {
                             otherScore={this.props.matchInfo['match_hometeam_score']}
                             matchFinished={this.props.matchInfo['match_status'] === 'FT'}/>
         }
-
+        if (this.state.redirect) {
+            return <Redirect push to="/MatchInfo" />;
+        }
     return (
       <Paper
             square={true}
@@ -46,7 +47,7 @@ class Result extends React.Component {
             onMouseOver={this.onMouseOver}
             onMouseLeave={this.onMouseOut}
             style={{padding:'0px', marginTop:'5px', textAlign:'center', height:'30px', width:'calc(100%)', position:'relative'}}
-            onClick={() => this.handleClick(this.props.matchInfo['match_id'])}
+            onClick={() => {this.handleClick(this.props.matchInfo['match_id']); console.log('matchInfo', this.props.matchInfo)}}
         >
             <p style={{margin:'5px', display:'inline-block', position: 'absolute', fontSize:'10px', fontWeight:'bold', right:'calc(50% + 50px)'}}>
                 {this.props.matchInfo['match_hometeam_name']}

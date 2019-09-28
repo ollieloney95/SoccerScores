@@ -69,7 +69,7 @@ class DatabaseConnection:
         logging.info('getting league_db from disk')
         try:
             with self.lock:
-                df = pd.read_csv(config.path_events_db).set_index('match_id')
+                df = pd.read_csv(config.path_events_db).set_index('match_id', drop=False)
             df = df.astype({'country_id': 'int32',
                             'league_id':'int32'})
             df['match_date'] = [datetime.strptime(d, '%Y-%m-%d') for d in df['match_date']]
@@ -131,7 +131,7 @@ class DatabaseConnection:
         try:
             logging.info('fetch for {}'.format(path))
             response = requests.get(path)
-            df = pd.DataFrame(response.json()).set_index('match_id')
+            df = pd.DataFrame(response.json()).set_index('match_id', drop=False)
             df = df.astype({'country_id': 'int32',
                             'league_id':'int32'})
             df['match_date'] = [datetime.strptime(d, '%Y-%m-%d') for d in df['match_date']]
@@ -314,7 +314,7 @@ def get_results(league_id):
 
 @app.route('/get_match/<match_id>', methods=['GET'])
 def get_match(match_id):
-    return jsonify(db_con.present_match(match_id))
+    return jsonify(db_con.get_events(match_id=match_id))
 
 if __name__ == '__main__':
     import logging
