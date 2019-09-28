@@ -8,9 +8,6 @@ import { AgGridReact } from 'ag-grid-react';
 import 'ag-grid-community/dist/styles/ag-grid.css';
 import 'ag-grid-community/dist/styles/ag-theme-balham.css';
 
-const host = 'https://apifootball.com'
-const key = '9fe5c8415f9eda3d0abd11d51578518d6a7c48d172f82abed46bf5bd9fe2479f'
-
 
 class LeagueTable extends React.Component {
 
@@ -69,8 +66,6 @@ class LeagueTable extends React.Component {
     }
 
     clubIconCellRenderer = (cellData) =>{
-            console.log('cellData', cellData)
-            console.log('this.props.country_name', this.props.country_name)
             return (
               <div>
                 <ClubIcon clubName={cellData} country_name={this.props.country_name}/>
@@ -79,7 +74,7 @@ class LeagueTable extends React.Component {
     }
 
     fetch_get_standings(league_id){
-            console.log('fetch_get_standings')
+            console.log('fetch_get_standings: ', process.env.REACT_APP_BACKEND_HOST + ':' + process.env.REACT_APP_BACKEND_PORT_MIDDLE  + "/get_league_standings_db/" + league_id)
             fetch(process.env.REACT_APP_BACKEND_HOST + ':' + process.env.REACT_APP_BACKEND_PORT_MIDDLE  + "/get_league_standings_db/" + league_id, {
                   method: 'GET',
                   headers: {
@@ -87,7 +82,7 @@ class LeagueTable extends React.Component {
                     'Content-Type': 'application/json',
                   }})
                   .then(response => response.json())
-                  .then(data => {console.log(data); this.setState({ standingsDataRaw: data }); console.log('data in fetch ', data); this.setupStandingData();});
+                  .then(data => {this.setState({ standingsDataRaw: data }); this.setupStandingData();});
           }
 
     clubIconCellRenderer = (params) => {

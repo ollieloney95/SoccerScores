@@ -309,7 +309,7 @@ def get_fixtures(league_id):
 @app.route('/get_results/<league_id>', methods=['GET'])
 def get_results(league_id):
     date_from = datetime.now() - timedelta(days=14)
-    date_to = datetime.now() + timedelta(days=1)
+    date_to = datetime.now()
     return jsonify(db_con.get_events(league_id=league_id, date_from=date_from, date_to=date_to))
 
 @app.route('/get_match/<match_id>', methods=['GET'])
