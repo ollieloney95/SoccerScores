@@ -1,0 +1,104 @@
+/* Collection default theme */
+
+.ReactVirtualized__Collection {
+}
+
+.ReactVirtualized__Collection__innerScrollContainer {
+}
+
+/* Grid default theme */
+
+.ReactVirtualized__Grid {
+}
+
+.ReactVirtualized__Grid__innerScrollContainer {
+}
+
+/* Table default theme */
+
+.ReactVirtualized__Table {
+}
+
+.ReactVirtualized__Table__Grid {
+}
+
+.ReactVirtualized__Table__headerRow {
+  background-color: rgba(215,215,215,0.2);
+  padding-top: 10px;
+  border-bottom: 2px solid;
+  font-weight: 600;
+  font-size: 13px;
+  text-transform: none;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-align: center;
+      align-items: center;
+}
+.ReactVirtualized__Table__row {
+  border-bottom: 0.2px dotted rgba(215,215,215,1);
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 12px;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-align: center;
+      align-items: center;
+}
+.ReactVirtualized__Table__row:nth-of-type(5)  {
+  border-bottom: 2px dotted rgba(0,0,0,1);
+}
+
+.ReactVirtualized__Table__row:nth-of-type(22)  {
+  border-bottom: 2px dotted rgba(0,0,0,1);
+}
+
+
+
+.ReactVirtualized__Table__headerTruncatedText {
+  display: inline-block;
+  max-width: 100%;
+  white-space: nowrap;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.ReactVirtualized__Table__headerColumn,
+.ReactVirtualized__Table__rowColumn {
+  margin-right: 10px;
+  min-width: 0px;
+}
+.ReactVirtualized__Table__rowColumn {
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.ReactVirtualized__Table__headerColumn:first-of-type,
+.ReactVirtualized__Table__rowColumn:first-of-type {
+  margin-left: 10px;
+}
+.ReactVirtualized__Table__sortableHeaderColumn {
+  cursor: pointer;
+}
+
+.ReactVirtualized__Table__sortableHeaderIconContainer {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+}
+.ReactVirtualized__Table__sortableHeaderIcon {
+  -ms-flex: 0 0 24px;
+      flex: 0 0 24px;
+  height: 1em;
+  width: 1em;
+  fill: currentColor;
+}
+
+/* List default theme */
+
+.ReactVirtualized__List {
+}

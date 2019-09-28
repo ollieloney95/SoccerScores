@@ -1,0 +1,701 @@
+INFO:root:getting league_db from disk
+INFO:root:set up leagues_db from disk
+INFO:root:getting league_db from disk
+INFO:root:setting up league_db for id 63 from disk
+INFO:root:set up league_db for id 63 from disk
+INFO:root:setting up league_db for id 128 from disk
+INFO:root:set up league_db for id 128 from disk
+INFO:root:in refresh_events data not fresh
+INFO:root:fetch for https://apifootball.com/api/?action=get_events&from=2019-09-10&to=2019-10-08&APIkey=9fe5c8415f9eda3d0abd11d51578518d6a7c48d172f82abed46bf5bd9fe2479f
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): apifootball.com:443
+DEBUG:urllib3.connectionpool:https://apifootball.com:443 "GET /api/?action=get_events&from=2019-09-10&to=2019-10-08&APIkey=9fe5c8415f9eda3d0abd11d51578518d6a7c48d172f82abed46bf5bd9fe2479f HTTP/1.1" 200 None
+INFO:root:events_db updating 99 with new table 99
+INFO:root:writing db to fisk at /Users/ollieloney/SoccerScores/databases/events_db.csv
+INFO:root:refreshed events
+INFO:root:updating  leagues_db from fetch
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): apifootball.com:443
+DEBUG:urllib3.connectionpool:https://apifootball.com:443 "GET /api/?action=get_leagues&APIkey=9fe5c8415f9eda3d0abd11d51578518d6a7c48d172f82abed46bf5bd9fe2479f HTTP/1.1" 200 180
+INFO:root:writing db to fisk at /Users/ollieloney/SoccerScores/databases/leagues_db.csv
+INFO:root:setting up league_db_standings from fetch for id 63
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): apifootball.com:443
+DEBUG:urllib3.connectionpool:https://apifootball.com:443 "GET /api/?action=get_standings&league_id=63&APIkey=9fe5c8415f9eda3d0abd11d51578518d6a7c48d172f82abed46bf5bd9fe2479f HTTP/1.1" 200 None
+INFO:root:changed league_db_standings from the fetch for 63
+INFO:root:writing db to fisk at /Users/ollieloney/SoccerScores/databases/league_standings_63
+INFO:root:setting up league_db_standings from fetch for id 128
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): apifootball.com:443
+DEBUG:urllib3.connectionpool:https://apifootball.com:443 "GET /api/?action=get_standings&league_id=128&APIkey=9fe5c8415f9eda3d0abd11d51578518d6a7c48d172f82abed46bf5bd9fe2479f HTTP/1.1" 200 None
+INFO:root:changed league_db_standings from the fetch for 128
+INFO:root:writing db to fisk at /Users/ollieloney/SoccerScores/databases/league_standings_128
+INFO:werkzeug: * Running on http://0.0.0.0:5001/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 20:57:30] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 20:57:30] "OPTIONS /get_league_standings_db/128 HTTP/1.1" 200 -
+INFO:root:get_sidebar_info
+INFO:root:inside get_leagues
+INFO:root:in get_league_db data is fresh
+INFO:root:db_con.get_leagues() {'169': {'leagues': {'league_ids': ['63'], 'league_names': ['Championship'], 'country_name': 'England'}, 'country_name': 'England'}, '173': {'leagues': {'league_ids': ['128'], 'league_names': ['Ligue 2'], 'country_name': 'France'}, 'country_name': 'France'}}
+INFO:root:inside get_leagues
+INFO:root:in get_league_db data is fresh
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 20:57:30] "GET /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:root:get_league_standings_db for 128
+INFO:root:in get_league_db_standings data not fresh
+INFO:root:setting up league_db_standings from fetch for id 128
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): apifootball.com:443
+DEBUG:urllib3.connectionpool:https://apifootball.com:443 "GET /api/?action=get_standings&league_id=128&APIkey=9fe5c8415f9eda3d0abd11d51578518d6a7c48d172f82abed46bf5bd9fe2479f HTTP/1.1" 200 None
+INFO:root:changed league_db_standings from the fetch for 128
+INFO:root:writing db to fisk at /Users/ollieloney/SoccerScores/databases/league_standings_128
+INFO:root:keys of league_db_standings are dict_keys([128, '63', '128', 63]) and league id 128 is in ? True
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 20:57:30] "GET /get_league_standings_db/128 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 20:57:31] "OPTIONS /get_results/128 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 20:57:31] "GET /get_results/128 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 20:57:34] "OPTIONS /get_fixtures/128 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 20:57:34] "GET /get_fixtures/128 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 20:57:35] "GET /get_results/128 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 20:59:11] "OPTIONS /get_fixtures/128 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 20:59:11] "GET /get_fixtures/128 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 20:59:12] "OPTIONS /get_results/128 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 20:59:12] "GET /get_results/128 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 20:59:12] "OPTIONS /get_league_standings_db/128 HTTP/1.1" 200 -
+INFO:root:get_league_standings_db for 128
+INFO:root:in get_league_db_standings data is fresh
+INFO:root:keys of league_db_standings are dict_keys([128, '63', '128', 63]) and league id 128 is in ? True
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 20:59:12] "GET /get_league_standings_db/128 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 20:59:13] "GET /get_results/128 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 20:59:21] "OPTIONS /get_results/63 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 20:59:21] "GET /get_results/63 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 20:59:23] "OPTIONS /get_results/128 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 20:59:23] "GET /get_results/128 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 20:59:25] "GET /get_results/63 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 20:59:27] "GET /get_results/128 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 20:59:37] "OPTIONS /get_results/63 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 20:59:37] "GET /get_results/63 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:02:38] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:02:38] "OPTIONS /get_league_standings_db/63 HTTP/1.1" 200 -
+INFO:root:get_sidebar_info
+INFO:root:inside get_leagues
+INFO:root:in get_league_db data is fresh
+INFO:root:db_con.get_leagues() {'169': {'leagues': {'league_ids': ['63'], 'league_names': ['Championship'], 'country_name': 'England'}, 'country_name': 'England'}, '173': {'leagues': {'league_ids': ['128'], 'league_names': ['Ligue 2'], 'country_name': 'France'}, 'country_name': 'France'}}
+INFO:root:inside get_leagues
+INFO:root:in get_league_db data is fresh
+INFO:root:get_league_standings_db for 63
+INFO:root:in get_league_db_standings data not fresh
+INFO:root:setting up league_db_standings from fetch for id 63
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:02:38] "GET /get_sidebar_info/ HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): apifootball.com:443
+DEBUG:urllib3.connectionpool:https://apifootball.com:443 "GET /api/?action=get_standings&league_id=63&APIkey=9fe5c8415f9eda3d0abd11d51578518d6a7c48d172f82abed46bf5bd9fe2479f HTTP/1.1" 200 None
+INFO:root:changed league_db_standings from the fetch for 63
+INFO:root:writing db to fisk at /Users/ollieloney/SoccerScores/databases/league_standings_63
+INFO:root:keys of league_db_standings are dict_keys([128, '63', '128', 63]) and league id 63 is in ? True
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:02:39] "GET /get_league_standings_db/63 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:02:41] "OPTIONS /get_results/63 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:02:41] "GET /get_results/63 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:03:13] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:03:13] "OPTIONS /get_league_standings_db/63 HTTP/1.1" 200 -
+INFO:root:get_sidebar_info
+INFO:root:inside get_leagues
+INFO:root:in get_league_db data is fresh
+INFO:root:db_con.get_leagues() {'169': {'leagues': {'league_ids': ['63'], 'league_names': ['Championship'], 'country_name': 'England'}, 'country_name': 'England'}, '173': {'leagues': {'league_ids': ['128'], 'league_names': ['Ligue 2'], 'country_name': 'France'}, 'country_name': 'France'}}
+INFO:root:inside get_leagues
+INFO:root:in get_league_db data is fresh
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:03:13] "GET /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:root:get_league_standings_db for 63
+INFO:root:in get_league_db_standings data is fresh
+INFO:root:keys of league_db_standings are dict_keys([128, '63', '128', 63]) and league id 63 is in ? True
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:03:13] "GET /get_league_standings_db/63 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:03:17] "OPTIONS /get_results/63 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:03:17] "GET /get_results/63 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:03:41] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:03:41] "OPTIONS /get_league_standings_db/63 HTTP/1.1" 200 -
+INFO:root:get_sidebar_info
+INFO:root:inside get_leagues
+INFO:root:in get_league_db data is fresh
+INFO:root:db_con.get_leagues() {'169': {'leagues': {'league_ids': ['63'], 'league_names': ['Championship'], 'country_name': 'England'}, 'country_name': 'England'}, '173': {'leagues': {'league_ids': ['128'], 'league_names': ['Ligue 2'], 'country_name': 'France'}, 'country_name': 'France'}}
+INFO:root:inside get_leagues
+INFO:root:in get_league_db data is fresh
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:03:41] "GET /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:root:get_league_standings_db for 63
+INFO:root:in get_league_db_standings data is fresh
+INFO:root:keys of league_db_standings are dict_keys([128, '63', '128', 63]) and league id 63 is in ? True
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:03:41] "GET /get_league_standings_db/63 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:03:42] "OPTIONS /get_results/63 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:03:43] "GET /get_results/63 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:04:15] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:04:15] "OPTIONS /get_league_standings_db/63 HTTP/1.1" 200 -
+INFO:root:get_sidebar_info
+INFO:root:inside get_leagues
+INFO:root:in get_league_db data is fresh
+INFO:root:db_con.get_leagues() {'169': {'leagues': {'league_ids': ['63'], 'league_names': ['Championship'], 'country_name': 'England'}, 'country_name': 'England'}, '173': {'leagues': {'league_ids': ['128'], 'league_names': ['Ligue 2'], 'country_name': 'France'}, 'country_name': 'France'}}
+INFO:root:inside get_leagues
+INFO:root:in get_league_db data is fresh
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:04:15] "GET /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:root:get_league_standings_db for 63
+INFO:root:in get_league_db_standings data is fresh
+INFO:root:keys of league_db_standings are dict_keys([128, '63', '128', 63]) and league id 63 is in ? True
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:04:15] "GET /get_league_standings_db/63 HTTP/1.1" 200 -
+INFO:root:get_sidebar_info
+INFO:root:inside get_leagues
+INFO:root:in get_league_db data is fresh
+INFO:root:db_con.get_leagues() {'169': {'leagues': {'league_ids': ['63'], 'league_names': ['Championship'], 'country_name': 'England'}, 'country_name': 'England'}, '173': {'leagues': {'league_ids': ['128'], 'league_names': ['Ligue 2'], 'country_name': 'France'}, 'country_name': 'France'}}
+INFO:root:inside get_leagues
+INFO:root:in get_league_db data is fresh
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:04:19] "GET /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:root:get_league_standings_db for 63
+INFO:root:in get_league_db_standings data is fresh
+INFO:root:keys of league_db_standings are dict_keys([128, '63', '128', 63]) and league id 63 is in ? True
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:04:19] "GET /get_league_standings_db/63 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:04:21] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:04:21] "OPTIONS /get_league_standings_db/63 HTTP/1.1" 200 -
+INFO:root:get_sidebar_info
+INFO:root:inside get_leagues
+INFO:root:in get_league_db data is fresh
+INFO:root:db_con.get_leagues() {'169': {'leagues': {'league_ids': ['63'], 'league_names': ['Championship'], 'country_name': 'England'}, 'country_name': 'England'}, '173': {'leagues': {'league_ids': ['128'], 'league_names': ['Ligue 2'], 'country_name': 'France'}, 'country_name': 'France'}}
+INFO:root:inside get_leagues
+INFO:root:in get_league_db data is fresh
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:04:21] "GET /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:root:get_league_standings_db for 63
+INFO:root:in get_league_db_standings data is fresh
+INFO:root:keys of league_db_standings are dict_keys([128, '63', '128', 63]) and league id 63 is in ? True
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:04:21] "GET /get_league_standings_db/63 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:04:25] "OPTIONS /get_results/63 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:04:25] "GET /get_results/63 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:06:54] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:06:54] "OPTIONS /get_league_standings_db/63 HTTP/1.1" 200 -
+INFO:root:get_sidebar_info
+INFO:root:inside get_leagues
+INFO:root:in get_league_db data is fresh
+INFO:root:db_con.get_leagues() {'169': {'leagues': {'league_ids': ['63'], 'league_names': ['Championship'], 'country_name': 'England'}, 'country_name': 'England'}, '173': {'leagues': {'league_ids': ['128'], 'league_names': ['Ligue 2'], 'country_name': 'France'}, 'country_name': 'France'}}
+INFO:root:inside get_leagues
+INFO:root:in get_league_db data is fresh
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:06:54] "GET /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:root:get_league_standings_db for 63
+INFO:root:in get_league_db_standings data is fresh
+INFO:root:keys of league_db_standings are dict_keys([128, '63', '128', 63]) and league id 63 is in ? True
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:06:54] "GET /get_league_standings_db/63 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:06:54] "OPTIONS /get_results/63 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:06:54] "GET /get_results/63 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:07:06] "OPTIONS /get_fixtures/63 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:07:06] "GET /get_fixtures/63 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:07:06] "OPTIONS /get_league_standings_db/63 HTTP/1.1" 200 -
+INFO:root:get_league_standings_db for 63
+INFO:root:in get_league_db_standings data is fresh
+INFO:root:keys of league_db_standings are dict_keys([128, '63', '128', 63]) and league id 63 is in ? True
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:07:06] "GET /get_league_standings_db/63 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:07:07] "OPTIONS /get_results/63 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:07:07] "GET /get_results/63 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:07:37] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:root:get_sidebar_info
+INFO:root:inside get_leagues
+INFO:root:in get_league_db data is fresh
+INFO:root:db_con.get_leagues() {'169': {'leagues': {'league_ids': ['63'], 'league_names': ['Championship'], 'country_name': 'England'}, 'country_name': 'England'}, '173': {'leagues': {'league_ids': ['128'], 'league_names': ['Ligue 2'], 'country_name': 'France'}, 'country_name': 'France'}}
+INFO:root:inside get_leagues
+INFO:root:in get_league_db data is fresh
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:07:38] "GET /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:07:41] "OPTIONS /get_league_standings_db/128 HTTP/1.1" 200 -
+INFO:root:get_league_standings_db for 128
+INFO:root:in get_league_db_standings data is fresh
+INFO:root:keys of league_db_standings are dict_keys([128, '63', '128', 63]) and league id 128 is in ? True
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:07:41] "GET /get_league_standings_db/128 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:07:42] "OPTIONS /get_results/128 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:07:42] "GET /get_results/128 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:08:55] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:08:55] "OPTIONS /get_league_standings_db/128 HTTP/1.1" 200 -
+INFO:root:get_sidebar_info
+INFO:root:inside get_leagues
+INFO:root:in get_league_db data is fresh
+INFO:root:get_league_standings_db for 128
+INFO:root:in get_league_db_standings data is fresh
+INFO:root:db_con.get_leagues() {'169': {'leagues': {'league_ids': ['63'], 'league_names': ['Championship'], 'country_name': 'England'}, 'country_name': 'England'}, '173': {'leagues': {'league_ids': ['128'], 'league_names': ['Ligue 2'], 'country_name': 'France'}, 'country_name': 'France'}}
+INFO:root:keys of league_db_standings are dict_keys([128, '63', '128', 63]) and league id 128 is in ? True
+INFO:root:inside get_leagues
+INFO:root:in get_league_db data is fresh
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:08:55] "GET /get_league_standings_db/128 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:08:55] "GET /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:09:12] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:09:12] "OPTIONS /get_league_standings_db/128 HTTP/1.1" 200 -
+INFO:root:get_sidebar_info
+INFO:root:inside get_leagues
+INFO:root:in get_league_db data is fresh
+INFO:root:db_con.get_leagues() {'169': {'leagues': {'league_ids': ['63'], 'league_names': ['Championship'], 'country_name': 'England'}, 'country_name': 'England'}, '173': {'leagues': {'league_ids': ['128'], 'league_names': ['Ligue 2'], 'country_name': 'France'}, 'country_name': 'France'}}
+INFO:root:inside get_leagues
+INFO:root:in get_league_db data is fresh
+INFO:root:get_league_standings_db for 128
+INFO:root:in get_league_db_standings data is fresh
+INFO:root:keys of league_db_standings are dict_keys([128, '63', '128', 63]) and league id 128 is in ? True
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:09:13] "GET /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:09:13] "GET /get_league_standings_db/128 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:09:14] "OPTIONS /get_results/128 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:09:14] "GET /get_results/128 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:09:47] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:09:47] "OPTIONS /get_league_standings_db/128 HTTP/1.1" 200 -
+INFO:root:get_sidebar_info
+INFO:root:inside get_leagues
+INFO:root:in get_league_db data is fresh
+INFO:root:db_con.get_leagues() {'169': {'leagues': {'league_ids': ['63'], 'league_names': ['Championship'], 'country_name': 'England'}, 'country_name': 'England'}, '173': {'leagues': {'league_ids': ['128'], 'league_names': ['Ligue 2'], 'country_name': 'France'}, 'country_name': 'France'}}
+INFO:root:inside get_leagues
+INFO:root:in get_league_db data is fresh
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:09:47] "GET /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:root:get_league_standings_db for 128
+INFO:root:in get_league_db_standings data is fresh
+INFO:root:keys of league_db_standings are dict_keys([128, '63', '128', 63]) and league id 128 is in ? True
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:09:47] "GET /get_league_standings_db/128 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:09:50] "OPTIONS /get_results/128 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:09:50] "GET /get_results/128 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:10:51] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:10:51] "OPTIONS /get_league_standings_db/128 HTTP/1.1" 200 -
+INFO:root:get_sidebar_info
+INFO:root:inside get_leagues
+INFO:root:in get_league_db data is fresh
+INFO:root:db_con.get_leagues() {'169': {'leagues': {'league_ids': ['63'], 'league_names': ['Championship'], 'country_name': 'England'}, 'country_name': 'England'}, '173': {'leagues': {'league_ids': ['128'], 'league_names': ['Ligue 2'], 'country_name': 'France'}, 'country_name': 'France'}}
+INFO:root:inside get_leagues
+INFO:root:in get_league_db data is fresh
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:10:51] "GET /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:root:get_league_standings_db for 128
+INFO:root:in get_league_db_standings data is fresh
+INFO:root:keys of league_db_standings are dict_keys([128, '63', '128', 63]) and league id 128 is in ? True
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:10:51] "GET /get_league_standings_db/128 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:10:52] "OPTIONS /get_results/128 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:10:52] "GET /get_results/128 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:11:15] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:11:15] "OPTIONS /get_league_standings_db/128 HTTP/1.1" 200 -
+INFO:root:get_sidebar_info
+INFO:root:inside get_leagues
+INFO:root:in get_league_db data is fresh
+INFO:root:db_con.get_leagues() {'169': {'leagues': {'league_ids': ['63'], 'league_names': ['Championship'], 'country_name': 'England'}, 'country_name': 'England'}, '173': {'leagues': {'league_ids': ['128'], 'league_names': ['Ligue 2'], 'country_name': 'France'}, 'country_name': 'France'}}
+INFO:root:inside get_leagues
+INFO:root:in get_league_db data is fresh
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:11:15] "GET /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:root:get_league_standings_db for 128
+INFO:root:in get_league_db_standings data is fresh
+INFO:root:keys of league_db_standings are dict_keys([128, '63', '128', 63]) and league id 128 is in ? True
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:11:15] "GET /get_league_standings_db/128 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:11:17] "OPTIONS /get_results/128 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:11:17] "GET /get_results/128 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:12:09] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:12:09] "OPTIONS /get_league_standings_db/128 HTTP/1.1" 200 -
+INFO:root:get_sidebar_info
+INFO:root:inside get_leagues
+INFO:root:in get_league_db data is fresh
+INFO:root:db_con.get_leagues() {'169': {'leagues': {'league_ids': ['63'], 'league_names': ['Championship'], 'country_name': 'England'}, 'country_name': 'England'}, '173': {'leagues': {'league_ids': ['128'], 'league_names': ['Ligue 2'], 'country_name': 'France'}, 'country_name': 'France'}}
+INFO:root:inside get_leagues
+INFO:root:in get_league_db data is fresh
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:12:10] "GET /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:root:get_league_standings_db for 128
+INFO:root:in get_league_db_standings data is fresh
+INFO:root:keys of league_db_standings are dict_keys([128, '63', '128', 63]) and league id 128 is in ? True
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:12:10] "GET /get_league_standings_db/128 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:12:12] "OPTIONS /get_results/128 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:12:12] "GET /get_results/128 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:12:33] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:12:33] "OPTIONS /get_league_standings_db/128 HTTP/1.1" 200 -
+INFO:root:get_sidebar_info
+INFO:root:inside get_leagues
+INFO:root:in get_league_db data is fresh
+INFO:root:db_con.get_leagues() {'169': {'leagues': {'league_ids': ['63'], 'league_names': ['Championship'], 'country_name': 'England'}, 'country_name': 'England'}, '173': {'leagues': {'league_ids': ['128'], 'league_names': ['Ligue 2'], 'country_name': 'France'}, 'country_name': 'France'}}
+INFO:root:inside get_leagues
+INFO:root:in get_league_db data is fresh
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:12:33] "GET /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:root:get_league_standings_db for 128
+INFO:root:in get_league_db_standings data is fresh
+INFO:root:keys of league_db_standings are dict_keys([128, '63', '128', 63]) and league id 128 is in ? True
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:12:33] "GET /get_league_standings_db/128 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:12:46] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:12:46] "OPTIONS /get_league_standings_db/128 HTTP/1.1" 200 -
+INFO:root:get_sidebar_info
+INFO:root:inside get_leagues
+INFO:root:in get_league_db data is fresh
+INFO:root:db_con.get_leagues() {'169': {'leagues': {'league_ids': ['63'], 'league_names': ['Championship'], 'country_name': 'England'}, 'country_name': 'England'}, '173': {'leagues': {'league_ids': ['128'], 'league_names': ['Ligue 2'], 'country_name': 'France'}, 'country_name': 'France'}}
+INFO:root:inside get_leagues
+INFO:root:in get_league_db data is fresh
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:12:46] "GET /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:root:get_league_standings_db for 128
+INFO:root:in get_league_db_standings data is fresh
+INFO:root:keys of league_db_standings are dict_keys([128, '63', '128', 63]) and league id 128 is in ? True
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:12:46] "GET /get_league_standings_db/128 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:12:52] "OPTIONS /get_results/128 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:12:52] "GET /get_results/128 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:13:59] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:13:59] "OPTIONS /get_league_standings_db/128 HTTP/1.1" 200 -
+INFO:root:get_sidebar_info
+INFO:root:inside get_leagues
+INFO:root:in get_league_db data is fresh
+INFO:root:db_con.get_leagues() {'169': {'leagues': {'league_ids': ['63'], 'league_names': ['Championship'], 'country_name': 'England'}, 'country_name': 'England'}, '173': {'leagues': {'league_ids': ['128'], 'league_names': ['Ligue 2'], 'country_name': 'France'}, 'country_name': 'France'}}
+INFO:root:inside get_leagues
+INFO:root:in get_league_db data is fresh
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:14:00] "GET /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:root:get_league_standings_db for 128
+INFO:root:in get_league_db_standings data is fresh
+INFO:root:keys of league_db_standings are dict_keys([128, '63', '128', 63]) and league id 128 is in ? True
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:14:00] "GET /get_league_standings_db/128 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:14:01] "OPTIONS /get_results/128 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:14:01] "GET /get_results/128 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:15:05] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:15:05] "OPTIONS /get_league_standings_db/128 HTTP/1.1" 200 -
+INFO:root:get_sidebar_info
+INFO:root:inside get_leagues
+INFO:root:in get_league_db data is fresh
+INFO:root:db_con.get_leagues() {'169': {'leagues': {'league_ids': ['63'], 'league_names': ['Championship'], 'country_name': 'England'}, 'country_name': 'England'}, '173': {'leagues': {'league_ids': ['128'], 'league_names': ['Ligue 2'], 'country_name': 'France'}, 'country_name': 'France'}}
+INFO:root:inside get_leagues
+INFO:root:in get_league_db data is fresh
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:15:05] "GET /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:root:get_league_standings_db for 128
+INFO:root:in get_league_db_standings data is fresh
+INFO:root:keys of league_db_standings are dict_keys([128, '63', '128', 63]) and league id 128 is in ? True
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:15:05] "GET /get_league_standings_db/128 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:15:09] "OPTIONS /get_results/128 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:15:09] "GET /get_results/128 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:15:51] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:15:51] "OPTIONS /get_league_standings_db/128 HTTP/1.1" 200 -
+INFO:root:get_sidebar_info
+INFO:root:inside get_leagues
+INFO:root:in get_league_db data is fresh
+INFO:root:db_con.get_leagues() {'169': {'leagues': {'league_ids': ['63'], 'league_names': ['Championship'], 'country_name': 'England'}, 'country_name': 'England'}, '173': {'leagues': {'league_ids': ['128'], 'league_names': ['Ligue 2'], 'country_name': 'France'}, 'country_name': 'France'}}
+INFO:root:inside get_leagues
+INFO:root:in get_league_db data is fresh
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:15:52] "GET /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:root:get_league_standings_db for 128
+INFO:root:in get_league_db_standings data is fresh
+INFO:root:keys of league_db_standings are dict_keys([128, '63', '128', 63]) and league id 128 is in ? True
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:15:52] "GET /get_league_standings_db/128 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:15:54] "OPTIONS /get_results/128 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:15:54] "GET /get_results/128 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:15:56] "OPTIONS /get_fixtures/128 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:15:56] "GET /get_fixtures/128 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:15:57] "GET /get_results/128 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:19:02] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:19:02] "OPTIONS /get_league_standings_db/128 HTTP/1.1" 200 -
+INFO:root:get_sidebar_info
+INFO:root:inside get_leagues
+INFO:root:in get_league_db data is fresh
+INFO:root:db_con.get_leagues() {'169': {'leagues': {'league_ids': ['63'], 'league_names': ['Championship'], 'country_name': 'England'}, 'country_name': 'England'}, '173': {'leagues': {'league_ids': ['128'], 'league_names': ['Ligue 2'], 'country_name': 'France'}, 'country_name': 'France'}}
+INFO:root:inside get_leagues
+INFO:root:in get_league_db data is fresh
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:19:02] "GET /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:root:get_league_standings_db for 128
+INFO:root:in get_league_db_standings data is fresh
+INFO:root:keys of league_db_standings are dict_keys([128, '63', '128', 63]) and league id 128 is in ? True
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:19:02] "GET /get_league_standings_db/128 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:19:08] "OPTIONS /get_results/128 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:19:08] "GET /get_results/128 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:19:18] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:19:18] "OPTIONS /get_league_standings_db/128 HTTP/1.1" 200 -
+INFO:root:get_sidebar_info
+INFO:root:inside get_leagues
+INFO:root:in get_league_db data is fresh
+INFO:root:db_con.get_leagues() {'169': {'leagues': {'league_ids': ['63'], 'league_names': ['Championship'], 'country_name': 'England'}, 'country_name': 'England'}, '173': {'leagues': {'league_ids': ['128'], 'league_names': ['Ligue 2'], 'country_name': 'France'}, 'country_name': 'France'}}
+INFO:root:inside get_leagues
+INFO:root:in get_league_db data is fresh
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:19:18] "GET /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:root:get_league_standings_db for 128
+INFO:root:in get_league_db_standings data is fresh
+INFO:root:keys of league_db_standings are dict_keys([128, '63', '128', 63]) and league id 128 is in ? True
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:19:18] "GET /get_league_standings_db/128 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:19:19] "OPTIONS /get_results/128 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:19:19] "GET /get_results/128 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:19:57] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:19:57] "OPTIONS /get_league_standings_db/128 HTTP/1.1" 200 -
+INFO:root:get_sidebar_info
+INFO:root:inside get_leagues
+INFO:root:in get_league_db data is fresh
+INFO:root:db_con.get_leagues() {'169': {'leagues': {'league_ids': ['63'], 'league_names': ['Championship'], 'country_name': 'England'}, 'country_name': 'England'}, '173': {'leagues': {'league_ids': ['128'], 'league_names': ['Ligue 2'], 'country_name': 'France'}, 'country_name': 'France'}}
+INFO:root:inside get_leagues
+INFO:root:in get_league_db data is fresh
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:19:57] "GET /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:root:get_league_standings_db for 128
+INFO:root:in get_league_db_standings data is fresh
+INFO:root:keys of league_db_standings are dict_keys([128, '63', '128', 63]) and league id 128 is in ? True
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:19:57] "GET /get_league_standings_db/128 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:19:58] "OPTIONS /get_results/128 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:19:59] "GET /get_results/128 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:20:14] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:20:14] "OPTIONS /get_league_standings_db/128 HTTP/1.1" 200 -
+INFO:root:get_sidebar_info
+INFO:root:inside get_leagues
+INFO:root:in get_league_db data is fresh
+INFO:root:db_con.get_leagues() {'169': {'leagues': {'league_ids': ['63'], 'league_names': ['Championship'], 'country_name': 'England'}, 'country_name': 'England'}, '173': {'leagues': {'league_ids': ['128'], 'league_names': ['Ligue 2'], 'country_name': 'France'}, 'country_name': 'France'}}
+INFO:root:inside get_leagues
+INFO:root:in get_league_db data is fresh
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:20:14] "GET /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:root:get_league_standings_db for 128
+INFO:root:in get_league_db_standings data is fresh
+INFO:root:keys of league_db_standings are dict_keys([128, '63', '128', 63]) and league id 128 is in ? True
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:20:14] "GET /get_league_standings_db/128 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:21:45] "OPTIONS /get_fixtures/128 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:21:45] "GET /get_fixtures/128 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:21:45] "OPTIONS /get_results/128 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:21:45] "GET /get_results/128 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:21:53] "OPTIONS /get_fixtures/128 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:21:53] "GET /get_fixtures/128 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:21:53] "OPTIONS /get_results/128 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:21:53] "GET /get_results/128 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:25:22] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:25:22] "OPTIONS /get_league_standings_db/128 HTTP/1.1" 200 -
+INFO:root:get_sidebar_info
+INFO:root:inside get_leagues
+INFO:root:in get_league_db data is fresh
+INFO:root:db_con.get_leagues() {'169': {'leagues': {'league_ids': ['63'], 'league_names': ['Championship'], 'country_name': 'England'}, 'country_name': 'England'}, '173': {'leagues': {'league_ids': ['128'], 'league_names': ['Ligue 2'], 'country_name': 'France'}, 'country_name': 'France'}}
+INFO:root:inside get_leagues
+INFO:root:in get_league_db data is fresh
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:25:22] "GET /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:root:get_league_standings_db for 128
+INFO:root:in get_league_db_standings data is fresh
+INFO:root:keys of league_db_standings are dict_keys([128, '63', '128', 63]) and league id 128 is in ? True
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:25:22] "GET /get_league_standings_db/128 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:25:24] "OPTIONS /get_results/128 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:25:24] "GET /get_results/128 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:25:42] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:25:42] "OPTIONS /get_league_standings_db/128 HTTP/1.1" 200 -
+INFO:root:get_sidebar_info
+INFO:root:inside get_leagues
+INFO:root:in get_league_db data is fresh
+INFO:root:db_con.get_leagues() {'169': {'leagues': {'league_ids': ['63'], 'league_names': ['Championship'], 'country_name': 'England'}, 'country_name': 'England'}, '173': {'leagues': {'league_ids': ['128'], 'league_names': ['Ligue 2'], 'country_name': 'France'}, 'country_name': 'France'}}
+INFO:root:inside get_leagues
+INFO:root:in get_league_db data is fresh
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:25:42] "GET /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:root:get_league_standings_db for 128
+INFO:root:in get_league_db_standings data is fresh
+INFO:root:keys of league_db_standings are dict_keys([128, '63', '128', 63]) and league id 128 is in ? True
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:25:42] "GET /get_league_standings_db/128 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:25:44] "OPTIONS /get_results/128 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:25:44] "GET /get_results/128 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:26:14] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:26:14] "OPTIONS /get_league_standings_db/128 HTTP/1.1" 200 -
+INFO:root:get_sidebar_info
+INFO:root:inside get_leagues
+INFO:root:in get_league_db data is fresh
+INFO:root:db_con.get_leagues() {'169': {'leagues': {'league_ids': ['63'], 'league_names': ['Championship'], 'country_name': 'England'}, 'country_name': 'England'}, '173': {'leagues': {'league_ids': ['128'], 'league_names': ['Ligue 2'], 'country_name': 'France'}, 'country_name': 'France'}}
+INFO:root:inside get_leagues
+INFO:root:in get_league_db data is fresh
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:26:15] "GET /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:root:get_league_standings_db for 128
+INFO:root:in get_league_db_standings data is fresh
+INFO:root:keys of league_db_standings are dict_keys([128, '63', '128', 63]) and league id 128 is in ? True
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:26:15] "GET /get_league_standings_db/128 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:26:52] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:26:52] "OPTIONS /get_league_standings_db/128 HTTP/1.1" 200 -
+INFO:root:get_sidebar_info
+INFO:root:inside get_leagues
+INFO:root:in get_league_db data is fresh
+INFO:root:db_con.get_leagues() {'169': {'leagues': {'league_ids': ['63'], 'league_names': ['Championship'], 'country_name': 'England'}, 'country_name': 'England'}, '173': {'leagues': {'league_ids': ['128'], 'league_names': ['Ligue 2'], 'country_name': 'France'}, 'country_name': 'France'}}
+INFO:root:inside get_leagues
+INFO:root:in get_league_db data is fresh
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:26:53] "GET /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:root:get_league_standings_db for 128
+INFO:root:in get_league_db_standings data is fresh
+INFO:root:keys of league_db_standings are dict_keys([128, '63', '128', 63]) and league id 128 is in ? True
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:26:53] "GET /get_league_standings_db/128 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:26:54] "OPTIONS /get_results/128 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:26:54] "GET /get_results/128 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:26:59] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:26:59] "OPTIONS /get_league_standings_db/128 HTTP/1.1" 200 -
+INFO:root:get_sidebar_info
+INFO:root:inside get_leagues
+INFO:root:in get_league_db data is fresh
+INFO:root:db_con.get_leagues() {'169': {'leagues': {'league_ids': ['63'], 'league_names': ['Championship'], 'country_name': 'England'}, 'country_name': 'England'}, '173': {'leagues': {'league_ids': ['128'], 'league_names': ['Ligue 2'], 'country_name': 'France'}, 'country_name': 'France'}}
+INFO:root:inside get_leagues
+INFO:root:in get_league_db data is fresh
+INFO:root:get_league_standings_db for 128
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:27:00] "GET /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:root:in get_league_db_standings data is fresh
+INFO:root:keys of league_db_standings are dict_keys([128, '63', '128', 63]) and league id 128 is in ? True
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:27:00] "GET /get_league_standings_db/128 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:27:00] "OPTIONS /get_results/128 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:27:01] "GET /get_results/128 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:30:40] "OPTIONS /get_fixtures/128 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:30:40] "GET /get_fixtures/128 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:30:41] "OPTIONS /get_results/128 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:30:41] "GET /get_results/128 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:31:10] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:31:10] "OPTIONS /get_league_standings_db/128 HTTP/1.1" 200 -
+INFO:root:get_sidebar_info
+INFO:root:inside get_leagues
+INFO:root:in get_league_db data not fresh
+INFO:root:updating  leagues_db from fetch
+INFO:root:get_league_standings_db for 128
+INFO:root:in get_league_db_standings data not fresh
+INFO:root:setting up league_db_standings from fetch for id 128
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): apifootball.com:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): apifootball.com:443
+DEBUG:urllib3.connectionpool:https://apifootball.com:443 "GET /api/?action=get_standings&league_id=128&APIkey=9fe5c8415f9eda3d0abd11d51578518d6a7c48d172f82abed46bf5bd9fe2479f HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://apifootball.com:443 "GET /api/?action=get_leagues&APIkey=9fe5c8415f9eda3d0abd11d51578518d6a7c48d172f82abed46bf5bd9fe2479f HTTP/1.1" 200 180
+INFO:root:writing db to fisk at /Users/ollieloney/SoccerScores/databases/leagues_db.csv
+INFO:root:db_con.get_leagues() {'169': {'leagues': {'league_ids': ['63'], 'league_names': ['Championship'], 'country_name': 'England'}, 'country_name': 'England'}, '173': {'leagues': {'league_ids': ['128'], 'league_names': ['Ligue 2'], 'country_name': 'France'}, 'country_name': 'France'}}
+INFO:root:changed league_db_standings from the fetch for 128
+INFO:root:writing db to fisk at /Users/ollieloney/SoccerScores/databases/league_standings_128
+INFO:root:inside get_leagues
+INFO:root:in get_league_db data is fresh
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:31:10] "GET /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:root:keys of league_db_standings are dict_keys([128, '63', '128', 63]) and league id 128 is in ? True
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:31:10] "GET /get_league_standings_db/128 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:31:10] "OPTIONS /get_results/128 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:31:11] "GET /get_results/128 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:31:27] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:31:27] "OPTIONS /get_league_standings_db/128 HTTP/1.1" 200 -
+INFO:root:get_sidebar_info
+INFO:root:inside get_leagues
+INFO:root:in get_league_db data is fresh
+INFO:root:db_con.get_leagues() {'169': {'leagues': {'league_ids': ['63'], 'league_names': ['Championship'], 'country_name': 'England'}, 'country_name': 'England'}, '173': {'leagues': {'league_ids': ['128'], 'league_names': ['Ligue 2'], 'country_name': 'France'}, 'country_name': 'France'}}
+INFO:root:inside get_leagues
+INFO:root:in get_league_db data is fresh
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:31:27] "GET /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:root:get_league_standings_db for 128
+INFO:root:in get_league_db_standings data is fresh
+INFO:root:keys of league_db_standings are dict_keys([128, '63', '128', 63]) and league id 128 is in ? True
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:31:27] "GET /get_league_standings_db/128 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:31:36] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:31:36] "OPTIONS /get_league_standings_db/128 HTTP/1.1" 200 -
+INFO:root:get_sidebar_info
+INFO:root:inside get_leagues
+INFO:root:in get_league_db data is fresh
+INFO:root:db_con.get_leagues() {'169': {'leagues': {'league_ids': ['63'], 'league_names': ['Championship'], 'country_name': 'England'}, 'country_name': 'England'}, '173': {'leagues': {'league_ids': ['128'], 'league_names': ['Ligue 2'], 'country_name': 'France'}, 'country_name': 'France'}}
+INFO:root:inside get_leagues
+INFO:root:in get_league_db data is fresh
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:31:36] "GET /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:root:get_league_standings_db for 128
+INFO:root:in get_league_db_standings data is fresh
+INFO:root:keys of league_db_standings are dict_keys([128, '63', '128', 63]) and league id 128 is in ? True
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:31:36] "GET /get_league_standings_db/128 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:31:43] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:31:43] "OPTIONS /get_league_standings_db/128 HTTP/1.1" 200 -
+INFO:root:get_sidebar_info
+INFO:root:inside get_leagues
+INFO:root:in get_league_db data is fresh
+INFO:root:db_con.get_leagues() {'169': {'leagues': {'league_ids': ['63'], 'league_names': ['Championship'], 'country_name': 'England'}, 'country_name': 'England'}, '173': {'leagues': {'league_ids': ['128'], 'league_names': ['Ligue 2'], 'country_name': 'France'}, 'country_name': 'France'}}
+INFO:root:inside get_leagues
+INFO:root:in get_league_db data is fresh
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:31:43] "GET /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:root:get_league_standings_db for 128
+INFO:root:in get_league_db_standings data is fresh
+INFO:root:keys of league_db_standings are dict_keys([128, '63', '128', 63]) and league id 128 is in ? True
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:31:43] "GET /get_league_standings_db/128 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:31:46] "OPTIONS /get_results/128 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:31:46] "GET /get_results/128 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:32:24] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:32:24] "OPTIONS /get_league_standings_db/128 HTTP/1.1" 200 -
+INFO:root:get_sidebar_info
+INFO:root:inside get_leagues
+INFO:root:in get_league_db data is fresh
+INFO:root:db_con.get_leagues() {'169': {'leagues': {'league_ids': ['63'], 'league_names': ['Championship'], 'country_name': 'England'}, 'country_name': 'England'}, '173': {'leagues': {'league_ids': ['128'], 'league_names': ['Ligue 2'], 'country_name': 'France'}, 'country_name': 'France'}}
+INFO:root:inside get_leagues
+INFO:root:in get_league_db data is fresh
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:32:24] "GET /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:root:get_league_standings_db for 128
+INFO:root:in get_league_db_standings data is fresh
+INFO:root:keys of league_db_standings are dict_keys([128, '63', '128', 63]) and league id 128 is in ? True
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:32:24] "GET /get_league_standings_db/128 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:32:25] "OPTIONS /get_results/128 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:32:25] "GET /get_results/128 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:32:51] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:32:51] "OPTIONS /get_league_standings_db/128 HTTP/1.1" 200 -
+INFO:root:get_sidebar_info
+INFO:root:inside get_leagues
+INFO:root:in get_league_db data is fresh
+INFO:root:db_con.get_leagues() {'169': {'leagues': {'league_ids': ['63'], 'league_names': ['Championship'], 'country_name': 'England'}, 'country_name': 'England'}, '173': {'leagues': {'league_ids': ['128'], 'league_names': ['Ligue 2'], 'country_name': 'France'}, 'country_name': 'France'}}
+INFO:root:inside get_leagues
+INFO:root:in get_league_db data is fresh
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:32:51] "GET /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:root:get_league_standings_db for 128
+INFO:root:in get_league_db_standings data is fresh
+INFO:root:keys of league_db_standings are dict_keys([128, '63', '128', 63]) and league id 128 is in ? True
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:32:51] "GET /get_league_standings_db/128 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:32:52] "OPTIONS /get_results/128 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:32:52] "GET /get_results/128 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:33:11] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:33:11] "OPTIONS /get_league_standings_db/128 HTTP/1.1" 200 -
+INFO:root:get_sidebar_info
+INFO:root:inside get_leagues
+INFO:root:in get_league_db data is fresh
+INFO:root:db_con.get_leagues() {'169': {'leagues': {'league_ids': ['63'], 'league_names': ['Championship'], 'country_name': 'England'}, 'country_name': 'England'}, '173': {'leagues': {'league_ids': ['128'], 'league_names': ['Ligue 2'], 'country_name': 'France'}, 'country_name': 'France'}}
+INFO:root:inside get_leagues
+INFO:root:in get_league_db data is fresh
+INFO:root:get_league_standings_db for 128
+INFO:root:in get_league_db_standings data is fresh
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:33:11] "GET /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:root:keys of league_db_standings are dict_keys([128, '63', '128', 63]) and league id 128 is in ? True
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:33:11] "GET /get_league_standings_db/128 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:33:12] "OPTIONS /get_results/128 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:33:13] "GET /get_results/128 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:33:14] "OPTIONS /get_fixtures/128 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:33:14] "GET /get_fixtures/128 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:33:15] "GET /get_results/128 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:34:51] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:34:51] "OPTIONS /get_league_standings_db/128 HTTP/1.1" 200 -
+INFO:root:get_sidebar_info
+INFO:root:inside get_leagues
+INFO:root:in get_league_db data is fresh
+INFO:root:db_con.get_leagues() {'169': {'leagues': {'league_ids': ['63'], 'league_names': ['Championship'], 'country_name': 'England'}, 'country_name': 'England'}, '173': {'leagues': {'league_ids': ['128'], 'league_names': ['Ligue 2'], 'country_name': 'France'}, 'country_name': 'France'}}
+INFO:root:inside get_leagues
+INFO:root:in get_league_db data is fresh
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:34:51] "GET /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:root:get_league_standings_db for 128
+INFO:root:in get_league_db_standings data is fresh
+INFO:root:keys of league_db_standings are dict_keys([128, '63', '128', 63]) and league id 128 is in ? True
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:34:51] "GET /get_league_standings_db/128 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:34:52] "OPTIONS /get_fixtures/128 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:34:52] "GET /get_fixtures/128 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:36:04] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:36:04] "OPTIONS /get_league_standings_db/128 HTTP/1.1" 200 -
+INFO:root:get_sidebar_info
+INFO:root:inside get_leagues
+INFO:root:in get_league_db data is fresh
+INFO:root:db_con.get_leagues() {'169': {'leagues': {'league_ids': ['63'], 'league_names': ['Championship'], 'country_name': 'England'}, 'country_name': 'England'}, '173': {'leagues': {'league_ids': ['128'], 'league_names': ['Ligue 2'], 'country_name': 'France'}, 'country_name': 'France'}}
+INFO:root:inside get_leagues
+INFO:root:in get_league_db data is fresh
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:36:04] "GET /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:root:get_league_standings_db for 128
+INFO:root:in get_league_db_standings data is fresh
+INFO:root:keys of league_db_standings are dict_keys([128, '63', '128', 63]) and league id 128 is in ? True
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:36:04] "GET /get_league_standings_db/128 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:36:05] "OPTIONS /get_results/128 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:36:05] "GET /get_results/128 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:36:06] "OPTIONS /get_fixtures/128 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:36:06] "GET /get_fixtures/128 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:36:12] "OPTIONS /get_results/128 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:36:12] "GET /get_results/128 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:36:12] "OPTIONS /get_fixtures/128 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:36:12] "GET /get_fixtures/128 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:36:13] "GET /get_results/128 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:36:18] "OPTIONS /get_results/63 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:36:18] "GET /get_results/63 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:36:19] "OPTIONS /get_fixtures/63 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:36:19] "GET /get_fixtures/63 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:36:19] "OPTIONS /get_league_standings_db/63 HTTP/1.1" 200 -
+INFO:root:get_league_standings_db for 63
+INFO:root:in get_league_db_standings data not fresh
+INFO:root:setting up league_db_standings from fetch for id 63
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): apifootball.com:443
+DEBUG:urllib3.connectionpool:https://apifootball.com:443 "GET /api/?action=get_standings&league_id=63&APIkey=9fe5c8415f9eda3d0abd11d51578518d6a7c48d172f82abed46bf5bd9fe2479f HTTP/1.1" 200 None
+INFO:root:changed league_db_standings from the fetch for 63
+INFO:root:writing db to fisk at /Users/ollieloney/SoccerScores/databases/league_standings_63
+INFO:root:keys of league_db_standings are dict_keys([128, '63', '128', 63]) and league id 63 is in ? True
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:36:20] "GET /get_league_standings_db/63 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:36:20] "GET /get_results/63 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:36:26] "OPTIONS /get_fixtures/63 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:36:26] "GET /get_fixtures/63 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:36:28] "OPTIONS /get_results/63 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:36:28] "GET /get_results/63 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:37:03] "OPTIONS /get_fixtures/63 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:37:03] "GET /get_fixtures/63 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:37:03] "OPTIONS /get_league_standings_db/63 HTTP/1.1" 200 -
+INFO:root:get_league_standings_db for 63
+INFO:root:in get_league_db_standings data is fresh
+INFO:root:keys of league_db_standings are dict_keys([128, '63', '128', 63]) and league id 63 is in ? True
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:37:04] "GET /get_league_standings_db/63 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:37:06] "OPTIONS /get_league_standings_db/128 HTTP/1.1" 200 -
+INFO:root:get_league_standings_db for 128
+INFO:root:in get_league_db_standings data is fresh
+INFO:root:keys of league_db_standings are dict_keys([128, '63', '128', 63]) and league id 128 is in ? True
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:37:06] "GET /get_league_standings_db/128 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:37:07] "OPTIONS /get_fixtures/128 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:37:07] "GET /get_fixtures/128 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:37:07] "OPTIONS /get_results/128 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:37:07] "GET /get_results/128 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:37:11] "OPTIONS /get_results/63 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:37:11] "GET /get_results/63 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:38:55] "OPTIONS /get_fixtures/63 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:38:55] "GET /get_fixtures/63 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:38:56] "OPTIONS /get_results/63 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:38:56] "GET /get_results/63 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:38:58] "OPTIONS /get_results/128 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:38:58] "GET /get_results/128 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:39:00] "OPTIONS /get_fixtures/128 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:39:00] "GET /get_fixtures/128 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Sep/2019 21:39:01] "GET /get_results/128 HTTP/1.1" 200 -
