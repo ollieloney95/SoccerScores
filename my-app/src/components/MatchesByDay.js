@@ -12,7 +12,7 @@ class MatchesByDay extends React.Component {
         super(props);
     };
 
-    formatDate = (date_ts) =>{
+    formatDate = (date_ts) =>{    //todo this is repeated
         let date = new Date(parseInt(date_ts) * 1000)
         let day = date.toLocaleString('en-us', {  weekday: 'short' })
         let dayOfMonth = date.getDate()

@@ -1,2 +1,12 @@
 INFO:root:setting up user_db
 INFO:werkzeug: * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2019 21:02:09] "OPTIONS /login/ HTTP/1.1" 200 -
+INFO:root:checking credentials of user
+INFO:root:username found
+INFO:root:user_db_entry
+INFO:root:password_hash    5f4dcc3b5aa765d61d8327deb882cf99
+email                     ollie.loney95@gmail.com
+name                                        ollie
+Name: user, dtype: object
+INFO:root:user: user has been verifies
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2019 21:02:09] "POST /login/ HTTP/1.1" 200 -

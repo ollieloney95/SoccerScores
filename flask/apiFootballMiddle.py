@@ -6,6 +6,7 @@ from flask import Flask
 from flask import jsonify
 from flask_cors import CORS
 import numpy as np
+import ast
 
 import config
 
@@ -299,6 +300,7 @@ def get_league_standings_db(league_id):
         return jsonify('league_id not recognised')
     return jsonify(df.to_dict('index'))
 
+
 @app.route('/get_fixtures/<league_id>', methods=['GET'])
 def get_fixtures(league_id):
     date_from = datetime.now()
@@ -312,9 +314,15 @@ def get_results(league_id):
     date_to = datetime.now()
     return jsonify(db_con.get_events(league_id=league_id, date_from=date_from, date_to=date_to))
 
+
 @app.route('/get_match/<match_id>', methods=['GET'])
 def get_match(match_id):
-    return jsonify(db_con.get_events(match_id=match_id))
+    match_info = db_con.get_events(match_id=match_id)[int(match_id)]
+    match_info['lineup'] = ast.literal_eval(match_info['lineup'])
+    match_info['cards'] = ast.literal_eval(match_info['cards'])
+    match_info['goalscorer'] = ast.literal_eval(match_info['goalscorer'])
+    match_info['statistics'] = ast.literal_eval(match_info['statistics'])
+    return jsonify(match_info)
 
 if __name__ == '__main__':
     import logging
