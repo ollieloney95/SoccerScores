@@ -7,6 +7,7 @@ import {onGridSizeChanged} from 'utils/AGGridUtils'
 import { AgGridReact } from 'ag-grid-react';
 import 'ag-grid-community/dist/styles/ag-grid.css';
 import 'ag-grid-community/dist/styles/ag-theme-balham.css';
+import PropTypes from 'prop-types';
 
 
 class LeagueTable extends React.Component {
@@ -151,3 +152,8 @@ function mapStateToProps(store) {
 }
 
 export default connect(mapStateToProps)(LeagueTable);
+
+LeagueTable.propTypes = {
+  league_id: PropTypes.number.isRequired,
+  country_name: PropTypes.string.isRequired
+}

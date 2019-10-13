@@ -4,6 +4,7 @@ import ClubIcon from './ClubIcon';
 import { connect } from 'react-redux';
 import ScoreIcon from 'components/ScoreIcon';
 import { Redirect } from 'react-router';
+import PropTypes from 'prop-types';
 
 class Result extends React.Component {
 
@@ -90,3 +91,7 @@ function mapStateToProps(state) {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Result);
+
+Result.propTypes = {
+  matchInfo: PropTypes.object.isRequired
+}

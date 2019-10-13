@@ -1,13 +1,11 @@
 import React, { Component } from 'react';
 import {LeagueConfig} from 'configs/IconConfig.js';
+import PropTypes from 'prop-types';
 
 class LeagueIcon extends React.Component {
 
     constructor(props) {
         super(props);
-        this.state = {
-              leagueString: this.getImageFromId(this.props.league_id),
-          }
     }
 
     getImageFromId(id){
@@ -20,10 +18,14 @@ class LeagueIcon extends React.Component {
         <img
             width = {this.props.width}
             height = {this.props.height}
-            src={("").concat("/images/Leagues/",this.state.leagueString,".png")} />
+            src={("").concat("/images/Leagues/", this.getImageFromId(this.props.league_id) ,".png")} />
       </div>
     );
   }
 }
 
 export default LeagueIcon;
+
+LeagueIcon.propTypes = {
+  league_id: PropTypes.number.isRequired
+}

@@ -180,9 +180,14 @@ class DatabaseConnection:
         date_from_filter = df['match_date'] > date_from.replace(hour=0, minute=0, second=0) if date_from else trues
         date_to_filter = df['match_date'] < date_to.replace(hour=23, minute=59, second=0) if date_to else trues
 
+        # format the dataframe correctly
         df = df.replace(np.nan, '', regex=True)
         df = df.loc[match_id_filter & league_id_filter & date_from_filter & date_to_filter]
         df['match_date'] = [d.timestamp() for d in df['match_date']]
+        df['lineup'] = [ast.literal_eval(d) for d in df['lineup']]
+        df['cards'] = [ast.literal_eval(d) for d in df['cards']]
+        df['goalscorer'] = [ast.literal_eval(d) for d in df['goalscorer']]
+        df['statistics'] = [ast.literal_eval(d) for d in df['statistics']]
 
         return df.to_dict('index')
 
@@ -318,10 +323,6 @@ def get_results(league_id):
 @app.route('/get_match/<match_id>', methods=['GET'])
 def get_match(match_id):
     match_info = db_con.get_events(match_id=match_id)[int(match_id)]
-    match_info['lineup'] = ast.literal_eval(match_info['lineup'])
-    match_info['cards'] = ast.literal_eval(match_info['cards'])
-    match_info['goalscorer'] = ast.literal_eval(match_info['goalscorer'])
-    match_info['statistics'] = ast.literal_eval(match_info['statistics'])
     return jsonify(match_info)
 
 if __name__ == '__main__':

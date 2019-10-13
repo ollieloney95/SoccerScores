@@ -52,6 +52,8 @@ class TileDataCountry extends Component {
             return null
         }
         let cids = Object.keys(dat)
+        // convert cids to ints
+        for(let i=0; i<cids.length;i++) cids[i] = parseInt(cids[i])
         let elements_to_return = []
         for(let i=0;i<cids.length;i++){
             let cid = cids[i]
@@ -65,6 +67,9 @@ class TileDataCountry extends Component {
         let country_name = countryData['country_name']
         let league_names = countryData['leagues']['league_names']
         let league_ids = countryData['leagues']['league_ids']
+        // convert league ids to int
+        for(let i=0; i<league_ids.length;i++) league_ids[i] = parseInt(league_ids[i])
+        {console.log(cid)}
         element_to_return.push(
             <ListItem button key={cid} onClick={() => this.handleClick(country_name)}>
                 <ListItemIcon>
@@ -79,8 +84,9 @@ class TileDataCountry extends Component {
             let league_name = league_names[i]
             element_to_return.push(
                 <Link to="/LeagueInfo" style={{textDecoration: 'none'}}>
-                  <Collapse key={league_id} in={this.state.open === country_name} timeout="auto" unmountOnExit onClick={()=>this.props.changeLeagueId(league_id, league_name, cid, country_name)}>
+                  <Collapse in={this.state.open === country_name} timeout="auto" unmountOnExit onClick={()=>this.props.changeLeagueId(league_id, league_name, cid, country_name)}>
                     <List component="div" style={{paddingLeft:'20px'}}>
+                        {console.log(league_id)}
                       <ListItem key={league_id} button>
                         <ListItemIcon>
                           <LeagueIcon league_id={league_id} height='20px' width='20px'/>

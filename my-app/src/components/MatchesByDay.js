@@ -87,5 +87,6 @@ function mapStateToProps(store) {
 export default connect(mapStateToProps, mapDispatchToProps)(MatchesByDay);
 
 MatchesByDay.propTypes = {
-  sortAscending: PropTypes.bool.isRequired
+  sortAscending: PropTypes.bool.isRequired,
+  matchesByDay: PropTypes.object.isRequired,
 };

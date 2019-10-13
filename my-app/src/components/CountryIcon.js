@@ -1,13 +1,11 @@
 import React, { Component } from 'react';
 import {CountryConfig} from 'configs/IconConfig.js';
+import PropTypes from 'prop-types';
 
 class CountryIcon extends React.Component {
 
     constructor(props) {
         super(props);
-        this.state = {
-              countryString: this.getImageFromId(this.props.country_id),
-          }
     }
 
     getImageFromId(id){
@@ -18,10 +16,14 @@ class CountryIcon extends React.Component {
   render() {
     return (
       <div>
-        <img src={("").concat("/images/Countries/", this.state.countryString, ".png")} />
+        <img src={("").concat("/images/Countries/", this.getImageFromId(this.props.country_id), ".png")} />
       </div>
     );
   }
 }
 
 export default CountryIcon;
+
+CountryIcon.propTypes = {
+  country_id: PropTypes.number.isRequired
+}
