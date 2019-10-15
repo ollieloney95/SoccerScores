@@ -31,6 +31,10 @@ class App extends Component {
         super(props);
     }
 
+    componentDidMount() {
+        document.title = "Football Scores";
+      }
+
   render() {
     store.getState()
     {console.log('username', store.getState().username)}

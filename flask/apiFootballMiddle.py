@@ -40,13 +40,14 @@ class DatabaseConnection:
             return True
         except Exception as e:
             logging.error('error in write_db_to_disk {}'.format(e))
-            return False
+        return False
 
     def setup_from_disk(self):
-        self.setup_leagues_from_disk()
-        self.setup_events_db_from_disk()
-        for league_id in self.leagues_db.league_id:
-            self.setup_league_standings_db_from_disk(league_id)
+        if self.setup_leagues_from_disk() and self.setup_events_db_from_disk():
+            for league_id in self.leagues_db.league_id:
+                self.setup_league_standings_db_from_disk(league_id)
+            return True
+        return False
 
     def setup_leagues_from_disk(self):
         """

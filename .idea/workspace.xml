@@ -3,24 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="877cc63c-ed97-4d4b-90a5-6aae4b812f1d" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/databases/events_db.csv" beforeDir="false" afterPath="$PROJECT_DIR$/databases/events_db.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/databases/league_standings_128" beforeDir="false" afterPath="$PROJECT_DIR$/databases/league_standings_128" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/databases/league_standings_63" beforeDir="false" afterPath="$PROJECT_DIR$/databases/league_standings_63" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/flask/apiFootballMiddle.py" beforeDir="false" afterPath="$PROJECT_DIR$/flask/apiFootballMiddle.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/flask/logs/middle.log" beforeDir="false" afterPath="$PROJECT_DIR$/flask/logs/middle.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/flask/logs/server.log" beforeDir="false" afterPath="$PROJECT_DIR$/flask/logs/server.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/components/ClubIcon.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/ClubIcon.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/components/CountryIcon.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/CountryIcon.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/components/Fixture.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/components/LeagueIcon.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/LeagueIcon.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/components/LeagueTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/LeagueTable.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/components/MatchesByDay.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/MatchesByDay.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/components/NavBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/NavBar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/components/Result.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/Result.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/components/ScoreIcon.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/ScoreIcon.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/components/SideBar/TileDataCountry.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/SideBar/TileDataCountry.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/pages/MatchPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/pages/MatchPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/working.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/working.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/App.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -34,7 +20,7 @@
       <file leaf-file-name="MatchPage.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/my-app/src/pages/MatchPage.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="467">
+            <state relative-caret-position="630">
               <caret line="42" column="24" selection-start-line="42" selection-start-column="13" selection-end-line="42" selection-end-column="24" />
             </state>
           </provider>
@@ -44,7 +30,28 @@
         <entry file="file://$PROJECT_DIR$/my-app/src/components/MatchHeader.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="330">
-              <caret line="22" column="50" lean-forward="true" selection-start-line="22" selection-start-column="50" selection-end-line="22" selection-end-column="71" />
+              <caret line="22" column="50" selection-start-line="22" selection-start-column="50" selection-end-line="22" selection-end-column="71" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="apiFootballMiddle.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/flask/apiFootballMiddle.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-646">
+              <caret line="38" column="31" lean-forward="true" selection-start-line="38" selection-start-column="31" selection-end-line="38" selection-end-column="31" />
+              <folding>
+                <element signature="e#0#19#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="App.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/my-app/src/App.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="438">
+              <caret line="34" column="41" selection-start-line="34" selection-start-column="41" selection-end-line="34" selection-end-column="41" />
             </state>
           </provider>
         </entry>
@@ -52,8 +59,8 @@
       <file leaf-file-name="MatchInfoTabs.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/my-app/src/components/MatchInfoTabs.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="421">
-              <caret line="36" column="12" lean-forward="true" selection-start-line="36" selection-start-column="12" selection-end-line="36" selection-end-column="12" />
+            <state relative-caret-position="540">
+              <caret line="36" column="12" selection-start-line="36" selection-start-column="12" selection-end-line="36" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -62,7 +69,7 @@
         <entry file="file://$PROJECT_DIR$/my-app/src/components/MatchEventsPanel.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="240">
-              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+              <caret line="16" selection-start-line="16" selection-end-line="16" />
             </state>
           </provider>
         </entry>
@@ -71,25 +78,7 @@
         <entry file="file://$PROJECT_DIR$/my-app/src/components/StatisticsPanel.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="45">
-              <caret line="3" column="44" lean-forward="true" selection-start-line="3" selection-start-column="44" selection-end-line="3" selection-end-column="44" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HomePage.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/my-app/src/pages/HomePage.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="23" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Result.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/my-app/src/components/Result.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" selection-start-line="1" selection-end-line="1" selection-end-column="44" />
+              <caret line="3" column="44" selection-start-line="3" selection-start-column="44" selection-end-line="3" selection-end-column="44" />
             </state>
           </provider>
         </entry>
@@ -98,7 +87,7 @@
         <entry file="file://$PROJECT_DIR$/my-app/src/components/ScoreIcon.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="165">
-              <caret line="11" column="24" lean-forward="true" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
+              <caret line="11" column="24" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -112,11 +101,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MatchOverview.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MatchOverview.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/my-app/src/components/MatchOverview.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="21" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
+            <state relative-caret-position="360">
+              <caret line="24" column="1" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -132,10 +121,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>resultsRaw</find>
-      <find>Date</find>
-      <find>match</find>
-      <find>data</find>
       <find>fetch_match_details</find>
       <find>Result</find>
       <find>MatchesByDay</find>
@@ -162,6 +147,10 @@
       <find>events_to_components</find>
       <find>StatisticsPanel</find>
       <find>formatDate</find>
+      <find>setup_leagues_from_disk</find>
+      <find>setup_from_disk</find>
+      <find>update_leagues_db_from_fetch</find>
+      <find>write_db_to_disk</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/my-app/src</dir>
@@ -204,8 +193,6 @@
         <option value="$PROJECT_DIR$/my-app/src/pages/FixturesByDay.js" />
         <option value="$PROJECT_DIR$/my-app/src/pages/ResultsByDay.js" />
         <option value="$PROJECT_DIR$/my-app/src/pages/LeagueTablePage.js" />
-        <option value="$PROJECT_DIR$/my-app/src/App.js" />
-        <option value="$PROJECT_DIR$/flask/apiFootballMiddle.py" />
         <option value="$PROJECT_DIR$/my-app/src/components/Fixture.js" />
         <option value="$PROJECT_DIR$/my-app/src/components/MatchesByDay.js" />
         <option value="$PROJECT_DIR$/my-app/src/components/ScoreIcon.js" />
@@ -224,6 +211,8 @@
         <option value="$PROJECT_DIR$/my-app/src/pages/MatchPage.js" />
         <option value="$PROJECT_DIR$/my-app/src/components/MatchHeader.js" />
         <option value="$PROJECT_DIR$/my-app/src/components/MatchOverview.js" />
+        <option value="$PROJECT_DIR$/flask/apiFootballMiddle.py" />
+        <option value="$PROJECT_DIR$/my-app/src/App.js" />
       </list>
     </option>
   </component>
@@ -236,6 +225,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -264,13 +254,6 @@
               <item name="SoccerScores" type="462c0819:PsiDirectoryNode" />
               <item name="my-app" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SoccerScores" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SoccerScores" type="462c0819:PsiDirectoryNode" />
-              <item name="my-app" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -284,7 +267,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="AndroidView" />
     </panes>
@@ -397,7 +379,6 @@
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2638889" />
-      <window_info anchor="bottom" id="Find" order="1" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
@@ -409,6 +390,7 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" />
     </layout>
     <layout-to-restore>
       <window_info anchor="right" id="Palette" order="3" />
@@ -416,12 +398,12 @@
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27638888" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
@@ -431,7 +413,7 @@
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info id="Capture Tool" order="5" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="right" id="Maven Projects" order="7" />
@@ -562,13 +544,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/my-app/src/pages/ResultsPage.js" />
     <entry file="file://$PROJECT_DIR$/my-app/src/pages/FixturesPage.js" />
-    <entry file="file://$PROJECT_DIR$/my-app/src/App.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="780">
-          <caret line="52" column="59" selection-start-line="52" selection-start-column="50" selection-end-line="52" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/my-app/src/pages/FixturesByDay.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="585">
@@ -592,16 +567,6 @@
     <entry file="file://$PROJECT_DIR$/my-app/public/images/bannerFootball.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/flask/apiFootballMiddle.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="318" column="28" lean-forward="true" selection-start-line="318" selection-start-column="28" selection-end-line="318" selection-end-column="28" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/my-app/src/pages/ResultsByDay.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -609,13 +574,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/my-app/src/components/Fixture.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="30" selection-start-line="30" selection-end-line="35" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/my-app/src/components/Fixture.js" />
     <entry file="file://$PROJECT_DIR$/my-app/src/components/SideBar/SideBar.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="298">
@@ -703,28 +662,28 @@
     <entry file="file://$PROJECT_DIR$/my-app/src/components/ScoreIcon.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
-          <caret line="11" column="24" lean-forward="true" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
+          <caret line="11" column="24" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/my-app/src/components/StatisticsPanel.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
-          <caret line="3" column="44" lean-forward="true" selection-start-line="3" selection-start-column="44" selection-end-line="3" selection-end-column="44" />
+          <caret line="3" column="44" selection-start-line="3" selection-start-column="44" selection-end-line="3" selection-end-column="44" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/my-app/src/components/MatchInfoTabs.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="421">
-          <caret line="36" column="12" lean-forward="true" selection-start-line="36" selection-start-column="12" selection-end-line="36" selection-end-column="12" />
+        <state relative-caret-position="540">
+          <caret line="36" column="12" selection-start-line="36" selection-start-column="12" selection-end-line="36" selection-end-column="12" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/my-app/src/components/MatchEventsPanel.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
         </state>
       </provider>
     </entry>
@@ -737,7 +696,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/my-app/src/pages/MatchPage.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="467">
+        <state relative-caret-position="630">
           <caret line="42" column="24" selection-start-line="42" selection-start-column="13" selection-end-line="42" selection-end-column="24" />
         </state>
       </provider>
@@ -745,14 +704,31 @@
     <entry file="file://$PROJECT_DIR$/my-app/src/components/MatchHeader.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
-          <caret line="22" column="50" lean-forward="true" selection-start-line="22" selection-start-column="50" selection-end-line="22" selection-end-column="71" />
+          <caret line="22" column="50" selection-start-line="22" selection-start-column="50" selection-end-line="22" selection-end-column="71" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/my-app/src/components/MatchOverview.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="21" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
+        <state relative-caret-position="360">
+          <caret line="24" column="1" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flask/apiFootballMiddle.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-646">
+          <caret line="38" column="31" lean-forward="true" selection-start-line="38" selection-start-column="31" selection-end-line="38" selection-end-column="31" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-app/src/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="438">
+          <caret line="34" column="41" selection-start-line="34" selection-start-column="41" selection-end-line="34" selection-end-column="41" />
         </state>
       </provider>
     </entry>
