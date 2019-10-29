@@ -39,6 +39,7 @@ class MatchPage extends React.Component {
         return(<div></div>)
     }
     return (
+
         <div>
             <MatchHeader matchData={this.state.matchData} />
             <MatchOverview matchData={this.state.matchData} />

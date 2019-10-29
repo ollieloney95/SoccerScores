@@ -1,124 +1,41 @@
-INFO:root:getting league_db from disk
-INFO:root:set up leagues_db from disk
-INFO:root:getting league_db from disk
-INFO:root:setting up league_db for id 63 from disk
-INFO:root:set up league_db for id 63 from disk
-INFO:root:setting up league_db for id 128 from disk
-INFO:root:set up league_db for id 128 from disk
-INFO:root:in refresh_events data not fresh
-INFO:root:fetch for https://apifootball.com/api/?action=get_events&from=2019-10-01&to=2019-10-29&APIkey=9fe5c8415f9eda3d0abd11d51578518d6a7c48d172f82abed46bf5bd9fe2479f
+INFO:root:getting db at /Users/ollieloney/SoccerScores/databases/leagues_db.csv from disk
+ERROR:root:error in getting db at /Users/ollieloney/SoccerScores/databases/leagues_db.csv error is parser_f() got an unexpected keyword argument 'index'
+INFO:root:in update_events_from_fetch data is stale
+INFO:root:fetch for https://apifootball.com/api/?action=get_events&from=2019-10-15&to=2019-11-12&APIkey=9fe5c8415f9eda3d0abd11d51578518d6a7c48d172f82abed46bf5bd9fe2479f
 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): apifootball.com:443
-DEBUG:urllib3.connectionpool:https://apifootball.com:443 "GET /api/?action=get_events&from=2019-10-01&to=2019-10-29&APIkey=9fe5c8415f9eda3d0abd11d51578518d6a7c48d172f82abed46bf5bd9fe2479f HTTP/1.1" 200 None
-INFO:root:events_db updating 89 with new table 90
+DEBUG:urllib3.connectionpool:https://apifootball.com:443 "GET /api/?action=get_events&from=2019-10-15&to=2019-11-12&APIkey=9fe5c8415f9eda3d0abd11d51578518d6a7c48d172f82abed46bf5bd9fe2479f HTTP/1.1" 200 None
 INFO:root:writing db to fisk at /Users/ollieloney/SoccerScores/databases/events_db.csv
-INFO:root:refreshed events
-INFO:root:updating  leagues_db from fetch
+INFO:root:in update_leagues_db_from_fetch data is stale
 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): apifootball.com:443
 DEBUG:urllib3.connectionpool:https://apifootball.com:443 "GET /api/?action=get_leagues&APIkey=9fe5c8415f9eda3d0abd11d51578518d6a7c48d172f82abed46bf5bd9fe2479f HTTP/1.1" 200 180
 INFO:root:writing db to fisk at /Users/ollieloney/SoccerScores/databases/leagues_db.csv
-INFO:root:setting up league_db_standings from fetch for id 63
+INFO:root:in update_league_db_standings_from_fetch data is stale
 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): apifootball.com:443
 DEBUG:urllib3.connectionpool:https://apifootball.com:443 "GET /api/?action=get_standings&league_id=63&APIkey=9fe5c8415f9eda3d0abd11d51578518d6a7c48d172f82abed46bf5bd9fe2479f HTTP/1.1" 200 None
 INFO:root:changed league_db_standings from the fetch for 63
 INFO:root:writing db to fisk at /Users/ollieloney/SoccerScores/databases/league_standings_63
-INFO:root:setting up league_db_standings from fetch for id 128
+INFO:root:in update_league_db_standings_from_fetch data is stale
 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): apifootball.com:443
 DEBUG:urllib3.connectionpool:https://apifootball.com:443 "GET /api/?action=get_standings&league_id=128&APIkey=9fe5c8415f9eda3d0abd11d51578518d6a7c48d172f82abed46bf5bd9fe2479f HTTP/1.1" 200 None
 INFO:root:changed league_db_standings from the fetch for 128
 INFO:root:writing db to fisk at /Users/ollieloney/SoccerScores/databases/league_standings_128
 INFO:werkzeug: * Running on http://0.0.0.0:5001/ (Press CTRL+C to quit)
-INFO:werkzeug:127.0.0.1 - - [15/Oct/2019 19:31:16] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
-INFO:root:get_sidebar_info
+INFO:werkzeug:127.0.0.1 - - [29/Oct/2019 20:37:18] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Oct/2019 20:37:18] "OPTIONS /get_match/459492 HTTP/1.1" 200 -
 INFO:root:inside get_leagues
-INFO:root:in get_league_db data is fresh
-INFO:root:db_con.get_leagues() {'169': {'country_name': 'England', 'leagues': {'league_ids': ['63'], 'league_names': ['Championship'], 'country_name': 'England'}}, '173': {'country_name': 'France', 'leagues': {'league_ids': ['128'], 'league_names': ['Ligue 2'], 'country_name': 'France'}}}
-INFO:root:inside get_leagues
-INFO:root:in get_league_db data is fresh
-INFO:werkzeug:127.0.0.1 - - [15/Oct/2019 19:31:16] "GET /get_sidebar_info/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Oct/2019 19:31:56] "OPTIONS /get_league_standings_db/63 HTTP/1.1" 200 -
-INFO:root:get_league_standings_db for 63
-INFO:root:in get_league_db_standings data not fresh
-INFO:root:setting up league_db_standings from fetch for id 63
+INFO:root:in update_leagues_db_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [29/Oct/2019 20:37:18] "GET /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Oct/2019 20:37:18] "GET /get_match/459492 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Oct/2019 20:37:21] "OPTIONS /get_league_standings_db/63 HTTP/1.1" 200 -
+INFO:root:in update_league_db_standings_from_fetch data is stale
 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): apifootball.com:443
 DEBUG:urllib3.connectionpool:https://apifootball.com:443 "GET /api/?action=get_standings&league_id=63&APIkey=9fe5c8415f9eda3d0abd11d51578518d6a7c48d172f82abed46bf5bd9fe2479f HTTP/1.1" 200 None
 INFO:root:changed league_db_standings from the fetch for 63
 INFO:root:writing db to fisk at /Users/ollieloney/SoccerScores/databases/league_standings_63
-INFO:root:keys of league_db_standings are dict_keys([128, '128', '63', 63]) and league id 63 is in ? True
-INFO:werkzeug:127.0.0.1 - - [15/Oct/2019 19:31:56] "GET /get_league_standings_db/63 HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Oct/2019 19:31:57] "OPTIONS /get_fixtures/63 HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Oct/2019 19:31:57] "GET /get_fixtures/63 HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Oct/2019 19:31:58] "OPTIONS /get_match/455326 HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Oct/2019 19:31:58] "GET /get_match/455326 HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Oct/2019 19:32:02] "OPTIONS /get_league_standings_db/63 HTTP/1.1" 200 -
-INFO:root:get_league_standings_db for 63
-INFO:root:in get_league_db_standings data is fresh
-INFO:root:keys of league_db_standings are dict_keys([128, '128', '63', 63]) and league id 63 is in ? True
-INFO:werkzeug:127.0.0.1 - - [15/Oct/2019 19:32:02] "GET /get_league_standings_db/63 HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Oct/2019 19:32:03] "OPTIONS /get_results/63 HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Oct/2019 19:32:03] "GET /get_results/63 HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Oct/2019 19:32:05] "OPTIONS /get_match/450838 HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Oct/2019 19:32:05] "GET /get_match/450838 HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Oct/2019 19:32:31] "OPTIONS /get_league_standings_db/128 HTTP/1.1" 200 -
-INFO:root:get_league_standings_db for 128
-INFO:root:in get_league_db_standings data not fresh
-INFO:root:setting up league_db_standings from fetch for id 128
-DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): apifootball.com:443
-DEBUG:urllib3.connectionpool:https://apifootball.com:443 "GET /api/?action=get_standings&league_id=128&APIkey=9fe5c8415f9eda3d0abd11d51578518d6a7c48d172f82abed46bf5bd9fe2479f HTTP/1.1" 200 None
-INFO:root:changed league_db_standings from the fetch for 128
-INFO:root:writing db to fisk at /Users/ollieloney/SoccerScores/databases/league_standings_128
-INFO:root:keys of league_db_standings are dict_keys([128, '128', '63', 63]) and league id 128 is in ? True
-INFO:werkzeug:127.0.0.1 - - [15/Oct/2019 19:32:31] "GET /get_league_standings_db/128 HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Oct/2019 19:32:31] "OPTIONS /get_fixtures/128 HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Oct/2019 19:32:31] "GET /get_fixtures/128 HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Oct/2019 19:32:33] "OPTIONS /get_results/128 HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Oct/2019 19:32:33] "GET /get_results/128 HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Oct/2019 19:32:33] "OPTIONS /get_match/451280 HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Oct/2019 19:32:33] "GET /get_match/451280 HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Oct/2019 19:33:07] "OPTIONS /get_league_standings_db/63 HTTP/1.1" 200 -
-INFO:root:get_league_standings_db for 63
-INFO:root:in get_league_db_standings data is fresh
-INFO:root:keys of league_db_standings are dict_keys([128, '128', '63', 63]) and league id 63 is in ? True
-INFO:werkzeug:127.0.0.1 - - [15/Oct/2019 19:33:07] "GET /get_league_standings_db/63 HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Oct/2019 19:33:28] "OPTIONS /get_league_standings_db/128 HTTP/1.1" 200 -
-INFO:root:get_league_standings_db for 128
-INFO:root:in get_league_db_standings data is fresh
-INFO:root:keys of league_db_standings are dict_keys([128, '128', '63', 63]) and league id 128 is in ? True
-INFO:werkzeug:127.0.0.1 - - [15/Oct/2019 19:33:28] "GET /get_league_standings_db/128 HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Oct/2019 19:33:29] "OPTIONS /get_fixtures/128 HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Oct/2019 19:33:29] "GET /get_fixtures/128 HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Oct/2019 19:33:30] "OPTIONS /get_match/455346 HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Oct/2019 19:33:30] "GET /get_match/455346 HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Oct/2019 19:34:04] "OPTIONS /get_league_standings_db/63 HTTP/1.1" 200 -
-INFO:root:get_league_standings_db for 63
-INFO:root:in get_league_db_standings data is fresh
-INFO:root:keys of league_db_standings are dict_keys([128, '128', '63', 63]) and league id 63 is in ? True
-INFO:werkzeug:127.0.0.1 - - [15/Oct/2019 19:34:04] "GET /get_league_standings_db/63 HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Oct/2019 19:34:05] "OPTIONS /get_results/63 HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Oct/2019 19:34:06] "GET /get_results/63 HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Oct/2019 19:34:07] "OPTIONS /get_match/450839 HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Oct/2019 19:34:07] "GET /get_match/450839 HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Oct/2019 19:45:25] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Oct/2019 19:45:25] "OPTIONS /get_match/450839 HTTP/1.1" 200 -
-INFO:root:get_sidebar_info
-INFO:root:inside get_leagues
-INFO:root:in get_league_db data is fresh
-INFO:root:db_con.get_leagues() {'169': {'country_name': 'England', 'leagues': {'league_ids': ['63'], 'league_names': ['Championship'], 'country_name': 'England'}}, '173': {'country_name': 'France', 'leagues': {'league_ids': ['128'], 'league_names': ['Ligue 2'], 'country_name': 'France'}}}
-INFO:root:inside get_leagues
-INFO:root:in get_league_db data is fresh
-INFO:werkzeug:127.0.0.1 - - [15/Oct/2019 19:45:25] "GET /get_sidebar_info/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Oct/2019 19:45:25] "GET /get_match/450839 HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Oct/2019 19:45:39] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Oct/2019 19:45:39] "OPTIONS /get_match/450839 HTTP/1.1" 200 -
-INFO:root:get_sidebar_info
-INFO:root:inside get_leagues
-INFO:root:in get_league_db data is fresh
-INFO:root:db_con.get_leagues() {'169': {'country_name': 'England', 'leagues': {'league_ids': ['63'], 'league_names': ['Championship'], 'country_name': 'England'}}, '173': {'country_name': 'France', 'leagues': {'league_ids': ['128'], 'league_names': ['Ligue 2'], 'country_name': 'France'}}}
-INFO:root:inside get_leagues
-INFO:root:in get_league_db data is fresh
-INFO:werkzeug:127.0.0.1 - - [15/Oct/2019 19:45:39] "GET /get_sidebar_info/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Oct/2019 19:45:39] "GET /get_match/450839 HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Oct/2019 19:46:43] "OPTIONS /get_league_standings_db/128 HTTP/1.1" 200 -
-INFO:root:get_league_standings_db for 128
-INFO:root:in get_league_db_standings data is fresh
-INFO:root:keys of league_db_standings are dict_keys([128, '128', '63', 63]) and league id 128 is in ? True
-INFO:werkzeug:127.0.0.1 - - [15/Oct/2019 19:46:43] "GET /get_league_standings_db/128 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Oct/2019 20:37:21] "GET /get_league_standings_db/63 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Oct/2019 20:37:23] "OPTIONS /get_fixtures/63 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Oct/2019 20:37:23] "GET /get_fixtures/63 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Oct/2019 20:37:23] "OPTIONS /get_results/63 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Oct/2019 20:37:23] "GET /get_results/63 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Oct/2019 20:37:25] "OPTIONS /get_match/459562 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Oct/2019 20:37:25] "GET /get_match/459562 HTTP/1.1" 200 -

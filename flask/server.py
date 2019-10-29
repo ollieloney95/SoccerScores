@@ -19,9 +19,11 @@ class User:
         self.saveData = saveData
 
 class UserDatabaseConnection:
+
     def __init__(self):
         self.lock = threading.Lock()
         self.user_db = self.get_user_database_from_disk()
+
 
     def get_user_database_from_disk(self):
         """
@@ -34,9 +36,10 @@ class UserDatabaseConnection:
             df = df.set_index('username')
             return df
         except Exception as e:
-            logging.info('ERROR HERE !!!')
+            logging.info('no user db found ?')
             logging.error(e)
             return None
+
 
     def write_user_database_to_disk(self):
         """
@@ -89,10 +92,12 @@ class UserDatabaseConnection:
             return "False"
         return "True"
 
+
 @app.route('/')
 def hello_world():
     return config.path_user_db
     return "connected to pyweb server"
+
 
 @app.route('/login/', methods=['POST'])
 def login():
@@ -109,6 +114,7 @@ def login():
     elif user_check == "0_INCORRECT_USERNAME":
         logging.info("user: {} does not exist".format(user_.username))
     return jsonify({"user_check": user_check})
+
 
 @app.route('/addAccount/', methods=['POST'])
 def addAccount():
@@ -131,6 +137,7 @@ def addAccount():
         added_user = Db_connection.add_user(user_)
         return jsonify(0)
     return jsonify(1)
+
 
 if __name__ == '__main__':
     import logging

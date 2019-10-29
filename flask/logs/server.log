@@ -1,4 +1,2 @@
 INFO:root:setting up user_db
-INFO:root:ERROR HERE !!!
-ERROR:root:[Errno 2] File b'/Users/ollieloney/SoccerScores/databases/user_db.csv' does not exist: b'/Users/ollieloney/SoccerScores/databases/user_db.csv'
 INFO:werkzeug: * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)

@@ -4,6 +4,7 @@ import { Provider } from 'react-redux'
 import AppBar from '@material-ui/core/AppBar';
 import StatisticsPanel from 'components/StatisticsPanel'
 import MatchEventsPanel from 'components/MatchEventsPanel'
+import Lineup from 'components/Lineup'
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import PropTypes from 'prop-types';
@@ -27,12 +28,17 @@ export default class MatchInfoTabs extends React.Component {
 
     let matchEventsPanel = (<MatchEventsPanel
         goalScorers={this.props.matchData['goalscorer']}
-        cards={this.props.matchData['cards']} />)
+        cards={this.props.matchData['cards']}
+        />)
 
     let statisticsPanel = (<StatisticsPanel
-        statistics={this.props.matchData['statistics']} />)
+        statistics={this.props.matchData['statistics']}
+        />)
 
-    let lineupPanel
+    let lineupPanel = (<Lineup
+        lineup={this.props.matchData['lineup']['home']}
+        formation={this.props.matchData['match_hometeam_system']}
+        />)
 
     return (
         <div>
