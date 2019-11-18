@@ -9,8 +9,9 @@ path_events_db = path_home + '/databases/events_db.csv'
 
 #apifootball
 apifootball_key = '9fe5c8415f9eda3d0abd11d51578518d6a7c48d172f82abed46bf5bd9fe2479f'
-#apifootball_host = 'https://apiv2.apifootball.com'
-apifootball_host = 'https://apifootball.com/api'
+apifootball_host = 'https://apiv2.apifootball.com'
+#apifootball_host = 'https://apifootball.com/api'
+
 
 #configs
 refresh_time_mins = 30

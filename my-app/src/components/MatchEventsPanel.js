@@ -5,42 +5,49 @@ import Paper from '@material-ui/core/Paper';
 import EventIcon from 'components/EventIcon'
 
 
+class EventDisplay extends Component {
+    constructor(props) {
+        super(props);
+    }
+
+    render() {
+        let minsElement = (<p style={{display:'inline-block', margin:'0px 5px'}}>
+                              {this.props.mins}
+                           </p>)
+
+        let textElement = (<p style={{display:'inline-block', margin:'0px 5px'}}>
+                               {this.props.text}
+                           </p>)
+
+        return (
+        <div>
+            {this.props.home ? minsElement : textElement}
+            <EventIcon event={this.props.event}/>
+            {this.props.home ? textElement : minsElement}
+        </div>
+        );
+    }
+}
+
+
 export default class MatchEventsPanel extends React.Component {
 
     constructor(props) {
         super(props);
     }
 
-    format_events = (goalScorers, cards) => {
+    format_events = (goalScorers, cards, substitutions) => {
         let events = {} //minutes to events, events is a list,
         // a single events is a list of [minute:int, home:bool, eventDisplay:component, type:str]
+
 
         // go through goalscorers
         for(let i=0;i<goalScorers.length;i++){
             let mins = parseInt(goalScorers[i]['time'])
-            let isHome = goalScorers[i]['away_scorer']==""?true:false
-            let eventDisplay
-            if(isHome){
-                eventDisplay = (<div>
-                                    <p style={{display:'inline-block', margin:'0px 5px'}}>
-                                        {mins}
-                                    </p>
-                                    <EventIcon event={'goal'}/>
-                                    <p style={{display:'inline-block', margin:'0px 5px'}}>
-                                        {goalScorers[i]['home_scorer']}
-                                    </p>
-                               </div>)
-            }else{
-                eventDisplay = (<div>
-                                    <p style={{display:'inline-block', margin:'0px 5px'}}>
-                                        {goalScorers[i]['away_scorer']}
-                                    </p>
-                                    <EventIcon event={'goal'} />
-                                    <p style={{display:'inline-block', margin:'0px 5px'}}>
-                                        {mins}
-                                    </p>
-                               </div>)
-            }
+            let isHome = goalScorers[i]['away_scorer'] == "" ? true : false
+            let scorer = isHome ? goalScorers[i]['home_scorer'] : goalScorers[i]['away_scorer']
+            let eventDisplay = <EventDisplay home={isHome} event={'goal'} text={scorer} mins={mins} />
+
             let event = [mins, isHome, eventDisplay, 'goal']
             if(mins in Object.keys(events)){
                 events[mins].push(event)
@@ -49,32 +56,37 @@ export default class MatchEventsPanel extends React.Component {
             }
         }
 
+
+        // go through subs
+        for(let sub of substitutions['home']){
+            let mins = parseInt(sub['time'])
+            let eventDisplay = <EventDisplay home={true} event={'substitution'} text={sub['substitution']} mins={mins} />
+            let event = [parseInt(sub['time']), true, eventDisplay, sub['substitution']]
+            if(mins in Object.keys(events)){
+                events[mins].push(event)
+            }else{
+                events[mins] = [event]
+            }
+        }
+        for(let sub of substitutions['away']){
+            let mins = parseInt(sub['time'])
+            let eventDisplay = <EventDisplay home={false} event={'substitution'} text={sub['substitution']} mins={mins} />
+            let event = [mins, false, eventDisplay, sub['substitution']]
+            if(mins in Object.keys(events)){
+                events[mins].push(event)
+            }else{
+                events[mins] = [event]
+            }
+        }
+
+
+
         // go through cards
         for(let i=0;i<cards.length;i++){
             let mins = parseInt(cards[i]['time'])
             let isHome = cards[i]['away_fault']==""?true:false
-            let eventDisplay
-            if(isHome){
-                eventDisplay = (<div>
-                                    <p style={{display:'inline-block', margin:'0px 5px'}}>
-                                        {mins}
-                                    </p>
-                                    <EventIcon event={cards[i]['card']} />
-                                    <p style={{display:'inline-block', margin:'0px 5px'}}>
-                                        {cards[i]['home_fault']}
-                                    </p>
-                               </div>)
-            }else{
-                eventDisplay = (<div>
-                                   <p style={{display:'inline-block', margin:'0px 5px'}}>
-                                       {cards[i]['away_fault']}
-                                   </p>
-                                   <EventIcon event={cards[i]['card']} />
-                                   <p style={{display:'inline-block', margin:'0px 5px'}}>
-                                       {mins}
-                                   </p>
-                              </div>)
-            }
+            let text = isHome ? cards[i]['home_fault'] : cards[i]['away_fault']
+            let eventDisplay = <EventDisplay home={isHome} event={cards[i]['card']} text={text} mins={mins} />
             let event = [mins, isHome, eventDisplay, cards[i]['card']]
             if(mins in Object.keys(events)){
                 events[mins].push(event)
@@ -85,10 +97,10 @@ export default class MatchEventsPanel extends React.Component {
         return(events)
     }
 
+
     events_to_components = (events) => {
         let mins = Object.keys(events)
         let eventComponents = []
-        console.log('events', events)
 
         mins.forEach(function(min) {
           for(let j=0;j<events[min].length;j++){
@@ -108,13 +120,14 @@ export default class MatchEventsPanel extends React.Component {
         return(eventComponents)
     }
 
+
   render() {
     let events
     if(this.props.goalScorers && this.props.cards){
-        events = this.events_to_components(this.format_events(this.props.goalScorers, this.props.cards))
+        events = this.events_to_components(this.format_events(this.props.goalScorers, this.props.cards, this.props.substitutions))
     }
     return (
-      <Paper>
+      <Paper style={{width:'60%', margin:'auto'}}>
         {events}
       </Paper>
     );
@@ -123,5 +136,13 @@ export default class MatchEventsPanel extends React.Component {
 
 MatchEventsPanel.propTypes = {
   goalScorers: PropTypes.array.isRequired,
-  cards: PropTypes.array.isRequired
+  cards: PropTypes.array.isRequired,
+  substitutions: PropTypes.array.isRequired
+}
+
+EventDisplay.propTypes = {
+  event: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired,
+  mins: PropTypes.number.isRequired,
+  home: PropTypes.bool.isRequired,
 }

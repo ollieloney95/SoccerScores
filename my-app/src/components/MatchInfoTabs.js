@@ -9,6 +9,7 @@ import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import PropTypes from 'prop-types';
 import Paper from '@material-ui/core/Paper';
+import FullPitch from 'components/FullPitch'
 
 
 export default class MatchInfoTabs extends React.Component {
@@ -29,16 +30,16 @@ export default class MatchInfoTabs extends React.Component {
     let matchEventsPanel = (<MatchEventsPanel
         goalScorers={this.props.matchData['goalscorer']}
         cards={this.props.matchData['cards']}
+        substitutions={this.props.matchData['substitutions']}
         />)
 
     let statisticsPanel = (<StatisticsPanel
         statistics={this.props.matchData['statistics']}
         />)
 
-    let lineupPanel = (<Lineup
-        lineup={this.props.matchData['lineup']['home']}
-        formation={this.props.matchData['match_hometeam_system']}
-        />)
+    let lineupPanel = (
+        <FullPitch matchData={this.props.matchData} />
+        )
 
     return (
         <div>

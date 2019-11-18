@@ -20,7 +20,7 @@ class DiskConnection:
     def __init__(self, lock, config):
         self.lock = lock
         self.config = config
-        self.leagues_db = pd.DataFrame(columns=['country_id', 'country_name', 'league_id', 'league_name'])
+        self.leagues_db = pd.DataFrame(columns=['country_id', 'country_name', 'league_id', 'league_name']).astype({'country_id': 'int32', 'league_id':'int32'})
         self.events_db = pd.DataFrame()
         self.league_db_standings = {}
         self.setup_all_league_standings_from_disk()
@@ -65,7 +65,7 @@ class DiskConnection:
         df = self.read_db_from_disk(self.config.path_leagues_db, False)
         if df.empty:
             return False
-        self.leagues_db = df
+        self.leagues_db = df.astype({'country_id': 'int32', 'league_id':'int32'})
         return True
 
     def setup_events_db_from_disk(self):
@@ -120,6 +120,7 @@ class HostConnection:
 
 
     def update_leagues_db_from_fetch(self, leagues_db):
+        logging.info('here leagues_db tpe is {}'.format(type(leagues_db)))
         # check if data is already fresh
         if self.is_data_fresh(0):
             logging.info('in update_leagues_db_from_fetch and data is fresh')
@@ -131,9 +132,13 @@ class HostConnection:
         try:
             response = requests.get(path)
             df = pd.DataFrame(response.json())
+            logging.info('here tpe is {}'.format(type(df)))
             leagues_db = df.combine_first(leagues_db)
+            logging.info('here2 tpe is {}'.format(type(leagues_db)))
             self.disk_connection.write_db_to_disk(self.config.path_leagues_db, leagues_db)
             self.update_last_refresh_times(0)
+            leagues_db = leagues_db.astype({'country_id': 'int32', 'league_id':'int32'})
+            return leagues_db
         except Exception as e:
             logging.error('error in update_leagues_db_from_fetch {}'.format(e))
         return leagues_db
@@ -166,6 +171,7 @@ class HostConnection:
 
     def update_league_db_standings_from_fetch(self, league_id, league_db_standings):
         # check if data is already fresh
+        logging.info('updating league {} from fetch'.format(league_id))
         if self.is_data_fresh(league_id):
             logging.info('in update_league_db_standings_from_fetch and data is fresh')
             return league_db_standings[league_id]
@@ -174,11 +180,13 @@ class HostConnection:
         # fetch data from webservice
         path = self.config.apifootball_host + '/?action=get_standings&league_id=' + str(
             league_id) + '&APIkey=' + self.config.apifootball_key
+        logging.info('fetching from path: {}'.format(path))
         try:
             response = requests.get(path)
-            df = pd.DataFrame(response.json())
+            res = response.json()
+            df = pd.DataFrame(res)
             logging.info('changed league_db_standings from the fetch for {}'.format(league_id))
-            self.disk_connection.write_db_to_disk(self.config.path_league_standings_stem + str(league_id), df)
+            self.disk_connection.write_db_to_disk(self.config.path_league_standings_stem + str(league_id) + '.csv', df)
             self.update_last_refresh_times(league_id)
         except Exception as e:
             logging.error('error in update_league_db_standings_from_fetch {}'.format(e))
@@ -247,7 +255,7 @@ class DatabaseConnection:
 
     def get_league_db(self):
         self.leagues_db = self.host_connection.update_leagues_db_from_fetch(self.leagues_db)
-        return self.leagues_db
+        return self.leagues_db.astype({'country_id': 'int32', 'league_id':'int32'})
 
 
     def get_league_db_standings(self, league_id):
@@ -308,6 +316,17 @@ def get_league_standings_db(league_id):
     if df.empty:
         return jsonify('league_id not recognised')
     return jsonify(df.to_dict('index'))
+
+
+@app.route('/get_name_from_country_id/<country_id>/', methods=['GET'])
+def get_name_from_country_id(country_id):
+    country_id = int(country_id)
+    df = db_con.get_league_db()
+    if country_id in df['country_id'].values:
+        logging.info('country name: {}'.format(df.loc[df['country_id'] == country_id].iloc[0].country_name))
+        return jsonify(df.loc[df['country_id'] == country_id].iloc[0].country_name)
+    logging.warning('asked for country name for this country id but cant find them {}'.format(country_id))
+    return jsonify('default')
 
 
 @app.route('/get_fixtures/<league_id>', methods=['GET'])

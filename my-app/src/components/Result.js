@@ -27,16 +27,19 @@ class Result extends React.Component {
   render() {
         let homeScore
         let awayScore
+
+        console.log('match status ', this.props.matchInfo['match_status'])
+
         if(this.props.matchInfo['match_hometeam_score'] !== "" && this.props.matchInfo['match_awayteam_score'] !== ""){
             homeScore = <ScoreIcon
                             score={this.props.matchInfo['match_hometeam_score']}
                             otherScore={this.props.matchInfo['match_awayteam_score']}
-                            matchFinished={this.props.matchInfo['match_status'] === 'FT'}/>
+                            matchFinished={this.props.matchInfo['match_status'] === 'Finished'}/>
 
             awayScore = <ScoreIcon
                             score={this.props.matchInfo['match_awayteam_score']}
                             otherScore={this.props.matchInfo['match_hometeam_score']}
-                            matchFinished={this.props.matchInfo['match_status'] === 'FT'}/>
+                            matchFinished={this.props.matchInfo['match_status'] === 'Finished'}/>
         }
         if (this.state.redirect) {
             return <Redirect push to="/MatchInfo" />;
@@ -54,19 +57,25 @@ class Result extends React.Component {
                 {this.props.matchInfo['match_hometeam_name']}
             </p>
             <div style={{display:'inline-block', margin:'0 auto', width:'110px', height:'30px'}}>
-                {homeScore}
+                <div style={{display:'inline-block', verticalAlign:'top'}}>
+                    {homeScore}
+                </div>
                 <Paper
-                        style={{display:'inline-block',
-                                width:'50px',
-                                height:'20px',
-                                margin:'5px',
-                                top:'5px',
-                                backgroundColor:'rgb(217, 217, 217)'}}
-                        elevation={0}
-                    >
-                    {this.props.matchInfo['match_time']}
+                    style={{display:'inline-block',
+                            width:'50px',
+                            height:'20px',
+                            margin:'5px',
+                            verticalAlign:'top',
+                            backgroundColor:'rgb(217, 217, 217)'}}
+                    elevation={0}
+                >
+                    <p style={{margin:'2px'}}>
+                        {this.props.matchInfo['match_time']}
+                    </p>
                 </Paper>
-                {awayScore}
+                <div style={{display:'inline-block', verticalAlign:'top'}}>
+                    {awayScore}
+                </div>
             </div>
             <p style={{margin:'5px', display:'inline-block', position: 'absolute', fontSize:'10px', fontWeight:'bold'}}>
                 {this.props.matchInfo['match_awayteam_name']}
