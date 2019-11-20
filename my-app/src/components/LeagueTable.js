@@ -36,7 +36,7 @@ class LeagueTable extends React.Component {
                   standingsDataFormatted: null,
                   country_name: this.props.country_name,
                   columnDefs: [{
-                          headerName: "Pos", field: "position", width: 60, pinned: 'left', cellStyle: {textAlign: 'right'}, sort:'desc'
+                          headerName: "Pos", field: "position", width: 60, pinned: 'left', cellStyle: {textAlign: 'right'}, sort:'asc'
                         }, {
                           headerName: "Team", field: "team", width: 100, pinned: 'left', cellStyle: {textAlign: 'right'}
                         }, {

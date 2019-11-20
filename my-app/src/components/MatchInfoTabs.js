@@ -41,19 +41,25 @@ export default class MatchInfoTabs extends React.Component {
         <FullPitch matchData={this.props.matchData} />
         )
 
+    let matchNotBegan
+    if(this.props.matchData['match_status'] === ''){
+        matchNotBegan = (<p>waiting for match to Start...</p>)
+    }
+
     return (
         <div>
             <Paper style={{marginBottom:'10px'}}>
+                {matchNotBegan}
                 <Tabs
+                    fullWidth
                     value={this.state.tabIndex}
                     indicatorColor="primary"
                     textColor="primary"
                     onChange={this.handleChange}
-                    aria-label="disabled tabs example"
                   >
-                    <Tab label="Event" />
-                    <Tab label="Stats" />
-                    <Tab label="Lineup" />
+                    <Tab label="Event" disabled={this.props.matchData['match_status'] === ''}/>
+                    <Tab label="Stats" disabled={this.props.matchData['match_status'] === ''}/>
+                    <Tab label="Lineup"  disabled={this.props.matchData['match_status'] === ''}/>
                   </Tabs>
             </Paper>
             {this.state.tabIndex === 0 ? matchEventsPanel:''}

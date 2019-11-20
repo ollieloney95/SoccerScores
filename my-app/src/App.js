@@ -12,6 +12,7 @@ import FavoritesPage from 'pages/FavoritesPage'
 import LoginPage from 'pages/account/LoginPage'
 import CreateAccount from 'pages/account/CreateAccount'
 import MatchPage from 'pages/MatchPage'
+import TeamsPage from 'pages/TeamsPage'
 
 //redux imports
 import store from './store/'
@@ -53,6 +54,7 @@ class App extends Component {
                                 <NavBar />
                                 <Switch>
                                     <Route path="/Favorites" component={FavoritesPage}/>
+                                    <Route path="/TeamsPage" component={TeamsPage}/>
                                     <Route path="/LeagueInfo" component={LeaguePage}/>
                                     <Route path="/MatchInfo" component={MatchPage}/>
                                     <Route path="/" component={Page1} />

@@ -53,9 +53,17 @@ class Result extends React.Component {
             style={{padding:'0px', marginTop:'5px', textAlign:'center', height:'30px', width:'calc(100%)', position:'relative'}}
             onClick={() => {this.handleClick(this.props.matchInfo['match_id']); console.log('matchInfo', this.props.matchInfo)}}
         >
-            <p style={{margin:'5px', display:'inline-block', position: 'absolute', fontSize:'10px', fontWeight:'bold', right:'calc(50% + 50px)'}}>
-                {this.props.matchInfo['match_hometeam_name']}
-            </p>
+
+            {/* club icon and club name - home */}
+            <div style={{margin:'0px 5px', display:'inline-block', position: 'absolute', right:'calc(50% + 50px)', verticalAlign:'top'}}>
+                <div style={{margin:'0 5px', display:'inline-block', verticalAlign:'top'}}>
+                    <ClubIcon clubName={this.props.matchInfo['match_hometeam_name']} />
+                </div>
+                <p style={{margin:'5px', display:'inline-block', fontSize:'10px', fontWeight:'bold', verticalAlign:'top'}}>
+                    {this.props.matchInfo['match_hometeam_name']}
+                </p>
+            </div>
+
             <div style={{display:'inline-block', margin:'0 auto', width:'110px', height:'30px'}}>
                 <div style={{display:'inline-block', verticalAlign:'top'}}>
                     {homeScore}
@@ -77,9 +85,16 @@ class Result extends React.Component {
                     {awayScore}
                 </div>
             </div>
-            <p style={{margin:'5px', display:'inline-block', position: 'absolute', fontSize:'10px', fontWeight:'bold'}}>
-                {this.props.matchInfo['match_awayteam_name']}
-            </p>
+
+            {/* club icon and club name - home */}
+            <div style={{margin:'0px 5px', display:'inline-block', position: 'absolute', verticalAlign:'top'}}>
+                <p style={{margin:'5px', display:'inline-block', fontSize:'10px', fontWeight:'bold', verticalAlign:'top'}}>
+                    {this.props.matchInfo['match_awayteam_name']}
+                </p>
+                <div style={{margin:'0 5px', display:'inline-block', verticalAlign:'top'}}>
+                    <ClubIcon clubName={this.props.matchInfo['match_awayteam_name']} />
+                </div>
+            </div>
       </Paper>
     );
   }

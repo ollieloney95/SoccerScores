@@ -12,6 +12,7 @@ import ListItemText from '@material-ui/core/ListItemText';
 import InboxIcon from '@material-ui/icons/MoveToInbox';
 import DraftsIcon from '@material-ui/icons/Drafts';
 import StarIcon from '@material-ui/icons/Star';
+import Dehaze from '@material-ui/icons/Dehaze';
 import SendIcon from '@material-ui/icons/Send';
 import MailIcon from '@material-ui/icons/Mail';
 import DeleteIcon from '@material-ui/icons/Delete';
@@ -37,6 +38,19 @@ const favorites = (
             <StarIcon />
           </ListItemIcon>
           <ListItemText primary="Favorites"/>
+        </ListItem>
+    </Link>
+  </div>
+);
+
+const teams = (
+  <div>
+    <Link to="/TeamsPage">
+        <ListItem key={'fav'} button>
+          <ListItemIcon>
+            <Dehaze />
+          </ListItemIcon>
+          <ListItemText primary="All Teams"/>
         </ListItem>
     </Link>
   </div>
@@ -84,6 +98,8 @@ class SideBar extends React.Component {
 
                 <Paper>
                       <List>{favorites}</List>
+                      <Divider />
+                      <List>{teams}</List>
                       <Divider />
                       {tileDataCountry}
                       <Divider />

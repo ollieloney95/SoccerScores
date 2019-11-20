@@ -89,7 +89,7 @@ class TileDataCountry extends Component {
                         {console.log(league_id)}
                       <ListItem key={league_id} button>
                         <ListItemIcon>
-                          <LeagueIcon league_id={league_id} height='20px' width='20px'/>
+                          <LeagueIcon leagueName={league_name} height='20px' width='20px'/>
                         </ListItemIcon>
                         <ListItemText primary={league_name}/>
                       </ListItem>
