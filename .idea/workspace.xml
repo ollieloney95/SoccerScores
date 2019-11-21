@@ -2,109 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="877cc63c-ed97-4d4b-90a5-6aae4b812f1d" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/flask/apiFootballMiddle.py" beforeDir="false" afterPath="$PROJECT_DIR$/flask/apiFootballMiddle.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/flask/logs/middle.log" beforeDir="false" afterPath="$PROJECT_DIR$/flask/logs/middle.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/public/images/ClubLogos/England/Accrington Stanley.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/public/images/ClubLogos/England/Aldershot.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/public/images/ClubLogos/England/Arsenal.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/public/images/ClubLogos/England/Aston Villa.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/public/images/ClubLogos/England/Barnet.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/public/images/ClubLogos/England/Barnsley.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/public/images/ClubLogos/England/Birmingham City.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/public/images/ClubLogos/England/Blackburn Rovers.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/public/images/ClubLogos/England/Blackpool.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/public/images/ClubLogos/England/Bolton Wanderers.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/public/images/ClubLogos/England/Bournemouth.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/public/images/ClubLogos/England/Bradford.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/public/images/ClubLogos/England/Brentford.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/public/images/ClubLogos/England/Brighton.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/public/images/ClubLogos/England/Bristol City.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/public/images/ClubLogos/England/Bristol Rovers.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/public/images/ClubLogos/England/Burnley.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/public/images/ClubLogos/England/Burton Albion.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/public/images/ClubLogos/England/Bury.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/public/images/ClubLogos/England/Cardiff.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/public/images/ClubLogos/England/Carlisle.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/public/images/ClubLogos/England/Charlton.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/public/images/ClubLogos/England/Chelsea.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/public/images/ClubLogos/England/Cheltenham.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/public/images/ClubLogos/England/Chesterfield.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/public/images/ClubLogos/England/Colchester.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/public/images/ClubLogos/England/Coventry.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/public/images/ClubLogos/England/Crewe.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/public/images/ClubLogos/England/Crystal Palace.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/public/images/ClubLogos/England/Dag &amp; Red.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/public/images/ClubLogos/England/Darlington.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/public/images/ClubLogos/England/Derby County.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/public/images/ClubLogos/England/Doncaster.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/public/images/ClubLogos/England/Everton.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/public/images/ClubLogos/England/Exeter.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/public/images/ClubLogos/England/Fulham.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/public/images/ClubLogos/England/Gillingham.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/public/images/ClubLogos/England/Grimsby.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/public/images/ClubLogos/England/Hartlepool.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/public/images/ClubLogos/England/Hereford.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/public/images/ClubLogos/England/Huddersfield.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/public/images/ClubLogos/England/Hull City.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/public/images/ClubLogos/England/Ipswich Town.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/public/images/ClubLogos/England/Leeds United.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/public/images/ClubLogos/England/Leicester.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/public/images/ClubLogos/England/Leyton Orient.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/public/images/ClubLogos/England/Lincoln.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/public/images/ClubLogos/England/Liverpool.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/public/images/ClubLogos/England/MK Dons.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/public/images/ClubLogos/England/Macclesfield.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/public/images/ClubLogos/England/Man City.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/public/images/ClubLogos/England/Man Utd.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/public/images/ClubLogos/England/Middlesbrough.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/public/images/ClubLogos/England/Millwall.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/public/images/ClubLogos/England/Morecambe.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/public/images/ClubLogos/England/Newcastle.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/public/images/ClubLogos/England/Northampton.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/public/images/ClubLogos/England/Norwich City.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/public/images/ClubLogos/England/Nottingham Forest.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/public/images/ClubLogos/England/Notts Coutny.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/public/images/ClubLogos/England/Oldham.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/public/images/ClubLogos/England/Peterborough.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/public/images/ClubLogos/England/Plymouth.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/public/images/ClubLogos/England/Port Vale.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/public/images/ClubLogos/England/Portsmouth.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/public/images/ClubLogos/England/Preston North End.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/public/images/ClubLogos/England/Queens Park Rangers.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/public/images/ClubLogos/England/Reading.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/public/images/ClubLogos/England/Rochdale.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/public/images/ClubLogos/England/Rotherham United.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/public/images/ClubLogos/England/Scunthorpe.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/public/images/ClubLogos/England/Sheffield United.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/public/images/ClubLogos/England/Sheffield Wednesday.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/public/images/ClubLogos/England/Shrewsbury.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/public/images/ClubLogos/England/Southampton.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/public/images/ClubLogos/England/Southend.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/public/images/ClubLogos/England/Stockport.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/public/images/ClubLogos/England/Stoke City.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/public/images/ClubLogos/England/Sunderland.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/public/images/ClubLogos/England/Swansea City.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/public/images/ClubLogos/England/Swindon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/public/images/ClubLogos/England/Torquay.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/public/images/ClubLogos/England/Tottenham.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/public/images/ClubLogos/England/Tranmere.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/public/images/ClubLogos/England/Walsall.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/public/images/ClubLogos/England/Watford.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/public/images/ClubLogos/England/West Bromwich Albion.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/public/images/ClubLogos/England/West Ham.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/public/images/ClubLogos/England/Wigan Athletic.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/public/images/ClubLogos/England/Wolves.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/public/images/ClubLogos/England/Wycombe.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/public/images/ClubLogos/England/Yeovil.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/public/images/Leagues/Ligue2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/components/ClubIcon.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/ClubIcon.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/components/LeagueIcon.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/LeagueIcon.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/components/LeagueTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/LeagueTable.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/components/MatchInfoTabs.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/MatchInfoTabs.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/components/MatchOverview.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/MatchOverview.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/components/Result.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/Result.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/components/SideBar/SideBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/SideBar/SideBar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/components/SideBar/TileDataCountry.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/SideBar/TileDataCountry.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flask/logs/server.log" beforeDir="false" afterPath="$PROJECT_DIR$/flask/logs/server.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/pages/FixturesByDay.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/pages/FixturesByDay.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/pages/TeamsPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/pages/TeamsPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/working.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/working.ipynb" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -115,92 +20,91 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="CountryIcon.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/my-app/src/components/CountryIcon.js">
+      <file leaf-file-name="ResultsByDay.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/my-app/src/pages/ResultsByDay.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="20" column="45" selection-start-line="20" selection-start-column="45" selection-end-line="20" selection-end-column="45" />
+            <state relative-caret-position="30">
+              <caret line="2" column="19" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="19" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TileDataCountry.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/my-app/src/components/SideBar/TileDataCountry.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="265">
-              <caret line="91" column="48" selection-start-line="91" selection-start-column="38" selection-end-line="91" selection-end-column="48" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SideBar.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/my-app/src/components/SideBar/SideBar.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="337">
-              <caret line="51" column="25" lean-forward="true" selection-start-line="51" selection-start-column="25" selection-end-line="51" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ClubIcon.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/my-app/src/components/ClubIcon.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="24" lean-forward="true" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="App.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/my-app/src/App.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="840">
-              <caret line="56" column="59" selection-start-line="56" selection-start-column="59" selection-end-line="56" selection-end-column="59" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MatchOverview.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/my-app/src/components/MatchOverview.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="343">
-              <caret line="40" column="22" lean-forward="true" selection-start-line="40" selection-start-column="22" selection-end-line="40" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Favorite.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/my-app/src/components/Favorite.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="12" lean-forward="true" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FavoritesPage.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/my-app/src/pages/FavoritesPage.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="508">
-              <caret line="45" lean-forward="true" selection-start-line="45" selection-end-line="45" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TeamsPage.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="TeamsPage.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/my-app/src/pages/TeamsPage.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="12" lean-forward="true" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
+            <state relative-caret-position="178">
+              <caret line="124" lean-forward="true" selection-start-line="124" selection-end-line="124" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LeagueIcon.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/my-app/src/components/LeagueIcon.js">
+      <file leaf-file-name="apiFootballMiddle.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/flask/apiFootballMiddle.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+            <state relative-caret-position="294">
+              <caret line="344" column="73" lean-forward="true" selection-start-line="344" selection-start-column="73" selection-end-line="344" selection-end-column="73" />
+              <folding>
+                <element signature="e#0#19#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Page1.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/my-app/src/pages/Page1.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" selection-start-line="2" selection-end-line="2" selection-end-column="44" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="package-lock.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/package-lock.json">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/my-app/package.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="405">
+              <caret line="27" column="24" selection-start-line="27" selection-start-column="24" selection-end-line="27" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MatchPage.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/my-app/src/pages/MatchPage.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="265">
+              <caret line="25" column="144" selection-start-line="25" selection-start-column="144" selection-end-line="25" selection-end-column="144" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MatchesByDay.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/my-app/src/components/MatchesByDay.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" column="18" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FixturesByDay.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/my-app/src/pages/FixturesByDay.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="14" column="4" lean-forward="true" selection-start-line="14" selection-start-column="4" selection-end-line="16" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HomePage.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/my-app/src/pages/HomePage.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="10" column="23" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -216,9 +120,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>f['match_date'] = [d.timestamp() for d in d</find>
-      <find>console.log</find>
-      <find>k</find>
       <find>FullPitch</find>
       <find>Lineup</find>
       <find>style</find>
@@ -246,6 +147,9 @@
       <find>LeagueIcon</find>
       <find>favorites</find>
       <find>StarIcon</find>
+      <find>matches</find>
+      <find>matchesByDay</find>
+      <find>fixturesByDay</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/my-app/src</dir>
@@ -277,7 +181,6 @@
         <option value="$PROJECT_DIR$/my-app/src/pages/FixturesPage.js" />
         <option value="$PROJECT_DIR$/my-app/src/pages/ResultsPage.js" />
         <option value="$PROJECT_DIR$/my-app/src/pages/MatchesByDay.js" />
-        <option value="$PROJECT_DIR$/my-app/src/pages/FixturesByDay.js" />
         <option value="$PROJECT_DIR$/my-app/src/pages/ResultsByDay.js" />
         <option value="$PROJECT_DIR$/my-app/src/pages/LeagueTablePage.js" />
         <option value="$PROJECT_DIR$/my-app/src/components/Fixture.js" />
@@ -292,7 +195,6 @@
         <option value="$PROJECT_DIR$/flask/server.py" />
         <option value="$PROJECT_DIR$/flask/config.py" />
         <option value="$PROJECT_DIR$/my-app/src/components/CountryIcon.js" />
-        <option value="$PROJECT_DIR$/flask/apiFootballMiddle.py" />
         <option value="$PROJECT_DIR$/my-app/src/components/PlayerShirt.js" />
         <option value="$PROJECT_DIR$/my-app/src/components/Lineup.js" />
         <option value="$PROJECT_DIR$/my-app/src/components/FullPitch.js" />
@@ -305,9 +207,11 @@
         <option value="$PROJECT_DIR$/my-app/src/components/SideBar/TileDataCountry.js" />
         <option value="$PROJECT_DIR$/my-app/src/components/LeagueIcon.js" />
         <option value="$PROJECT_DIR$/my-app/src/components/MatchOverview.js" />
-        <option value="$PROJECT_DIR$/my-app/src/pages/TeamsPage.js" />
         <option value="$PROJECT_DIR$/my-app/src/App.js" />
         <option value="$PROJECT_DIR$/my-app/src/components/SideBar/SideBar.js" />
+        <option value="$PROJECT_DIR$/my-app/src/pages/FixturesByDay.js" />
+        <option value="$PROJECT_DIR$/flask/apiFootballMiddle.py" />
+        <option value="$PROJECT_DIR$/my-app/src/pages/TeamsPage.js" />
       </list>
     </option>
   </component>
@@ -343,21 +247,6 @@
               <item name="SoccerScores" type="462c0819:PsiDirectoryNode" />
               <item name="my-app" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SoccerScores" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SoccerScores" type="462c0819:PsiDirectoryNode" />
-              <item name="my-app" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SoccerScores" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SoccerScores" type="462c0819:PsiDirectoryNode" />
-              <item name="my-app" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="SideBar" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SoccerScores" type="b2602c69:ProjectViewProjectNode" />
@@ -527,14 +416,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/my-app/src/index.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="26" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/my-app/src/components/PopUp.js" />
     <entry file="file://$PROJECT_DIR$/my-app/src/pages/account/CreateAccount.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -570,13 +451,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/my-app/src/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/my-app/src/utils/AGGridUtils.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -601,22 +475,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/my-app/src/pages/Page1.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" selection-start-line="4" selection-end-line="4" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/my-app/src/pages/ResultsPage.js" />
     <entry file="file://$PROJECT_DIR$/my-app/src/pages/FixturesPage.js" />
-    <entry file="file://$PROJECT_DIR$/my-app/src/pages/FixturesByDay.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="585">
-          <caret line="39" column="39" selection-start-line="39" selection-start-column="29" selection-end-line="39" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/my-app/public/images/ball.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -626,21 +486,7 @@
     <entry file="file://$PROJECT_DIR$/my-app/public/images/bannerFootball.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/my-app/src/pages/ResultsByDay.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="19" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/my-app/src/components/Fixture.js" />
-    <entry file="file://$PROJECT_DIR$/my-app/src/pages/HomePage.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="23" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/my-app/src/components/ScoreIcon.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -669,24 +515,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/my-app/src/pages/MatchPage.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="341">
-          <caret line="24" column="4" selection-start-line="24" selection-start-column="4" selection-end-line="34" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/flask/config.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="11" column="16" selection-start-line="11" selection-end-line="11" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/flask/apiFootballMiddle.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="25" column="51" selection-start-line="25" selection-start-column="51" selection-end-line="25" selection-end-column="51" />
         </state>
       </provider>
     </entry>
@@ -729,13 +561,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="20" column="12" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/my-app/src/components/MatchesByDay.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="5" selection-start-line="5" selection-end-line="5" selection-end-column="35" />
         </state>
       </provider>
     </entry>
@@ -784,14 +609,14 @@
     <entry file="file://$PROJECT_DIR$/my-app/src/components/LeagueIcon.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
-          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/my-app/src/components/MatchOverview.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="343">
-          <caret line="40" column="22" lean-forward="true" selection-start-line="40" selection-start-column="22" selection-end-line="40" selection-end-column="22" />
+          <caret line="40" column="22" selection-start-line="40" selection-start-column="22" selection-end-line="40" selection-end-column="22" />
         </state>
       </provider>
     </entry>
@@ -805,28 +630,21 @@
     <entry file="file://$PROJECT_DIR$/my-app/src/components/Favorite.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
-          <caret line="19" column="12" lean-forward="true" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
+          <caret line="19" column="12" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/my-app/src/pages/FavoritesPage.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="508">
-          <caret line="45" lean-forward="true" selection-start-line="45" selection-end-line="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/my-app/src/pages/TeamsPage.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="12" lean-forward="true" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
+          <caret line="45" selection-start-line="45" selection-end-line="45" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/my-app/src/components/ClubIcon.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
-          <caret line="15" column="24" lean-forward="true" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
+          <caret line="15" column="24" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
         </state>
       </provider>
     </entry>
@@ -839,8 +657,84 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/my-app/src/components/SideBar/SideBar.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="337">
-          <caret line="51" column="25" lean-forward="true" selection-start-line="51" selection-start-column="25" selection-end-line="51" selection-end-column="25" />
+        <state relative-caret-position="705">
+          <caret line="47" column="26" selection-start-line="47" selection-start-column="26" selection-end-line="47" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-app/src/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package-lock.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-app/src/pages/MatchPage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="265">
+          <caret line="25" column="144" selection-start-line="25" selection-start-column="144" selection-end-line="25" selection-end-column="144" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-app/src/components/MatchesByDay.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="18" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-app/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" column="24" selection-start-line="27" selection-start-column="24" selection-end-line="27" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-app/src/pages/ResultsByDay.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="19" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-app/src/pages/Page1.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" selection-start-line="2" selection-end-line="2" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-app/src/pages/HomePage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="23" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flask/apiFootballMiddle.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="344" column="73" lean-forward="true" selection-start-line="344" selection-start-column="73" selection-end-line="344" selection-end-column="73" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-app/src/pages/FixturesByDay.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="4" lean-forward="true" selection-start-line="14" selection-start-column="4" selection-end-line="16" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-app/src/pages/TeamsPage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="124" lean-forward="true" selection-start-line="124" selection-end-line="124" />
         </state>
       </provider>
     </entry>

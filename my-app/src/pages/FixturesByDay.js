@@ -50,6 +50,9 @@ export default class ResultsByDay extends React.Component {
     }
 
   render() {
+    if(!this.state.fixturesByDay){
+        return(<div></div>)
+    }
     return (
       <div>
             <MatchesByDay matchesByDay={this.state.fixturesByDay} sortAscending={false}/>

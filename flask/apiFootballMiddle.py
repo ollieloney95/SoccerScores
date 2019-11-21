@@ -352,6 +352,18 @@ def get_match(match_id):
     return jsonify(match_info)
 
 
+@app.route('/get_all_teams/', methods=['GET'])
+def get_all_teams():
+    league_ids = list(db_con.get_league_db()['league_id'])
+    team_list = []
+    for league_id in league_ids:
+        df = db_con.get_league_db_standings(league_id)[['team_name', 'team_id']]
+        df['league_id'] = league_id
+        team_list.extend(df.to_dict('records'))
+    return jsonify(team_list)
+
+
+
 if __name__ == '__main__':
     import logging
 
