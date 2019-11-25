@@ -5,7 +5,7 @@ import TextField from '@material-ui/core/TextField';
 import Paper from '@material-ui/core/Paper';
 
 
-export default class TeamsPage extends React.Component {
+export default class TeamPage extends React.Component {
 
     constructor(props) {
         super(props);
@@ -27,12 +27,7 @@ export default class TeamsPage extends React.Component {
                 'Content-Type': 'application/json',
               }})
               .then(response => response.json())
-              .then(data => {this.format_team_data(data)});
-    }
-
-    format_team_data = (data) => {
-        console.log('data', data)
-        this.setState({teams:data})
+              .then(data => {console.log(data)});
     }
 
 
@@ -40,17 +35,8 @@ export default class TeamsPage extends React.Component {
     return (
       <Paper>
          <b>
-            Search teams...
+            Team
          </b>
-         <Autocomplete
-               options={this.state.teams}
-               getOptionLabel={option => option.team_name}
-               style={{margin:'20px auto', width: 300 }}
-               renderInput={params => (
-                 <TextField {...params} label="Select Team" variant="outlined" fullWidth />
-               )}
-             />
-
       </Paper>
     );
   }

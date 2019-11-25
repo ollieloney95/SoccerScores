@@ -1,17 +1,18 @@
 INFO:root:getting db at /Users/ollieloney/SoccerScores/databases/leagues_db.csv from disk
-ERROR:root:error in getting db at /Users/ollieloney/SoccerScores/databases/leagues_db.csv error is parser_f() got an unexpected keyword argument 'index'
+INFO:root:getting db at /Users/ollieloney/SoccerScores/databases/events_db.csv from disk
+INFO:root:getting db at /Users/ollieloney/SoccerScores/databases/league_standings_149.csv from disk
+INFO:root:getting db at /Users/ollieloney/SoccerScores/databases/league_standings_177.csv from disk
 INFO:root:in update_events_from_fetch data is stale
-INFO:root:fetch for https://apiv2.apifootball.com/?action=get_events&from=2019-11-07&to=2019-12-05&APIkey=9fe5c8415f9eda3d0abd11d51578518d6a7c48d172f82abed46bf5bd9fe2479f
+INFO:root:fetch for https://apiv2.apifootball.com/?action=get_events&from=2019-11-11&to=2019-12-09&APIkey=9fe5c8415f9eda3d0abd11d51578518d6a7c48d172f82abed46bf5bd9fe2479f
 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): apiv2.apifootball.com:443
-DEBUG:urllib3.connectionpool:https://apiv2.apifootball.com:443 "GET /?action=get_events&from=2019-11-07&to=2019-12-05&APIkey=9fe5c8415f9eda3d0abd11d51578518d6a7c48d172f82abed46bf5bd9fe2479f HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://apiv2.apifootball.com:443 "GET /?action=get_events&from=2019-11-11&to=2019-12-09&APIkey=9fe5c8415f9eda3d0abd11d51578518d6a7c48d172f82abed46bf5bd9fe2479f HTTP/1.1" 200 None
 INFO:root:writing db to fisk at /Users/ollieloney/SoccerScores/databases/events_db.csv
-INFO:root:here leagues_db tpe is <class 'pandas.core.frame.DataFrame'>
+ERROR:root:error in write_db_to_disk to_csv() got an unexpected keyword argument 'dtype'
 INFO:root:in update_leagues_db_from_fetch data is stale
 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): apiv2.apifootball.com:443
 DEBUG:urllib3.connectionpool:https://apiv2.apifootball.com:443 "GET /?action=get_leagues&APIkey=9fe5c8415f9eda3d0abd11d51578518d6a7c48d172f82abed46bf5bd9fe2479f HTTP/1.1" 200 237
-INFO:root:here tpe is <class 'pandas.core.frame.DataFrame'>
-INFO:root:here2 tpe is <class 'pandas.core.frame.DataFrame'>
 INFO:root:writing db to fisk at /Users/ollieloney/SoccerScores/databases/leagues_db.csv
+ERROR:root:error in write_db_to_disk to_csv() got an unexpected keyword argument 'dtype'
 INFO:root:updating league 149 from fetch
 INFO:root:in update_league_db_standings_from_fetch data is stale
 INFO:root:fetching from path: https://apiv2.apifootball.com/?action=get_standings&league_id=149&APIkey=9fe5c8415f9eda3d0abd11d51578518d6a7c48d172f82abed46bf5bd9fe2479f
@@ -19,6 +20,7 @@ DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): apiv2.apifootbal
 DEBUG:urllib3.connectionpool:https://apiv2.apifootball.com:443 "GET /?action=get_standings&league_id=149&APIkey=9fe5c8415f9eda3d0abd11d51578518d6a7c48d172f82abed46bf5bd9fe2479f HTTP/1.1" 200 None
 INFO:root:changed league_db_standings from the fetch for 149
 INFO:root:writing db to fisk at /Users/ollieloney/SoccerScores/databases/league_standings_149.csv
+ERROR:root:error in write_db_to_disk to_csv() got an unexpected keyword argument 'dtype'
 INFO:root:updating league 177 from fetch
 INFO:root:in update_league_db_standings_from_fetch data is stale
 INFO:root:fetching from path: https://apiv2.apifootball.com/?action=get_standings&league_id=177&APIkey=9fe5c8415f9eda3d0abd11d51578518d6a7c48d172f82abed46bf5bd9fe2479f
@@ -26,117 +28,5 @@ DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): apiv2.apifootbal
 DEBUG:urllib3.connectionpool:https://apiv2.apifootball.com:443 "GET /?action=get_standings&league_id=177&APIkey=9fe5c8415f9eda3d0abd11d51578518d6a7c48d172f82abed46bf5bd9fe2479f HTTP/1.1" 200 None
 INFO:root:changed league_db_standings from the fetch for 177
 INFO:root:writing db to fisk at /Users/ollieloney/SoccerScores/databases/league_standings_177.csv
+ERROR:root:error in write_db_to_disk to_csv() got an unexpected keyword argument 'dtype'
 INFO:werkzeug: * Running on http://0.0.0.0:5001/ (Press CTRL+C to quit)
-INFO:werkzeug:127.0.0.1 - - [21/Nov/2019 21:30:29] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
-INFO:root:inside get_leagues
-INFO:root:here leagues_db tpe is <class 'pandas.core.frame.DataFrame'>
-INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [21/Nov/2019 21:30:30] "GET /get_sidebar_info/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [21/Nov/2019 21:30:30] "OPTIONS /get_name_from_country_id/41/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [21/Nov/2019 21:30:30] "OPTIONS /get_name_from_country_id/46/ HTTP/1.1" 200 -
-INFO:root:here leagues_db tpe is <class 'pandas.core.frame.DataFrame'>
-INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:root:country name: England
-INFO:werkzeug:127.0.0.1 - - [21/Nov/2019 21:30:30] "GET /get_name_from_country_id/41/ HTTP/1.1" 200 -
-INFO:root:here leagues_db tpe is <class 'pandas.core.frame.DataFrame'>
-INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:root:country name: France
-INFO:werkzeug:127.0.0.1 - - [21/Nov/2019 21:30:30] "GET /get_name_from_country_id/46/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [21/Nov/2019 21:31:05] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [21/Nov/2019 21:31:05] "OPTIONS /get_all_teams/ HTTP/1.1" 200 -
-INFO:root:inside get_leagues
-INFO:root:here leagues_db tpe is <class 'pandas.core.frame.DataFrame'>
-INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [21/Nov/2019 21:31:05] "GET /get_sidebar_info/ HTTP/1.1" 200 -
-INFO:root:here leagues_db tpe is <class 'pandas.core.frame.DataFrame'>
-INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:root:updating league 149 from fetch
-INFO:root:in update_league_db_standings_from_fetch and data is fresh
-INFO:root:updating league 177 from fetch
-INFO:root:in update_league_db_standings_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [21/Nov/2019 21:31:05] "GET /get_all_teams/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [21/Nov/2019 21:31:05] "OPTIONS /get_name_from_country_id/41/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [21/Nov/2019 21:31:05] "OPTIONS /get_name_from_country_id/46/ HTTP/1.1" 200 -
-INFO:root:here leagues_db tpe is <class 'pandas.core.frame.DataFrame'>
-INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:root:country name: England
-INFO:werkzeug:127.0.0.1 - - [21/Nov/2019 21:31:05] "GET /get_name_from_country_id/41/ HTTP/1.1" 200 -
-INFO:root:here leagues_db tpe is <class 'pandas.core.frame.DataFrame'>
-INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:root:country name: France
-INFO:werkzeug:127.0.0.1 - - [21/Nov/2019 21:31:05] "GET /get_name_from_country_id/46/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [21/Nov/2019 21:31:46] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [21/Nov/2019 21:31:46] "OPTIONS /get_all_teams/ HTTP/1.1" 200 -
-INFO:root:inside get_leagues
-INFO:root:here leagues_db tpe is <class 'pandas.core.frame.DataFrame'>
-INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [21/Nov/2019 21:31:46] "GET /get_sidebar_info/ HTTP/1.1" 200 -
-INFO:root:here leagues_db tpe is <class 'pandas.core.frame.DataFrame'>
-INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:root:updating league 149 from fetch
-INFO:root:in update_league_db_standings_from_fetch and data is fresh
-INFO:root:updating league 177 from fetch
-INFO:root:in update_league_db_standings_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [21/Nov/2019 21:31:46] "GET /get_all_teams/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [21/Nov/2019 21:31:46] "OPTIONS /get_name_from_country_id/41/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [21/Nov/2019 21:31:46] "OPTIONS /get_name_from_country_id/46/ HTTP/1.1" 200 -
-INFO:root:here leagues_db tpe is <class 'pandas.core.frame.DataFrame'>
-INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:root:country name: England
-INFO:werkzeug:127.0.0.1 - - [21/Nov/2019 21:31:46] "GET /get_name_from_country_id/41/ HTTP/1.1" 200 -
-INFO:root:here leagues_db tpe is <class 'pandas.core.frame.DataFrame'>
-INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:root:country name: France
-INFO:werkzeug:127.0.0.1 - - [21/Nov/2019 21:31:46] "GET /get_name_from_country_id/46/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [21/Nov/2019 21:32:54] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [21/Nov/2019 21:32:54] "OPTIONS /get_all_teams/ HTTP/1.1" 200 -
-INFO:root:inside get_leagues
-INFO:root:here leagues_db tpe is <class 'pandas.core.frame.DataFrame'>
-INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [21/Nov/2019 21:32:54] "GET /get_sidebar_info/ HTTP/1.1" 200 -
-INFO:root:here leagues_db tpe is <class 'pandas.core.frame.DataFrame'>
-INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:root:updating league 149 from fetch
-INFO:root:in update_league_db_standings_from_fetch and data is fresh
-INFO:root:updating league 177 from fetch
-INFO:root:in update_league_db_standings_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [21/Nov/2019 21:32:54] "GET /get_all_teams/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [21/Nov/2019 21:32:54] "OPTIONS /get_name_from_country_id/41/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [21/Nov/2019 21:32:55] "OPTIONS /get_name_from_country_id/46/ HTTP/1.1" 200 -
-INFO:root:here leagues_db tpe is <class 'pandas.core.frame.DataFrame'>
-INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:root:country name: England
-INFO:werkzeug:127.0.0.1 - - [21/Nov/2019 21:32:55] "GET /get_name_from_country_id/41/ HTTP/1.1" 200 -
-INFO:root:here leagues_db tpe is <class 'pandas.core.frame.DataFrame'>
-INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:root:country name: France
-INFO:werkzeug:127.0.0.1 - - [21/Nov/2019 21:32:55] "GET /get_name_from_country_id/46/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [21/Nov/2019 21:33:26] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [21/Nov/2019 21:33:26] "OPTIONS /get_all_teams/ HTTP/1.1" 200 -
-INFO:root:inside get_leagues
-INFO:root:here leagues_db tpe is <class 'pandas.core.frame.DataFrame'>
-INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [21/Nov/2019 21:33:26] "GET /get_sidebar_info/ HTTP/1.1" 200 -
-INFO:root:here leagues_db tpe is <class 'pandas.core.frame.DataFrame'>
-INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:root:updating league 149 from fetch
-INFO:root:in update_league_db_standings_from_fetch and data is fresh
-INFO:root:updating league 177 from fetch
-INFO:root:in update_league_db_standings_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [21/Nov/2019 21:33:26] "GET /get_all_teams/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [21/Nov/2019 21:33:26] "OPTIONS /get_name_from_country_id/41/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [21/Nov/2019 21:33:26] "OPTIONS /get_name_from_country_id/46/ HTTP/1.1" 200 -
-INFO:root:here leagues_db tpe is <class 'pandas.core.frame.DataFrame'>
-INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:root:country name: England
-INFO:werkzeug:127.0.0.1 - - [21/Nov/2019 21:33:26] "GET /get_name_from_country_id/41/ HTTP/1.1" 200 -
-INFO:root:here leagues_db tpe is <class 'pandas.core.frame.DataFrame'>
-INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:root:country name: France
-INFO:werkzeug:127.0.0.1 - - [21/Nov/2019 21:33:26] "GET /get_name_from_country_id/46/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [21/Nov/2019 21:34:23] "OPTIONS /get_league_standings_db/149 HTTP/1.1" 200 -
-INFO:root:updating league 149 from fetch
-INFO:root:in update_league_db_standings_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [21/Nov/2019 21:34:24] "GET /get_league_standings_db/149 HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [21/Nov/2019 21:34:25] "OPTIONS /get_fixtures/149 HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [21/Nov/2019 21:34:25] "GET /get_fixtures/149 HTTP/1.1" 200 -

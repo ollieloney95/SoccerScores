@@ -35,23 +35,23 @@ class DiskConnection:
         logging.info('writing db to fisk at {}'.format(path))
         try:
             with self.lock:
-                db.to_csv(path)
+                db.to_csv(path, index=False, dtype=str)
             return True
         except Exception as e:
             logging.error('error in write_db_to_disk {}'.format(e))
         return False
 
-    def read_db_from_disk(self, path, index=True):
+    def read_db_from_disk(self, path, index=None):
         """
         return df from disk via path
         """
         logging.info('getting db at {} from disk'.format(path))
         try:
             with self.lock:
-                df = pd.read_csv(path, index=index)
+                df = pd.read_csv(path, index_col=index, dtype=str)
             return df
         except Exception as e:
-            logging.error('error in getting db at {} error is {}'.format(path,e))
+            logging.error('error in getting db at {} error is {}'.format(path, e))
             return pd.DataFrame()
 
     def setup_all_league_standings_from_disk(self):
@@ -62,14 +62,14 @@ class DiskConnection:
         return False
 
     def setup_leagues_db_from_disk(self):
-        df = self.read_db_from_disk(self.config.path_leagues_db, False)
+        df = self.read_db_from_disk(self.config.path_leagues_db, index=None)
         if df.empty:
             return False
         self.leagues_db = df.astype({'country_id': 'int32', 'league_id':'int32'})
         return True
 
     def setup_events_db_from_disk(self):
-        df = self.read_db_from_disk(self.config.path_events_db)
+        df = self.read_db_from_disk(self.config.path_events_db, index=None)
         if df.empty:
             return False
         df = df.astype({'match_id': 'int32', 'country_id': 'int32', 'league_id':'int32'}).set_index('match_id', drop=False)
@@ -80,7 +80,7 @@ class DiskConnection:
 
     def setup_league_standings_db_from_disk(self, league_id):
         path = self.config.path_league_standings_stem + str(league_id) + ".csv"
-        df = self.read_db_from_disk(path)
+        df = self.read_db_from_disk(path, index=None)
         if df.empty:
             return False
         self.league_db_standings[league_id] = df
@@ -120,7 +120,6 @@ class HostConnection:
 
 
     def update_leagues_db_from_fetch(self, leagues_db):
-        logging.info('here leagues_db tpe is {}'.format(type(leagues_db)))
         # check if data is already fresh
         if self.is_data_fresh(0):
             logging.info('in update_leagues_db_from_fetch and data is fresh')
@@ -132,9 +131,7 @@ class HostConnection:
         try:
             response = requests.get(path)
             df = pd.DataFrame(response.json())
-            logging.info('here tpe is {}'.format(type(df)))
             leagues_db = df.combine_first(leagues_db)
-            logging.info('here2 tpe is {}'.format(type(leagues_db)))
             self.disk_connection.write_db_to_disk(self.config.path_leagues_db, leagues_db)
             self.update_last_refresh_times(0)
             leagues_db = leagues_db.astype({'country_id': 'int32', 'league_id':'int32'})
@@ -184,13 +181,13 @@ class HostConnection:
         try:
             response = requests.get(path)
             res = response.json()
-            df = pd.DataFrame(res)
+            league_db_standings[league_id] = pd.DataFrame(res)
             logging.info('changed league_db_standings from the fetch for {}'.format(league_id))
-            self.disk_connection.write_db_to_disk(self.config.path_league_standings_stem + str(league_id) + '.csv', df)
+            self.disk_connection.write_db_to_disk(self.config.path_league_standings_stem + str(league_id) + '.csv', league_db_standings[league_id])
             self.update_last_refresh_times(league_id)
         except Exception as e:
             logging.error('error in update_league_db_standings_from_fetch {}'.format(e))
-        return df
+        return league_db_standings[league_id]
 
     def _date_to_string(self, date):
         yyyy = str(date.year)
@@ -225,24 +222,21 @@ class DatabaseConnection:
         self.league_db_standings = self.host_connection.refresh_all_leagues_from_fetch(self.leagues_db, self.league_db_standings)
 
 
-    def get_events(self, league_id=None, date_from=None, date_to=None, match_id=None):
+    def get_events(self, league_id=None, date_from=None, date_to=None, match_id=None, team_name=None):
         df = self.events_db.copy()
         trues = np.array([True]*len(df))
 
         # apply filters
         match_id_filter = df.index == match_id if match_id else trues
+        team_name_filter = ((df['match_hometeam_name'] == team_name) | (df['match_awayteam_name'] == team_name)) if team_name else trues
         league_id_filter = df['league_id'] == league_id if league_id else trues
         date_from_filter = df['match_date'] > date_from.replace(hour=0, minute=0, second=0) if date_from else trues
         date_to_filter = df['match_date'] < date_to.replace(hour=23, minute=59, second=0) if date_to else trues
 
         # format the dataframe correctly
         df = df.replace(np.nan, '', regex=True)
-        df = df.loc[match_id_filter & league_id_filter & date_from_filter & date_to_filter]
+        df = df.loc[match_id_filter & league_id_filter & date_from_filter & date_to_filter & team_name_filter]
         df['match_date'] = [d.timestamp() for d in df['match_date']]
-        #df['lineup'] = [ast.literal_eval(d) for d in df['lineup']]
-        #df['cards'] = [ast.literal_eval(d) for d in df['cards']]
-        #df['goalscorer'] = [ast.literal_eval(d) for d in df['goalscorer']]
-        #df['statistics'] = [ast.literal_eval(d) for d in df['statistics']]
 
         return df.to_dict('index')
 
@@ -323,7 +317,6 @@ def get_name_from_country_id(country_id):
     country_id = int(country_id)
     df = db_con.get_league_db()
     if country_id in df['country_id'].values:
-        logging.info('country name: {}'.format(df.loc[df['country_id'] == country_id].iloc[0].country_name))
         return jsonify(df.loc[df['country_id'] == country_id].iloc[0].country_name)
     logging.warning('asked for country name for this country id but cant find them {}'.format(country_id))
     return jsonify('default')

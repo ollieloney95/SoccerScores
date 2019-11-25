@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="877cc63c-ed97-4d4b-90a5-6aae4b812f1d" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.ipynb_checkpoints/working-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/.ipynb_checkpoints/working-checkpoint.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/flask/apiFootballMiddle.py" beforeDir="false" afterPath="$PROJECT_DIR$/flask/apiFootballMiddle.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/flask/logs/middle.log" beforeDir="false" afterPath="$PROJECT_DIR$/flask/logs/middle.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flask/logs/server.log" beforeDir="false" afterPath="$PROJECT_DIR$/flask/logs/server.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/pages/FixturesByDay.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/pages/FixturesByDay.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-app/src/pages/TeamsPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/pages/TeamsPage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/working.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/working.ipynb" afterDir="false" />
     </list>
@@ -20,32 +18,60 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ResultsByDay.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/my-app/src/pages/ResultsByDay.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="19" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TeamsPage.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="TeamsPage.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/my-app/src/pages/TeamsPage.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="178">
-              <caret line="124" lean-forward="true" selection-start-line="124" selection-end-line="124" />
+            <state relative-caret-position="343">
+              <caret line="30" column="5" lean-forward="true" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="apiFootballMiddle.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="TeamPage.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/my-app/src/pages/TeamPage.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="20" column="22" lean-forward="true" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".env.production" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/my-app/.env.production">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name=".env.development" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/my-app/.env.development">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="apiFootballMiddle.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/flask/apiFootballMiddle.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
-              <caret line="344" column="73" lean-forward="true" selection-start-line="344" selection-start-column="73" selection-end-line="344" selection-end-column="73" />
+            <state relative-caret-position="277">
+              <caret line="238" column="32" lean-forward="true" selection-start-line="238" selection-start-column="32" selection-end-line="238" selection-end-column="32" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="config.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/flask/config.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="11" column="28" lean-forward="true" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="49" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MatchPage.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/my-app/src/pages/MatchPage.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="375">
+              <caret line="25" column="144" selection-start-line="25" selection-start-column="144" selection-end-line="25" selection-end-column="144" />
             </state>
           </provider>
         </entry>
@@ -59,43 +85,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="package-lock.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/package-lock.json">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/my-app/package.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="27" column="24" selection-start-line="27" selection-start-column="24" selection-end-line="27" selection-end-column="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MatchPage.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/my-app/src/pages/MatchPage.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="265">
-              <caret line="25" column="144" selection-start-line="25" selection-start-column="144" selection-end-line="25" selection-end-column="144" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MatchesByDay.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/my-app/src/components/MatchesByDay.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="18" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="FixturesByDay.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/my-app/src/pages/FixturesByDay.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="210">
-              <caret line="14" column="4" lean-forward="true" selection-start-line="14" selection-start-column="4" selection-end-line="16" selection-end-column="5" />
+              <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="16" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -120,27 +114,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>FullPitch</find>
-      <find>Lineup</find>
-      <find>style</find>
-      <find>requests.ge</find>
-      <find>path</find>
-      <find>setup_league_standings_db_from_disk</find>
-      <find>astype</find>
-      <find>fetch</find>
-      <find>none</find>
-      <find>league_db</find>
-      <find>update_leagues_db_from_fetch</find>
-      <find>get_league_db</find>
-      <find>get_dbs</find>
-      <find>write_db_to_disk</find>
-      <find>leagues_db</find>
-      <find>get_</find>
-      <find>print</find>
-      <find>awayScore</find>
-      <find>homeScore</find>
-      <find>events_to_components</find>
-      <find>format_events</find>
       <find>eventComponent</find>
       <find>EventDisplay</find>
       <find>ClubIcon</find>
@@ -150,6 +123,27 @@
       <find>matches</find>
       <find>matchesByDay</find>
       <find>fixturesByDay</find>
+      <find>update</find>
+      <find>fetch</find>
+      <find>update_leagues_db_from_fetch</find>
+      <find>get_sidebar_info</find>
+      <find>get_leagues</find>
+      <find>read_db_from_disk</find>
+      <find>league_db_standings</find>
+      <find>update_league_db_standings_from_fetch</find>
+      <find>logging.inf</find>
+      <find>league_db</find>
+      <find>league_db_standing</find>
+      <find>self.league_db_standings</find>
+      <find>get_dbs</find>
+      <find>setup_all_league_standings_from_disk</find>
+      <find>setup_league_standings_db_from_disk</find>
+      <find>refresh_all_leagues_from_fetch</find>
+      <find>from disk</find>
+      <find>self.league_db_stand</find>
+      <find>get_league_db_standings</find>
+      <find>to_csv</find>
+      <find>print</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/my-app/src</dir>
@@ -161,7 +155,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/my-app/src/components/SideBar/ClippedDrawer.js" />
         <option value="$PROJECT_DIR$/my-app/src/index.css" />
         <option value="$PROJECT_DIR$/my-app/public/index.html" />
         <option value="$PROJECT_DIR$/flask/utils.py" />
@@ -210,13 +203,14 @@
         <option value="$PROJECT_DIR$/my-app/src/App.js" />
         <option value="$PROJECT_DIR$/my-app/src/components/SideBar/SideBar.js" />
         <option value="$PROJECT_DIR$/my-app/src/pages/FixturesByDay.js" />
-        <option value="$PROJECT_DIR$/flask/apiFootballMiddle.py" />
         <option value="$PROJECT_DIR$/my-app/src/pages/TeamsPage.js" />
+        <option value="$PROJECT_DIR$/my-app/src/pages/TeamPage.js" />
+        <option value="$PROJECT_DIR$/flask/apiFootballMiddle.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="width" value="1440" />
+    <option name="width" value="714" />
     <option name="height" value="900" />
   </component>
   <component name="ProjectView">
@@ -224,7 +218,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="AndroidView" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -259,8 +255,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -272,18 +266,18 @@
     <property name="settings.editor.selected.configurable" value="configurable.group.language" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/my-app/src/components" />
+      <recent name="$PROJECT_DIR$/my-app/src/pages/account" />
+      <recent name="$PROJECT_DIR$/my-app/src/components/SideBar" />
+      <recent name="$PROJECT_DIR$/my-app/src" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/my-app/src/pages" />
       <recent name="$PROJECT_DIR$/my-app/src/components" />
       <recent name="$PROJECT_DIR$/my-app/src/configs" />
       <recent name="$PROJECT_DIR$/my-app" />
       <recent name="$PROJECT_DIR$/my-app/venv/flask" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/my-app/src/components" />
-      <recent name="$PROJECT_DIR$/my-app/src/pages/account" />
-      <recent name="$PROJECT_DIR$/my-app/src/components/SideBar" />
-      <recent name="$PROJECT_DIR$/my-app/src" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -365,8 +359,8 @@
       <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="3" />
-      <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
@@ -375,8 +369,8 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
       <window_info anchor="right" id="Theme Preview" order="3" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -388,14 +382,14 @@
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="right" id="Theme Preview" order="5" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27638888" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
@@ -416,27 +410,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/my-app/src/pages/account/CreateAccount.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="46" selection-start-line="5" selection-start-column="46" selection-end-line="5" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/my-app/src/pages/account/LoginPage.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="68" column="36" selection-start-line="68" selection-start-column="36" selection-end-line="68" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/my-app/node_modules/react-scripts/node_modules/dotenv/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="5" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/IdeaProjects/Working python/src/OliverLoney_question2.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
@@ -512,13 +485,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="317">
           <caret line="36" column="45" selection-start-line="36" selection-start-column="45" selection-end-line="36" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/flask/config.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="16" selection-start-line="11" selection-end-line="11" selection-end-column="16" />
         </state>
       </provider>
     </entry>
@@ -672,13 +638,6 @@
     <entry file="file://$PROJECT_DIR$/package-lock.json">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/my-app/src/pages/MatchPage.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="265">
-          <caret line="25" column="144" selection-start-line="25" selection-start-column="144" selection-end-line="25" selection-end-column="144" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/my-app/src/components/MatchesByDay.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -714,27 +673,54 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/flask/apiFootballMiddle.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="344" column="73" lean-forward="true" selection-start-line="344" selection-start-column="73" selection-end-line="344" selection-end-column="73" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/my-app/src/pages/FixturesByDay.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
-          <caret line="14" column="4" lean-forward="true" selection-start-line="14" selection-start-column="4" selection-end-line="16" selection-end-column="5" />
+          <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="16" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/my-app/src/pages/TeamsPage.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="178">
-          <caret line="124" lean-forward="true" selection-start-line="124" selection-end-line="124" />
+        <state relative-caret-position="343">
+          <caret line="30" column="5" lean-forward="true" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-app/src/pages/TeamPage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="22" lean-forward="true" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-app/.env.production">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-app/.env.development">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-app/src/pages/MatchPage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="144" selection-start-line="25" selection-start-column="144" selection-end-line="25" selection-end-column="144" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flask/config.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="28" lean-forward="true" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flask/apiFootballMiddle.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="277">
+          <caret line="238" column="32" lean-forward="true" selection-start-line="238" selection-start-column="32" selection-end-line="238" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
