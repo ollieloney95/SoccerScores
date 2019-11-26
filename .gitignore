@@ -1,4 +1,7 @@
 .gitignore
 *.log
+.DS_Store
+databases/.DS_Store
+.idea/workspace.xml
 /node_modules
 /databases

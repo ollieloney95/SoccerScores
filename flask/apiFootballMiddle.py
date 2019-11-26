@@ -7,6 +7,8 @@ from flask import jsonify
 from flask_cors import CORS
 import numpy as np
 import config
+import json
+
 
 app = Flask(__name__)
 CORS(app)
@@ -35,11 +37,19 @@ class DiskConnection:
         logging.info('writing db to fisk at {}'.format(path))
         try:
             with self.lock:
-                db.to_csv(path, index=False, dtype=str)
+                db.to_csv(path, index=False)
             return True
         except Exception as e:
             logging.error('error in write_db_to_disk {}'.format(e))
         return False
+
+    def _str_to_dict_for_col(self, df, col_name):
+        df[col_name] = [json.loads(s) for s in df[col_name]]
+        return df
+
+    def _dict_to_str_for_col(self, df, col_name):
+        df[col_name] = [json.dumps(d) for d in df[col_name]]
+        return df
 
     def read_db_from_disk(self, path, index=None):
         """
@@ -48,7 +58,7 @@ class DiskConnection:
         logging.info('getting db at {} from disk'.format(path))
         try:
             with self.lock:
-                df = pd.read_csv(path, index_col=index, dtype=str)
+                df = pd.read_csv(path, index_col=index, keep_default_na=False)
             return df
         except Exception as e:
             logging.error('error in getting db at {} error is {}'.format(path, e))
@@ -75,6 +85,14 @@ class DiskConnection:
         df = df.astype({'match_id': 'int32', 'country_id': 'int32', 'league_id':'int32'}).set_index('match_id', drop=False)
         df['match_id'] = df['match_id'].astype('int64')
         df['match_date'] = [datetime.strptime(d, '%Y-%m-%d') for d in df['match_date']]
+
+        # convert x columns to dicts
+        df = self._str_to_dict_for_col(df, 'cards')
+        df = self._str_to_dict_for_col(df, 'goalscorer')
+        df = self._str_to_dict_for_col(df, 'lineup')
+        df = self._str_to_dict_for_col(df, 'statistics')
+        df = self._str_to_dict_for_col(df, 'substitutions')
+
         self.events_db = df
         return True
 
@@ -159,7 +177,15 @@ class HostConnection:
             df['match_date'] = [datetime.strptime(d, '%Y-%m-%d') for d in df['match_date']]
             events_db = df.combine_first(events_db)
 
-            self.disk_connection.write_db_to_disk(self.config.path_events_db, events_db)
+            df = events_db.copy()
+            # convert x columns to strings for writing to disk
+            df = self.disk_connection._dict_to_str_for_col(df, 'cards')
+            df = self.disk_connection._dict_to_str_for_col(df, 'goalscorer')
+            df = self.disk_connection._dict_to_str_for_col(df, 'lineup')
+            df = self.disk_connection._dict_to_str_for_col(df, 'statistics')
+            df = self.disk_connection._dict_to_str_for_col(df, 'substitutions')
+
+            self.disk_connection.write_db_to_disk(self.config.path_events_db, df)
             self.update_last_refresh_times(1)
         except Exception as e:
             logging.error('error in update_events_from_fetch {}'.format(e))

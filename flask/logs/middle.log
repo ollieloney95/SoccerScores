@@ -3,30 +3,82 @@ INFO:root:getting db at /Users/ollieloney/SoccerScores/databases/events_db.csv f
 INFO:root:getting db at /Users/ollieloney/SoccerScores/databases/league_standings_149.csv from disk
 INFO:root:getting db at /Users/ollieloney/SoccerScores/databases/league_standings_177.csv from disk
 INFO:root:in update_events_from_fetch data is stale
-INFO:root:fetch for https://apiv2.apifootball.com/?action=get_events&from=2019-11-11&to=2019-12-09&APIkey=9fe5c8415f9eda3d0abd11d51578518d6a7c48d172f82abed46bf5bd9fe2479f
+INFO:root:fetch for https://apiv2.apifootball.com/?action=get_events&from=2019-11-12&to=2019-12-10&APIkey=9fe5c8415f9eda3d0abd11d51578518d6a7c48d172f82abed46bf5bd9fe2479f
 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): apiv2.apifootball.com:443
-DEBUG:urllib3.connectionpool:https://apiv2.apifootball.com:443 "GET /?action=get_events&from=2019-11-11&to=2019-12-09&APIkey=9fe5c8415f9eda3d0abd11d51578518d6a7c48d172f82abed46bf5bd9fe2479f HTTP/1.1" 200 None
-INFO:root:writing db to fisk at /Users/ollieloney/SoccerScores/databases/events_db.csv
-ERROR:root:error in write_db_to_disk to_csv() got an unexpected keyword argument 'dtype'
+ERROR:root:error in update_events_from_fetch HTTPSConnectionPool(host='apiv2.apifootball.com', port=443): Max retries exceeded with url: /?action=get_events&from=2019-11-12&to=2019-12-10&APIkey=9fe5c8415f9eda3d0abd11d51578518d6a7c48d172f82abed46bf5bd9fe2479f (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x111b48588>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known',))
 INFO:root:in update_leagues_db_from_fetch data is stale
 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): apiv2.apifootball.com:443
-DEBUG:urllib3.connectionpool:https://apiv2.apifootball.com:443 "GET /?action=get_leagues&APIkey=9fe5c8415f9eda3d0abd11d51578518d6a7c48d172f82abed46bf5bd9fe2479f HTTP/1.1" 200 237
-INFO:root:writing db to fisk at /Users/ollieloney/SoccerScores/databases/leagues_db.csv
-ERROR:root:error in write_db_to_disk to_csv() got an unexpected keyword argument 'dtype'
+ERROR:root:error in update_leagues_db_from_fetch HTTPSConnectionPool(host='apiv2.apifootball.com', port=443): Max retries exceeded with url: /?action=get_leagues&APIkey=9fe5c8415f9eda3d0abd11d51578518d6a7c48d172f82abed46bf5bd9fe2479f (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x111b48f28>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known',))
 INFO:root:updating league 149 from fetch
 INFO:root:in update_league_db_standings_from_fetch data is stale
 INFO:root:fetching from path: https://apiv2.apifootball.com/?action=get_standings&league_id=149&APIkey=9fe5c8415f9eda3d0abd11d51578518d6a7c48d172f82abed46bf5bd9fe2479f
 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): apiv2.apifootball.com:443
-DEBUG:urllib3.connectionpool:https://apiv2.apifootball.com:443 "GET /?action=get_standings&league_id=149&APIkey=9fe5c8415f9eda3d0abd11d51578518d6a7c48d172f82abed46bf5bd9fe2479f HTTP/1.1" 200 None
-INFO:root:changed league_db_standings from the fetch for 149
-INFO:root:writing db to fisk at /Users/ollieloney/SoccerScores/databases/league_standings_149.csv
-ERROR:root:error in write_db_to_disk to_csv() got an unexpected keyword argument 'dtype'
+ERROR:root:error in update_league_db_standings_from_fetch HTTPSConnectionPool(host='apiv2.apifootball.com', port=443): Max retries exceeded with url: /?action=get_standings&league_id=149&APIkey=9fe5c8415f9eda3d0abd11d51578518d6a7c48d172f82abed46bf5bd9fe2479f (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x111b485f8>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known',))
 INFO:root:updating league 177 from fetch
 INFO:root:in update_league_db_standings_from_fetch data is stale
 INFO:root:fetching from path: https://apiv2.apifootball.com/?action=get_standings&league_id=177&APIkey=9fe5c8415f9eda3d0abd11d51578518d6a7c48d172f82abed46bf5bd9fe2479f
 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): apiv2.apifootball.com:443
-DEBUG:urllib3.connectionpool:https://apiv2.apifootball.com:443 "GET /?action=get_standings&league_id=177&APIkey=9fe5c8415f9eda3d0abd11d51578518d6a7c48d172f82abed46bf5bd9fe2479f HTTP/1.1" 200 None
-INFO:root:changed league_db_standings from the fetch for 177
-INFO:root:writing db to fisk at /Users/ollieloney/SoccerScores/databases/league_standings_177.csv
-ERROR:root:error in write_db_to_disk to_csv() got an unexpected keyword argument 'dtype'
+ERROR:root:error in update_league_db_standings_from_fetch HTTPSConnectionPool(host='apiv2.apifootball.com', port=443): Max retries exceeded with url: /?action=get_standings&league_id=177&APIkey=9fe5c8415f9eda3d0abd11d51578518d6a7c48d172f82abed46bf5bd9fe2479f (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x111b48b38>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known',))
 INFO:werkzeug: * Running on http://0.0.0.0:5001/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 12:14:31] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 12:14:31] "OPTIONS /get_league_standings_db/149 HTTP/1.1" 200 -
+INFO:root:inside get_leagues
+INFO:root:in update_leagues_db_from_fetch data is stale
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): apiv2.apifootball.com:443
+ERROR:root:error in update_leagues_db_from_fetch HTTPSConnectionPool(host='apiv2.apifootball.com', port=443): Max retries exceeded with url: /?action=get_leagues&APIkey=9fe5c8415f9eda3d0abd11d51578518d6a7c48d172f82abed46bf5bd9fe2479f (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x10c145390>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known',))
+INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 12:14:32] "GET /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:root:updating league 149 from fetch
+INFO:root:in update_league_db_standings_from_fetch data is stale
+INFO:root:fetching from path: https://apiv2.apifootball.com/?action=get_standings&league_id=149&APIkey=9fe5c8415f9eda3d0abd11d51578518d6a7c48d172f82abed46bf5bd9fe2479f
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): apiv2.apifootball.com:443
+ERROR:root:error in update_league_db_standings_from_fetch HTTPSConnectionPool(host='apiv2.apifootball.com', port=443): Max retries exceeded with url: /?action=get_standings&league_id=149&APIkey=9fe5c8415f9eda3d0abd11d51578518d6a7c48d172f82abed46bf5bd9fe2479f (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x10c148320>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known',))
+INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 12:14:32] "GET /get_league_standings_db/149 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 12:14:32] "OPTIONS /get_name_from_country_id/41/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 12:14:32] "OPTIONS /get_name_from_country_id/46/ HTTP/1.1" 200 -
+INFO:root:in update_leagues_db_from_fetch data is stale
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): apiv2.apifootball.com:443
+ERROR:root:error in update_leagues_db_from_fetch HTTPSConnectionPool(host='apiv2.apifootball.com', port=443): Max retries exceeded with url: /?action=get_leagues&APIkey=9fe5c8415f9eda3d0abd11d51578518d6a7c48d172f82abed46bf5bd9fe2479f (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x10c1585c0>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known',))
+INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 12:14:32] "GET /get_name_from_country_id/41/ HTTP/1.1" 200 -
+INFO:root:in update_leagues_db_from_fetch data is stale
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): apiv2.apifootball.com:443
+ERROR:root:error in update_leagues_db_from_fetch HTTPSConnectionPool(host='apiv2.apifootball.com', port=443): Max retries exceeded with url: /?action=get_leagues&APIkey=9fe5c8415f9eda3d0abd11d51578518d6a7c48d172f82abed46bf5bd9fe2479f (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x10a5feeb8>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known',))
+INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 12:14:32] "GET /get_name_from_country_id/46/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 12:14:33] "OPTIONS /get_fixtures/149 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 12:14:33] "GET /get_fixtures/149 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 12:14:34] "OPTIONS /get_results/149 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 12:14:35] "GET /get_results/149 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 12:14:37] "OPTIONS /get_match/242313 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 12:14:37] "GET /get_match/242313 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 12:14:42] "OPTIONS /get_league_standings_db/177 HTTP/1.1" 200 -
+INFO:root:updating league 177 from fetch
+INFO:root:in update_league_db_standings_from_fetch data is stale
+INFO:root:fetching from path: https://apiv2.apifootball.com/?action=get_standings&league_id=177&APIkey=9fe5c8415f9eda3d0abd11d51578518d6a7c48d172f82abed46bf5bd9fe2479f
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): apiv2.apifootball.com:443
+ERROR:root:error in update_league_db_standings_from_fetch HTTPSConnectionPool(host='apiv2.apifootball.com', port=443): Max retries exceeded with url: /?action=get_standings&league_id=177&APIkey=9fe5c8415f9eda3d0abd11d51578518d6a7c48d172f82abed46bf5bd9fe2479f (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x10c148ac8>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known',))
+INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 12:14:42] "GET /get_league_standings_db/177 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 12:14:44] "OPTIONS /get_league_standings_db/149 HTTP/1.1" 200 -
+INFO:root:updating league 149 from fetch
+INFO:root:in update_league_db_standings_from_fetch data is stale
+INFO:root:fetching from path: https://apiv2.apifootball.com/?action=get_standings&league_id=149&APIkey=9fe5c8415f9eda3d0abd11d51578518d6a7c48d172f82abed46bf5bd9fe2479f
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): apiv2.apifootball.com:443
+ERROR:root:error in update_league_db_standings_from_fetch HTTPSConnectionPool(host='apiv2.apifootball.com', port=443): Max retries exceeded with url: /?action=get_standings&league_id=149&APIkey=9fe5c8415f9eda3d0abd11d51578518d6a7c48d172f82abed46bf5bd9fe2479f (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x10c15a208>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known',))
+INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 12:14:44] "GET /get_league_standings_db/149 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 12:14:49] "OPTIONS /get_fixtures/149 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 12:14:49] "GET /get_fixtures/149 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 12:14:50] "OPTIONS /get_results/149 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 12:14:50] "GET /get_results/149 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 12:14:52] "OPTIONS /get_all_teams/ HTTP/1.1" 200 -
+INFO:root:in update_leagues_db_from_fetch data is stale
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): apiv2.apifootball.com:443
+ERROR:root:error in update_leagues_db_from_fetch HTTPSConnectionPool(host='apiv2.apifootball.com', port=443): Max retries exceeded with url: /?action=get_leagues&APIkey=9fe5c8415f9eda3d0abd11d51578518d6a7c48d172f82abed46bf5bd9fe2479f (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x10c1487b8>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known',))
+INFO:root:updating league 149 from fetch
+INFO:root:in update_league_db_standings_from_fetch data is stale
+INFO:root:fetching from path: https://apiv2.apifootball.com/?action=get_standings&league_id=149&APIkey=9fe5c8415f9eda3d0abd11d51578518d6a7c48d172f82abed46bf5bd9fe2479f
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): apiv2.apifootball.com:443
+ERROR:root:error in update_league_db_standings_from_fetch HTTPSConnectionPool(host='apiv2.apifootball.com', port=443): Max retries exceeded with url: /?action=get_standings&league_id=149&APIkey=9fe5c8415f9eda3d0abd11d51578518d6a7c48d172f82abed46bf5bd9fe2479f (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x10c148470>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known',))
+INFO:root:updating league 177 from fetch
+INFO:root:in update_league_db_standings_from_fetch data is stale
+INFO:root:fetching from path: https://apiv2.apifootball.com/?action=get_standings&league_id=177&APIkey=9fe5c8415f9eda3d0abd11d51578518d6a7c48d172f82abed46bf5bd9fe2479f
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): apiv2.apifootball.com:443
+ERROR:root:error in update_league_db_standings_from_fetch HTTPSConnectionPool(host='apiv2.apifootball.com', port=443): Max retries exceeded with url: /?action=get_standings&league_id=177&APIkey=9fe5c8415f9eda3d0abd11d51578518d6a7c48d172f82abed46bf5bd9fe2479f (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x10c15ab38>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known',))
+INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 12:14:53] "GET /get_all_teams/ HTTP/1.1" 200 -
