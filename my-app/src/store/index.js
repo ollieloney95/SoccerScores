@@ -56,6 +56,10 @@ const reducer = (state = initialState, action) => {
             console.log("in store set match_id as: " + action.match_id)
             return Object.assign({}, state, {match_id: action.match_id});
 
+        case 'set_team':
+            console.log("in store set team as: " + action.teamName)
+            return Object.assign({}, state, {teamName: action.teamName});
+
         case 'logout':
             console.log("in store for logout: ")
             Object.assign({}, state, {username: null})

@@ -382,6 +382,29 @@ def get_all_teams():
     return jsonify(team_list)
 
 
+@app.route('/get_last_matches_for_team/<team_name>/', methods=['GET'])
+def get_last_matches_for_team(team_name):
+    N=5
+    matches = db_con.get_events(team_name=team_name, date_to=datetime.now() - timedelta(days=1))
+
+    match_summaries = []
+    for mid,match in matches.items():
+        home = match['match_hometeam_name'] == team_name
+        home_score = match['match_hometeam_score']
+        away_score = match['match_awayteam_score']
+        match_date = datetime.fromtimestamp(int(match['match_date']))
+        opponent = match['match_awayteam_name'] if home else match['match_hometeam_name']
+        match_summaries.append({'home':home,
+                                'home_score':home_score,
+                                'away_score':away_score,
+                                'match_date':match_date,
+                                'team_name':team_name,
+                                'opponent':opponent})
+
+    match_summaries.sort(key=lambda x:x['match_date'], reverse=True)
+    return jsonify(match_summaries[:min(N, len(match_summaries))])
+
+
 
 if __name__ == '__main__':
     import logging

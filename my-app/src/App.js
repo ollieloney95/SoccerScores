@@ -13,11 +13,11 @@ import LoginPage from 'pages/account/LoginPage'
 import CreateAccount from 'pages/account/CreateAccount'
 import MatchPage from 'pages/MatchPage'
 import TeamsPage from 'pages/TeamsPage'
+import TeamPage from 'pages/TeamPage'
 
 //redux imports
 import store from './store/'
 import { Provider } from 'react-redux'
-
 import { withStyles } from '@material-ui/core/styles';
 import 'styles/LeagueTableStyle.css'; // only needs to be imported once
 import 'styles/CustomExpansionPanelStyles.css';
@@ -55,6 +55,7 @@ class App extends Component {
                                 <Switch>
                                     <Route path="/Favorites" component={FavoritesPage}/>
                                     <Route path="/TeamsPage" component={TeamsPage}/>
+                                    <Route path="/TeamPage" component={TeamPage}/>
                                     <Route path="/LeagueInfo" component={LeaguePage}/>
                                     <Route path="/MatchInfo" component={MatchPage}/>
                                     <Route path="/" component={Page1} />

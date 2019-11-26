@@ -50,5 +50,5 @@ export default class ScoreIcon extends React.Component {
 ScoreIcon.propTypes = {
   score: PropTypes.number.isRequired,
   otherScore: PropTypes.number.isRequired,
-  matchFinished: PropTypes.string.isRequired,
+  matchFinished: PropTypes.bool.isRequired,
 };

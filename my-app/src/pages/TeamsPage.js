@@ -3,9 +3,11 @@ import PropTypes from 'prop-types';
 import Autocomplete from '@material-ui/lab/Autocomplete';
 import TextField from '@material-ui/core/TextField';
 import Paper from '@material-ui/core/Paper';
+import { connect, Provider } from 'react-redux';
+import { Redirect } from 'react-router';
 
 
-export default class TeamsPage extends React.Component {
+class TeamsPage extends React.Component {
 
     constructor(props) {
         super(props);
@@ -35,8 +37,17 @@ export default class TeamsPage extends React.Component {
         this.setState({teams:data})
     }
 
+    handleSelect = (e) => {
+       console.log('selected', e.target.textContent)
+       this.props.changeTeam(e.target.textContent)
+       this.setState({redirect:true})
+    }
+
 
   render() {
+    if(this.state.redirect){
+        return <Redirect push to="/TeamPage" />;
+    }
     return (
       <Paper>
          <b>
@@ -46,6 +57,7 @@ export default class TeamsPage extends React.Component {
                options={this.state.teams}
                getOptionLabel={option => option.team_name}
                style={{margin:'20px auto', width: 300 }}
+               onChange={this.handleSelect}
                renderInput={params => (
                  <TextField {...params} label="Select Team" variant="outlined" fullWidth />
                )}
@@ -55,3 +67,20 @@ export default class TeamsPage extends React.Component {
     );
   }
 }
+
+
+function mapDispatchToProps(dispatch) {
+    return {
+        changeTeam: (teamName) => {
+            console.log("setting global team as : ", teamName);
+            const action = { type: 'set_team', teamName: teamName};
+            dispatch(action);
+        }
+    }
+ }
+
+function mapStateToProps(store) {
+    return {store};
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(TeamsPage);

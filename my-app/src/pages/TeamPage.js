@@ -3,9 +3,12 @@ import PropTypes from 'prop-types';
 import Autocomplete from '@material-ui/lab/Autocomplete';
 import TextField from '@material-ui/core/TextField';
 import Paper from '@material-ui/core/Paper';
+import { connect, Provider } from 'react-redux';
+import { Redirect } from 'react-router';
+import PreviousResultsPanel from 'components/PreviousResultsPanel';
 
 
-export default class TeamPage extends React.Component {
+class TeamPage extends React.Component {
 
     constructor(props) {
         super(props);
@@ -15,7 +18,7 @@ export default class TeamPage extends React.Component {
     };
 
     componentWillMount(){
-        this.fetch_get_teams()
+        //this.fetch_get_teams()
     }
 
     fetch_get_teams(){
@@ -32,12 +35,28 @@ export default class TeamPage extends React.Component {
 
 
   render() {
+    if (!this.props.store.teamName) {
+        return <Redirect push to="/TeamsPage" />;
+    }
     return (
-      <Paper>
-         <b>
-            Team
-         </b>
-      </Paper>
+        <div>
+          <Paper>
+             <b>
+                {this.props.store.teamName}
+             </b>
+          </Paper>
+          <PreviousResultsPanel teamName={this.props.store.teamName} />
+        </div>
     );
   }
 }
+
+function mapDispatchToProps(dispatch) {
+        return {}
+     }
+
+function mapStateToProps(store) {
+    return {store};
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(TeamPage);
