@@ -405,6 +405,25 @@ def get_last_matches_for_team(team_name):
     return jsonify(match_summaries[:min(N, len(match_summaries))])
 
 
+@app.route('/get_team_info/<team_name>/', methods=['GET'])
+def get_team_info(team_name):
+    leagues = db_con.leagues_db
+    for league in leagues.itertuples():
+        league_standing = db_con.get_league_db_standings(league.league_id)
+        if team_name not in list(league_standing['team_name']):
+            continue
+        info_in_league = league_standing.loc[league_standing['team_name'] == team_name].iloc[0]
+        return jsonify({
+            'country_name': league.country_name,
+            'country_id': league.country_id,
+            'league_id': league.league_id,
+            'league_name': league.league_name,
+            'team_id': info_in_league.team_id,
+            'pos': info_in_league.overall_league_position
+        })
+    return jsonify({'no info for team': team_name})
+
+
 
 if __name__ == '__main__':
     import logging

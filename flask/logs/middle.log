@@ -3,9 +3,9 @@ INFO:root:getting db at /Users/ollieloney/SoccerScores/databases/events_db.csv f
 INFO:root:getting db at /Users/ollieloney/SoccerScores/databases/league_standings_149.csv from disk
 INFO:root:getting db at /Users/ollieloney/SoccerScores/databases/league_standings_177.csv from disk
 INFO:root:in update_events_from_fetch data is stale
-INFO:root:fetch for https://apiv2.apifootball.com/?action=get_events&from=2019-11-12&to=2019-12-10&APIkey=9fe5c8415f9eda3d0abd11d51578518d6a7c48d172f82abed46bf5bd9fe2479f
+INFO:root:fetch for https://apiv2.apifootball.com/?action=get_events&from=2019-11-13&to=2019-12-11&APIkey=9fe5c8415f9eda3d0abd11d51578518d6a7c48d172f82abed46bf5bd9fe2479f
 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): apiv2.apifootball.com:443
-DEBUG:urllib3.connectionpool:https://apiv2.apifootball.com:443 "GET /?action=get_events&from=2019-11-12&to=2019-12-10&APIkey=9fe5c8415f9eda3d0abd11d51578518d6a7c48d172f82abed46bf5bd9fe2479f HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://apiv2.apifootball.com:443 "GET /?action=get_events&from=2019-11-13&to=2019-12-11&APIkey=9fe5c8415f9eda3d0abd11d51578518d6a7c48d172f82abed46bf5bd9fe2479f HTTP/1.1" 200 None
 INFO:root:writing db to fisk at /Users/ollieloney/SoccerScores/databases/events_db.csv
 INFO:root:in update_leagues_db_from_fetch data is stale
 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): apiv2.apifootball.com:443
@@ -26,641 +26,1569 @@ DEBUG:urllib3.connectionpool:https://apiv2.apifootball.com:443 "GET /?action=get
 INFO:root:changed league_db_standings from the fetch for 177
 INFO:root:writing db to fisk at /Users/ollieloney/SoccerScores/databases/league_standings_177.csv
 INFO:werkzeug: * Running on http://0.0.0.0:5001/ (Press CTRL+C to quit)
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:30:30] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:30:30] "OPTIONS /get_last_matches_for_team/Nottingham/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:17:41] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:17:41] "OPTIONS /get_team_info/undefined/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:17:41] "OPTIONS /get_last_matches_for_team/Bristol%20City/ HTTP/1.1" 200 -
 INFO:root:inside get_leagues
 INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:30:31] "GET /get_sidebar_info/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:30:31] "GET /get_last_matches_for_team/Nottingham/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:30:31] "OPTIONS /get_name_from_country_id/41/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:30:31] "OPTIONS /get_name_from_country_id/46/ HTTP/1.1" 200 -
-INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:30:31] "GET /get_name_from_country_id/41/ HTTP/1.1" 200 -
-INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:30:31] "GET /get_name_from_country_id/46/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:30:56] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:30:56] "OPTIONS /get_last_matches_for_team/Nottingham/ HTTP/1.1" 200 -
-INFO:root:inside get_leagues
-INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:30:56] "GET /get_sidebar_info/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:30:56] "GET /get_last_matches_for_team/Nottingham/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:30:56] "OPTIONS /get_name_from_country_id/41/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:30:56] "OPTIONS /get_name_from_country_id/46/ HTTP/1.1" 200 -
-INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:30:56] "GET /get_name_from_country_id/41/ HTTP/1.1" 200 -
-INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:30:56] "GET /get_name_from_country_id/46/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:31:03] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:31:03] "OPTIONS /get_last_matches_for_team/Nottingham/ HTTP/1.1" 200 -
-INFO:root:inside get_leagues
-INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:31:04] "GET /get_sidebar_info/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:31:04] "GET /get_last_matches_for_team/Nottingham/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:31:04] "OPTIONS /get_name_from_country_id/41/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:31:04] "OPTIONS /get_name_from_country_id/46/ HTTP/1.1" 200 -
-INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:31:04] "GET /get_name_from_country_id/41/ HTTP/1.1" 200 -
-INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:31:04] "GET /get_name_from_country_id/46/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:31:16] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:31:16] "OPTIONS /get_last_matches_for_team/Nottingham/ HTTP/1.1" 200 -
-INFO:root:inside get_leagues
-INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:31:16] "GET /get_sidebar_info/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:31:16] "GET /get_last_matches_for_team/Nottingham/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:31:16] "OPTIONS /get_name_from_country_id/41/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:31:16] "OPTIONS /get_name_from_country_id/46/ HTTP/1.1" 200 -
-INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:31:17] "GET /get_name_from_country_id/41/ HTTP/1.1" 200 -
-INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:31:17] "GET /get_name_from_country_id/46/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:31:29] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:31:29] "OPTIONS /get_last_matches_for_team/Nottingham/ HTTP/1.1" 200 -
-INFO:root:inside get_leagues
-INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:31:29] "GET /get_sidebar_info/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:31:29] "GET /get_last_matches_for_team/Nottingham/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:31:29] "OPTIONS /get_name_from_country_id/41/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:31:29] "OPTIONS /get_name_from_country_id/46/ HTTP/1.1" 200 -
-INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:31:29] "GET /get_name_from_country_id/41/ HTTP/1.1" 200 -
-INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:31:29] "GET /get_name_from_country_id/46/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:33:22] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:33:22] "OPTIONS /get_last_matches_for_team/Nottingham/ HTTP/1.1" 200 -
-INFO:root:inside get_leagues
-INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:33:22] "GET /get_sidebar_info/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:33:22] "GET /get_last_matches_for_team/Nottingham/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:33:22] "OPTIONS /get_name_from_country_id/41/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:33:22] "OPTIONS /get_name_from_country_id/46/ HTTP/1.1" 200 -
-INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:33:22] "GET /get_name_from_country_id/41/ HTTP/1.1" 200 -
-INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:33:22] "GET /get_name_from_country_id/46/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:33:33] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:33:33] "OPTIONS /get_last_matches_for_team/Nottingham/ HTTP/1.1" 200 -
-INFO:root:inside get_leagues
-INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:33:33] "GET /get_sidebar_info/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:33:33] "GET /get_last_matches_for_team/Nottingham/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:33:33] "OPTIONS /get_name_from_country_id/41/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:33:33] "OPTIONS /get_name_from_country_id/46/ HTTP/1.1" 200 -
-INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:33:33] "GET /get_name_from_country_id/41/ HTTP/1.1" 200 -
-INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:33:33] "GET /get_name_from_country_id/46/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:34:03] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:34:03] "OPTIONS /get_last_matches_for_team/Nottingham/ HTTP/1.1" 200 -
-INFO:root:inside get_leagues
-INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:34:03] "GET /get_sidebar_info/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:34:03] "GET /get_last_matches_for_team/Nottingham/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:34:03] "OPTIONS /get_name_from_country_id/41/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:34:03] "OPTIONS /get_name_from_country_id/46/ HTTP/1.1" 200 -
-INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:34:04] "GET /get_name_from_country_id/41/ HTTP/1.1" 200 -
-INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:34:04] "GET /get_name_from_country_id/46/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:34:21] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:34:21] "OPTIONS /get_last_matches_for_team/Nottingham/ HTTP/1.1" 200 -
-INFO:root:inside get_leagues
-INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:34:21] "GET /get_sidebar_info/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:34:21] "GET /get_last_matches_for_team/Nottingham/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:34:21] "OPTIONS /get_name_from_country_id/41/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:34:21] "OPTIONS /get_name_from_country_id/46/ HTTP/1.1" 200 -
-INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:34:21] "GET /get_name_from_country_id/41/ HTTP/1.1" 200 -
-INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:34:21] "GET /get_name_from_country_id/46/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:34:27] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:34:27] "OPTIONS /get_last_matches_for_team/Nottingham/ HTTP/1.1" 200 -
-INFO:root:inside get_leagues
-INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:34:27] "GET /get_sidebar_info/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:34:27] "GET /get_last_matches_for_team/Nottingham/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:34:27] "OPTIONS /get_name_from_country_id/41/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:34:27] "OPTIONS /get_name_from_country_id/46/ HTTP/1.1" 200 -
-INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:34:27] "GET /get_name_from_country_id/41/ HTTP/1.1" 200 -
-INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:34:27] "GET /get_name_from_country_id/46/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:34:59] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:34:59] "OPTIONS /get_last_matches_for_team/Nottingham/ HTTP/1.1" 200 -
-INFO:root:inside get_leagues
-INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:34:59] "GET /get_sidebar_info/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:34:59] "GET /get_last_matches_for_team/Nottingham/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:34:59] "OPTIONS /get_name_from_country_id/41/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:34:59] "OPTIONS /get_name_from_country_id/46/ HTTP/1.1" 200 -
-INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:34:59] "GET /get_name_from_country_id/41/ HTTP/1.1" 200 -
-INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:34:59] "GET /get_name_from_country_id/46/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:45:31] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:45:31] "OPTIONS /get_last_matches_for_team/Nottingham/ HTTP/1.1" 200 -
-INFO:root:inside get_leagues
-INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:45:31] "GET /get_sidebar_info/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:45:32] "GET /get_last_matches_for_team/Nottingham/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:45:32] "OPTIONS /get_name_from_country_id/41/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:45:32] "OPTIONS /get_name_from_country_id/46/ HTTP/1.1" 200 -
-INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:45:32] "GET /get_name_from_country_id/41/ HTTP/1.1" 200 -
-INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:45:32] "GET /get_name_from_country_id/46/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:50:32] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:50:32] "OPTIONS /get_last_matches_for_team/Nottingham/ HTTP/1.1" 200 -
-INFO:root:inside get_leagues
-INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:50:32] "GET /get_sidebar_info/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:50:32] "GET /get_last_matches_for_team/Nottingham/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:50:33] "OPTIONS /get_name_from_country_id/41/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:50:33] "OPTIONS /get_name_from_country_id/46/ HTTP/1.1" 200 -
-INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:50:33] "GET /get_name_from_country_id/41/ HTTP/1.1" 200 -
-INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:50:33] "GET /get_name_from_country_id/46/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:51:52] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:51:52] "OPTIONS /get_last_matches_for_team/Nottingham/ HTTP/1.1" 200 -
-INFO:root:inside get_leagues
-INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:51:52] "GET /get_sidebar_info/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:51:52] "GET /get_last_matches_for_team/Nottingham/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:51:53] "OPTIONS /get_name_from_country_id/41/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:51:53] "OPTIONS /get_name_from_country_id/46/ HTTP/1.1" 200 -
-INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:51:53] "GET /get_name_from_country_id/41/ HTTP/1.1" 200 -
-INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:51:53] "GET /get_name_from_country_id/46/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:52:20] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:52:20] "OPTIONS /get_last_matches_for_team/Nottingham/ HTTP/1.1" 200 -
-INFO:root:inside get_leagues
-INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:52:20] "GET /get_sidebar_info/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:52:20] "GET /get_last_matches_for_team/Nottingham/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:52:21] "OPTIONS /get_name_from_country_id/41/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:52:21] "OPTIONS /get_name_from_country_id/46/ HTTP/1.1" 200 -
-INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:52:21] "GET /get_name_from_country_id/41/ HTTP/1.1" 200 -
-INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:52:21] "GET /get_name_from_country_id/46/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:52:33] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:52:33] "OPTIONS /get_last_matches_for_team/Nottingham/ HTTP/1.1" 200 -
-INFO:root:inside get_leagues
-INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:52:33] "GET /get_sidebar_info/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:52:33] "GET /get_last_matches_for_team/Nottingham/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:52:34] "OPTIONS /get_name_from_country_id/41/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:52:34] "OPTIONS /get_name_from_country_id/46/ HTTP/1.1" 200 -
-INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:52:34] "GET /get_name_from_country_id/41/ HTTP/1.1" 200 -
-INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:52:34] "GET /get_name_from_country_id/46/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:52:41] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:52:41] "OPTIONS /get_last_matches_for_team/Nottingham/ HTTP/1.1" 200 -
-INFO:root:inside get_leagues
-INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:52:41] "GET /get_sidebar_info/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:52:41] "GET /get_last_matches_for_team/Nottingham/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:52:41] "OPTIONS /get_name_from_country_id/41/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:52:41] "OPTIONS /get_name_from_country_id/46/ HTTP/1.1" 200 -
-INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:52:41] "GET /get_name_from_country_id/41/ HTTP/1.1" 200 -
-INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:52:41] "GET /get_name_from_country_id/46/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:52:54] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:52:54] "OPTIONS /get_last_matches_for_team/Nottingham/ HTTP/1.1" 200 -
-INFO:root:inside get_leagues
-INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:52:54] "GET /get_sidebar_info/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:52:54] "GET /get_last_matches_for_team/Nottingham/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:52:54] "OPTIONS /get_name_from_country_id/41/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:52:54] "OPTIONS /get_name_from_country_id/46/ HTTP/1.1" 200 -
-INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:52:54] "GET /get_name_from_country_id/41/ HTTP/1.1" 200 -
-INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:52:54] "GET /get_name_from_country_id/46/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:54:31] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:54:31] "OPTIONS /get_last_matches_for_team/Nottingham/ HTTP/1.1" 200 -
-INFO:root:inside get_leagues
-INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:54:31] "GET /get_sidebar_info/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:54:31] "GET /get_last_matches_for_team/Nottingham/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:54:31] "OPTIONS /get_name_from_country_id/41/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:54:31] "OPTIONS /get_name_from_country_id/46/ HTTP/1.1" 200 -
-INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:54:31] "GET /get_name_from_country_id/41/ HTTP/1.1" 200 -
-INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:54:31] "GET /get_name_from_country_id/46/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:54:38] "OPTIONS /get_league_standings_db/149 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:17:42] "GET /get_sidebar_info/ HTTP/1.1" 200 -
 INFO:root:updating league 149 from fetch
 INFO:root:in update_league_db_standings_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:54:38] "GET /get_league_standings_db/149 HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:54:38] "OPTIONS /get_results/149 HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:54:39] "GET /get_results/149 HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:54:39] "OPTIONS /get_fixtures/149 HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:54:39] "GET /get_fixtures/149 HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:54:40] "GET /get_results/149 HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:54:41] "GET /get_fixtures/149 HTTP/1.1" 200 -
+INFO:root:updating league 177 from fetch
+INFO:root:in update_league_db_standings_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:17:42] "GET /get_team_info/undefined/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:17:42] "GET /get_last_matches_for_team/Bristol%20City/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:17:42] "OPTIONS /get_name_from_country_id/41/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:17:42] "OPTIONS /get_name_from_country_id/46/ HTTP/1.1" 200 -
+INFO:root:in update_leagues_db_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:17:42] "GET /get_name_from_country_id/41/ HTTP/1.1" 200 -
+INFO:root:in update_leagues_db_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:17:42] "GET /get_name_from_country_id/46/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:17:47] "OPTIONS /get_league_standings_db/149 HTTP/1.1" 200 -
 INFO:root:updating league 149 from fetch
 INFO:root:in update_league_db_standings_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:54:42] "GET /get_league_standings_db/149 HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:54:45] "OPTIONS /get_results/149 HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:54:45] "GET /get_results/149 HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:54:45] "OPTIONS /get_match/242322 HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:54:45] "GET /get_match/242322 HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:54:47] "OPTIONS /get_league_standings_db/149 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:17:47] "GET /get_league_standings_db/149 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:17:48] "OPTIONS /get_fixtures/149 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:17:48] "GET /get_fixtures/149 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:17:50] "OPTIONS /get_all_teams/ HTTP/1.1" 200 -
+INFO:root:in update_leagues_db_from_fetch and data is fresh
 INFO:root:updating league 149 from fetch
 INFO:root:in update_league_db_standings_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:54:47] "GET /get_league_standings_db/149 HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:54:48] "GET /get_results/149 HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:54:50] "OPTIONS /get_match/242306 HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:54:50] "GET /get_match/242306 HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:56:23] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:56:23] "OPTIONS /get_match/242306 HTTP/1.1" 200 -
-INFO:root:inside get_leagues
-INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:56:23] "GET /get_sidebar_info/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:56:23] "GET /get_match/242306 HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:56:23] "OPTIONS /get_name_from_country_id/41/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:56:23] "OPTIONS /get_name_from_country_id/46/ HTTP/1.1" 200 -
-INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:56:23] "GET /get_name_from_country_id/41/ HTTP/1.1" 200 -
-INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:56:23] "GET /get_name_from_country_id/46/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:56:29] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
-INFO:root:inside get_leagues
-INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:56:29] "GET /get_sidebar_info/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:56:29] "OPTIONS /get_name_from_country_id/41/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:56:29] "OPTIONS /get_name_from_country_id/46/ HTTP/1.1" 200 -
-INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:56:30] "GET /get_name_from_country_id/41/ HTTP/1.1" 200 -
-INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:56:30] "GET /get_name_from_country_id/46/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:56:32] "OPTIONS /get_league_standings_db/149 HTTP/1.1" 200 -
+INFO:root:updating league 177 from fetch
+INFO:root:in update_league_db_standings_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:17:50] "GET /get_all_teams/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:17:51] "OPTIONS /get_team_info/undefined/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:17:51] "OPTIONS /get_last_matches_for_team/Preston/ HTTP/1.1" 200 -
 INFO:root:updating league 149 from fetch
 INFO:root:in update_league_db_standings_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:56:32] "GET /get_league_standings_db/149 HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:56:33] "OPTIONS /get_results/149 HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:56:33] "GET /get_results/149 HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:56:36] "OPTIONS /get_match/242314 HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:56:36] "GET /get_match/242314 HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:57:05] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:57:05] "OPTIONS /get_match/242314 HTTP/1.1" 200 -
+INFO:root:updating league 177 from fetch
+INFO:root:in update_league_db_standings_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:17:51] "GET /get_team_info/undefined/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:17:51] "GET /get_last_matches_for_team/Preston/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:20:16] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:20:16] "OPTIONS /get_team_info/Preston/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:20:16] "OPTIONS /get_last_matches_for_team/Preston/ HTTP/1.1" 200 -
 INFO:root:inside get_leagues
 INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:57:05] "GET /get_sidebar_info/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:57:05] "GET /get_match/242314 HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:57:05] "OPTIONS /get_name_from_country_id/41/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:57:05] "OPTIONS /get_name_from_country_id/46/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:20:16] "GET /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:root:updating league 149 from fetch
+INFO:root:in update_league_db_standings_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:20:16] "GET /get_team_info/Preston/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:20:16] "GET /get_last_matches_for_team/Preston/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:20:16] "OPTIONS /get_name_from_country_id/41/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:20:16] "OPTIONS /get_name_from_country_id/46/ HTTP/1.1" 200 -
 INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:57:05] "GET /get_name_from_country_id/41/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:20:16] "GET /get_name_from_country_id/41/ HTTP/1.1" 200 -
 INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:57:05] "GET /get_name_from_country_id/46/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:57:18] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:57:18] "OPTIONS /get_match/242314 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:20:16] "GET /get_name_from_country_id/46/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:21:29] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:21:29] "OPTIONS /get_team_info/Preston/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:21:29] "OPTIONS /get_last_matches_for_team/Preston/ HTTP/1.1" 200 -
 INFO:root:inside get_leagues
 INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:57:18] "GET /get_sidebar_info/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:57:18] "GET /get_match/242314 HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:57:18] "OPTIONS /get_name_from_country_id/41/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:57:18] "OPTIONS /get_name_from_country_id/46/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:21:29] "GET /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:root:updating league 149 from fetch
+INFO:root:in update_league_db_standings_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:21:29] "GET /get_team_info/Preston/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:21:29] "GET /get_last_matches_for_team/Preston/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:21:29] "OPTIONS /get_name_from_country_id/41/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:21:29] "OPTIONS /get_name_from_country_id/46/ HTTP/1.1" 200 -
 INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:57:18] "GET /get_name_from_country_id/41/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:21:29] "GET /get_name_from_country_id/41/ HTTP/1.1" 200 -
 INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:57:18] "GET /get_name_from_country_id/46/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:57:58] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:57:58] "OPTIONS /get_match/242314 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:21:29] "GET /get_name_from_country_id/46/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:21:44] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:21:45] "OPTIONS /get_team_info/Preston/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:21:45] "OPTIONS /get_last_matches_for_team/Preston/ HTTP/1.1" 200 -
 INFO:root:inside get_leagues
 INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:57:58] "GET /get_sidebar_info/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:57:59] "GET /get_match/242314 HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:57:59] "OPTIONS /get_name_from_country_id/41/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:57:59] "OPTIONS /get_name_from_country_id/46/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:21:45] "GET /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:root:updating league 149 from fetch
+INFO:root:in update_league_db_standings_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:21:45] "GET /get_team_info/Preston/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:21:45] "GET /get_last_matches_for_team/Preston/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:21:45] "OPTIONS /get_name_from_country_id/41/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:21:45] "OPTIONS /get_name_from_country_id/46/ HTTP/1.1" 200 -
 INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:57:59] "GET /get_name_from_country_id/41/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:21:45] "GET /get_name_from_country_id/41/ HTTP/1.1" 200 -
 INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 15:57:59] "GET /get_name_from_country_id/46/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:03:01] "OPTIONS /get_league_standings_db/149 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:21:45] "GET /get_name_from_country_id/46/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:21:58] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:21:58] "OPTIONS /get_team_info/Preston/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:21:58] "OPTIONS /get_last_matches_for_team/Preston/ HTTP/1.1" 200 -
+INFO:root:inside get_leagues
+INFO:root:in update_leagues_db_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:21:58] "GET /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:root:updating league 149 from fetch
+INFO:root:in update_league_db_standings_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:21:58] "GET /get_team_info/Preston/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:21:58] "GET /get_last_matches_for_team/Preston/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:21:58] "OPTIONS /get_name_from_country_id/41/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:21:58] "OPTIONS /get_name_from_country_id/46/ HTTP/1.1" 200 -
+INFO:root:in update_leagues_db_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:21:58] "GET /get_name_from_country_id/41/ HTTP/1.1" 200 -
+INFO:root:in update_leagues_db_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:21:58] "GET /get_name_from_country_id/46/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:22:11] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:22:11] "OPTIONS /get_team_info/Preston/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:22:11] "OPTIONS /get_last_matches_for_team/Preston/ HTTP/1.1" 200 -
+INFO:root:inside get_leagues
+INFO:root:in update_leagues_db_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:22:11] "GET /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:root:updating league 149 from fetch
+INFO:root:in update_league_db_standings_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:22:11] "GET /get_team_info/Preston/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:22:11] "GET /get_last_matches_for_team/Preston/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:22:11] "OPTIONS /get_name_from_country_id/41/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:22:11] "OPTIONS /get_name_from_country_id/46/ HTTP/1.1" 200 -
+INFO:root:in update_leagues_db_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:22:11] "GET /get_name_from_country_id/41/ HTTP/1.1" 200 -
+INFO:root:in update_leagues_db_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:22:11] "GET /get_name_from_country_id/46/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:23:09] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:23:09] "OPTIONS /get_team_info/Preston/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:23:09] "OPTIONS /get_last_matches_for_team/Preston/ HTTP/1.1" 200 -
+INFO:root:inside get_leagues
+INFO:root:in update_leagues_db_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:23:09] "GET /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:root:updating league 149 from fetch
+INFO:root:in update_league_db_standings_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:23:09] "GET /get_team_info/Preston/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:23:09] "GET /get_last_matches_for_team/Preston/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:23:09] "OPTIONS /get_name_from_country_id/41/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:23:09] "OPTIONS /get_name_from_country_id/46/ HTTP/1.1" 200 -
+INFO:root:in update_leagues_db_from_fetch and data is fresh
+INFO:root:in update_leagues_db_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:23:09] "GET /get_name_from_country_id/41/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:23:09] "GET /get_name_from_country_id/46/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:24:00] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:24:00] "OPTIONS /get_team_info/Preston/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:24:00] "OPTIONS /get_last_matches_for_team/Preston/ HTTP/1.1" 200 -
+INFO:root:inside get_leagues
+INFO:root:in update_leagues_db_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:24:00] "GET /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:root:updating league 149 from fetch
+INFO:root:in update_league_db_standings_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:24:00] "GET /get_team_info/Preston/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:24:00] "GET /get_last_matches_for_team/Preston/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:24:00] "OPTIONS /get_name_from_country_id/41/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:24:00] "OPTIONS /get_name_from_country_id/46/ HTTP/1.1" 200 -
+INFO:root:in update_leagues_db_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:24:00] "GET /get_name_from_country_id/41/ HTTP/1.1" 200 -
+INFO:root:in update_leagues_db_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:24:00] "GET /get_name_from_country_id/46/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:24:12] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:24:12] "OPTIONS /get_team_info/Preston/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:24:12] "OPTIONS /get_last_matches_for_team/Preston/ HTTP/1.1" 200 -
+INFO:root:inside get_leagues
+INFO:root:in update_leagues_db_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:24:12] "GET /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:root:updating league 149 from fetch
+INFO:root:in update_league_db_standings_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:24:12] "GET /get_team_info/Preston/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:24:12] "GET /get_last_matches_for_team/Preston/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:24:13] "OPTIONS /get_name_from_country_id/41/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:24:13] "OPTIONS /get_name_from_country_id/46/ HTTP/1.1" 200 -
+INFO:root:in update_leagues_db_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:24:13] "GET /get_name_from_country_id/41/ HTTP/1.1" 200 -
+INFO:root:in update_leagues_db_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:24:13] "GET /get_name_from_country_id/46/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:24:26] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:24:26] "OPTIONS /get_team_info/Preston/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:24:26] "OPTIONS /get_last_matches_for_team/Preston/ HTTP/1.1" 200 -
+INFO:root:inside get_leagues
+INFO:root:in update_leagues_db_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:24:27] "GET /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:root:updating league 149 from fetch
+INFO:root:in update_league_db_standings_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:24:27] "GET /get_team_info/Preston/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:24:27] "GET /get_last_matches_for_team/Preston/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:24:27] "OPTIONS /get_name_from_country_id/41/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:24:27] "OPTIONS /get_name_from_country_id/46/ HTTP/1.1" 200 -
+INFO:root:in update_leagues_db_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:24:27] "GET /get_name_from_country_id/41/ HTTP/1.1" 200 -
+INFO:root:in update_leagues_db_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:24:27] "GET /get_name_from_country_id/46/ HTTP/1.1" 200 -
+INFO:root:inside get_leagues
+INFO:root:in update_leagues_db_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:24:31] "GET /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:root:updating league 149 from fetch
+INFO:root:in update_league_db_standings_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:24:31] "GET /get_team_info/Preston/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:24:31] "GET /get_last_matches_for_team/Preston/ HTTP/1.1" 200 -
+INFO:root:in update_leagues_db_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:24:31] "GET /get_name_from_country_id/41/ HTTP/1.1" 200 -
+INFO:root:in update_leagues_db_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:24:31] "GET /get_name_from_country_id/46/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:24:41] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:24:41] "OPTIONS /get_team_info/Preston/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:24:41] "OPTIONS /get_last_matches_for_team/Preston/ HTTP/1.1" 200 -
+INFO:root:inside get_leagues
+INFO:root:in update_leagues_db_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:24:41] "GET /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:root:updating league 149 from fetch
+INFO:root:in update_league_db_standings_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:24:41] "GET /get_team_info/Preston/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:24:41] "GET /get_last_matches_for_team/Preston/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:24:41] "OPTIONS /get_name_from_country_id/41/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:24:41] "OPTIONS /get_name_from_country_id/46/ HTTP/1.1" 200 -
+INFO:root:in update_leagues_db_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:24:41] "GET /get_name_from_country_id/41/ HTTP/1.1" 200 -
+INFO:root:in update_leagues_db_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:24:41] "GET /get_name_from_country_id/46/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:25:06] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:25:06] "OPTIONS /get_team_info/Preston/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:25:06] "OPTIONS /get_last_matches_for_team/Preston/ HTTP/1.1" 200 -
+INFO:root:inside get_leagues
+INFO:root:in update_leagues_db_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:25:06] "GET /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:root:updating league 149 from fetch
+INFO:root:in update_league_db_standings_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:25:06] "GET /get_team_info/Preston/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:25:06] "GET /get_last_matches_for_team/Preston/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:25:07] "OPTIONS /get_name_from_country_id/41/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:25:07] "OPTIONS /get_name_from_country_id/46/ HTTP/1.1" 200 -
+INFO:root:in update_leagues_db_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:25:07] "GET /get_name_from_country_id/41/ HTTP/1.1" 200 -
+INFO:root:in update_leagues_db_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:25:07] "GET /get_name_from_country_id/46/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:26:03] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:26:03] "OPTIONS /get_team_info/Preston/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:26:03] "OPTIONS /get_last_matches_for_team/Preston/ HTTP/1.1" 200 -
+INFO:root:inside get_leagues
+INFO:root:in update_leagues_db_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:26:03] "GET /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:root:updating league 149 from fetch
+INFO:root:in update_league_db_standings_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:26:03] "GET /get_team_info/Preston/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:26:03] "GET /get_last_matches_for_team/Preston/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:26:03] "OPTIONS /get_name_from_country_id/41/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:26:03] "OPTIONS /get_name_from_country_id/46/ HTTP/1.1" 200 -
+INFO:root:in update_leagues_db_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:26:03] "GET /get_name_from_country_id/41/ HTTP/1.1" 200 -
+INFO:root:in update_leagues_db_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:26:03] "GET /get_name_from_country_id/46/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:26:17] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:26:17] "OPTIONS /get_team_info/Preston/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:26:17] "OPTIONS /get_last_matches_for_team/Preston/ HTTP/1.1" 200 -
+INFO:root:inside get_leagues
+INFO:root:in update_leagues_db_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:26:17] "GET /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:root:updating league 149 from fetch
+INFO:root:in update_league_db_standings_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:26:17] "GET /get_team_info/Preston/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:26:17] "GET /get_last_matches_for_team/Preston/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:26:17] "OPTIONS /get_name_from_country_id/41/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:26:17] "OPTIONS /get_name_from_country_id/46/ HTTP/1.1" 200 -
+INFO:root:in update_leagues_db_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:26:18] "GET /get_name_from_country_id/41/ HTTP/1.1" 200 -
+INFO:root:in update_leagues_db_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:26:18] "GET /get_name_from_country_id/46/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:26:39] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:26:39] "OPTIONS /get_team_info/Preston/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:26:39] "OPTIONS /get_last_matches_for_team/Preston/ HTTP/1.1" 200 -
+INFO:root:inside get_leagues
+INFO:root:in update_leagues_db_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:26:39] "GET /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:root:updating league 149 from fetch
+INFO:root:in update_league_db_standings_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:26:39] "GET /get_team_info/Preston/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:26:39] "GET /get_last_matches_for_team/Preston/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:26:39] "OPTIONS /get_name_from_country_id/41/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:26:39] "OPTIONS /get_name_from_country_id/46/ HTTP/1.1" 200 -
+INFO:root:in update_leagues_db_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:26:39] "GET /get_name_from_country_id/41/ HTTP/1.1" 200 -
+INFO:root:in update_leagues_db_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:26:39] "GET /get_name_from_country_id/46/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:27:00] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:27:00] "OPTIONS /get_team_info/Preston/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:27:00] "OPTIONS /get_last_matches_for_team/Preston/ HTTP/1.1" 200 -
+INFO:root:inside get_leagues
+INFO:root:in update_leagues_db_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:27:00] "GET /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:root:updating league 149 from fetch
+INFO:root:in update_league_db_standings_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:27:00] "GET /get_team_info/Preston/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:27:00] "GET /get_last_matches_for_team/Preston/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:27:00] "OPTIONS /get_name_from_country_id/41/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:27:00] "OPTIONS /get_name_from_country_id/46/ HTTP/1.1" 200 -
+INFO:root:in update_leagues_db_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:27:01] "GET /get_name_from_country_id/41/ HTTP/1.1" 200 -
+INFO:root:in update_leagues_db_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:27:01] "GET /get_name_from_country_id/46/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:27:18] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:27:18] "OPTIONS /get_team_info/Preston/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:27:18] "OPTIONS /get_last_matches_for_team/Preston/ HTTP/1.1" 200 -
+INFO:root:inside get_leagues
+INFO:root:in update_leagues_db_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:27:18] "GET /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:root:updating league 149 from fetch
+INFO:root:in update_league_db_standings_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:27:18] "GET /get_team_info/Preston/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:27:18] "GET /get_last_matches_for_team/Preston/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:27:19] "OPTIONS /get_name_from_country_id/41/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:27:19] "OPTIONS /get_name_from_country_id/46/ HTTP/1.1" 200 -
+INFO:root:in update_leagues_db_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:27:19] "GET /get_name_from_country_id/41/ HTTP/1.1" 200 -
+INFO:root:in update_leagues_db_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:27:19] "GET /get_name_from_country_id/46/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:27:35] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:27:35] "OPTIONS /get_team_info/Preston/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:27:35] "OPTIONS /get_last_matches_for_team/Preston/ HTTP/1.1" 200 -
+INFO:root:inside get_leagues
+INFO:root:in update_leagues_db_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:27:35] "GET /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:root:updating league 149 from fetch
+INFO:root:in update_league_db_standings_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:27:35] "GET /get_team_info/Preston/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:27:35] "OPTIONS /get_name_from_country_id/41/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:27:35] "OPTIONS /get_name_from_country_id/46/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:27:35] "GET /get_last_matches_for_team/Preston/ HTTP/1.1" 200 -
+INFO:root:in update_leagues_db_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:27:36] "GET /get_name_from_country_id/41/ HTTP/1.1" 200 -
+INFO:root:in update_leagues_db_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:27:36] "GET /get_name_from_country_id/46/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:27:52] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:27:52] "OPTIONS /get_team_info/Preston/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:27:52] "OPTIONS /get_last_matches_for_team/Preston/ HTTP/1.1" 200 -
+INFO:root:inside get_leagues
+INFO:root:in update_leagues_db_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:27:53] "GET /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:root:updating league 149 from fetch
+INFO:root:in update_league_db_standings_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:27:53] "GET /get_team_info/Preston/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:27:53] "GET /get_last_matches_for_team/Preston/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:27:53] "OPTIONS /get_name_from_country_id/41/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:27:53] "OPTIONS /get_name_from_country_id/46/ HTTP/1.1" 200 -
+INFO:root:in update_leagues_db_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:27:53] "GET /get_name_from_country_id/41/ HTTP/1.1" 200 -
+INFO:root:in update_leagues_db_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:27:53] "GET /get_name_from_country_id/46/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:28:06] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:28:06] "OPTIONS /get_team_info/Preston/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:28:06] "OPTIONS /get_last_matches_for_team/Preston/ HTTP/1.1" 200 -
+INFO:root:inside get_leagues
+INFO:root:in update_leagues_db_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:28:06] "GET /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:root:updating league 149 from fetch
+INFO:root:in update_league_db_standings_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:28:06] "GET /get_team_info/Preston/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:28:07] "GET /get_last_matches_for_team/Preston/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:28:07] "OPTIONS /get_name_from_country_id/41/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:28:07] "OPTIONS /get_name_from_country_id/46/ HTTP/1.1" 200 -
+INFO:root:in update_leagues_db_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:28:07] "GET /get_name_from_country_id/41/ HTTP/1.1" 200 -
+INFO:root:in update_leagues_db_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:28:07] "GET /get_name_from_country_id/46/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:28:15] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:28:15] "OPTIONS /get_team_info/Preston/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:28:15] "OPTIONS /get_last_matches_for_team/Preston/ HTTP/1.1" 200 -
+INFO:root:inside get_leagues
+INFO:root:in update_leagues_db_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:28:15] "GET /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:root:updating league 149 from fetch
+INFO:root:in update_league_db_standings_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:28:15] "GET /get_team_info/Preston/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:28:15] "GET /get_last_matches_for_team/Preston/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:28:15] "OPTIONS /get_name_from_country_id/41/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:28:15] "OPTIONS /get_name_from_country_id/46/ HTTP/1.1" 200 -
+INFO:root:in update_leagues_db_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:28:16] "GET /get_name_from_country_id/41/ HTTP/1.1" 200 -
+INFO:root:in update_leagues_db_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:28:16] "GET /get_name_from_country_id/46/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:28:33] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:28:33] "OPTIONS /get_team_info/Preston/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:28:33] "OPTIONS /get_last_matches_for_team/Preston/ HTTP/1.1" 200 -
+INFO:root:inside get_leagues
+INFO:root:in update_leagues_db_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:28:33] "GET /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:root:updating league 149 from fetch
+INFO:root:in update_league_db_standings_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:28:33] "GET /get_team_info/Preston/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:28:34] "GET /get_last_matches_for_team/Preston/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:28:34] "OPTIONS /get_name_from_country_id/41/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:28:34] "OPTIONS /get_name_from_country_id/46/ HTTP/1.1" 200 -
+INFO:root:in update_leagues_db_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:28:34] "GET /get_name_from_country_id/41/ HTTP/1.1" 200 -
+INFO:root:in update_leagues_db_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:28:34] "GET /get_name_from_country_id/46/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:28:54] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:28:54] "OPTIONS /get_team_info/Preston/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:28:54] "OPTIONS /get_last_matches_for_team/Preston/ HTTP/1.1" 200 -
+INFO:root:inside get_leagues
+INFO:root:in update_leagues_db_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:28:55] "GET /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:root:updating league 149 from fetch
+INFO:root:in update_league_db_standings_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:28:55] "GET /get_team_info/Preston/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:28:55] "GET /get_last_matches_for_team/Preston/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:28:55] "OPTIONS /get_name_from_country_id/41/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:28:55] "OPTIONS /get_name_from_country_id/46/ HTTP/1.1" 200 -
+INFO:root:in update_leagues_db_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:28:55] "GET /get_name_from_country_id/41/ HTTP/1.1" 200 -
+INFO:root:in update_leagues_db_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:28:55] "GET /get_name_from_country_id/46/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:29:13] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:29:13] "OPTIONS /get_team_info/Preston/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:29:13] "OPTIONS /get_last_matches_for_team/Preston/ HTTP/1.1" 200 -
+INFO:root:inside get_leagues
+INFO:root:in update_leagues_db_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:29:13] "GET /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:root:updating league 149 from fetch
+INFO:root:in update_league_db_standings_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:29:13] "GET /get_team_info/Preston/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:29:14] "GET /get_last_matches_for_team/Preston/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:29:14] "OPTIONS /get_name_from_country_id/41/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:29:14] "OPTIONS /get_name_from_country_id/46/ HTTP/1.1" 200 -
+INFO:root:in update_leagues_db_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:29:14] "GET /get_name_from_country_id/41/ HTTP/1.1" 200 -
+INFO:root:in update_leagues_db_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:29:14] "GET /get_name_from_country_id/46/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:29:23] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:29:23] "OPTIONS /get_team_info/Preston/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:29:23] "OPTIONS /get_last_matches_for_team/Preston/ HTTP/1.1" 200 -
+INFO:root:inside get_leagues
+INFO:root:in update_leagues_db_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:29:23] "GET /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:root:updating league 149 from fetch
+INFO:root:in update_league_db_standings_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:29:23] "GET /get_team_info/Preston/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:29:23] "GET /get_last_matches_for_team/Preston/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:29:24] "OPTIONS /get_name_from_country_id/41/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:29:24] "OPTIONS /get_name_from_country_id/46/ HTTP/1.1" 200 -
+INFO:root:in update_leagues_db_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:29:24] "GET /get_name_from_country_id/41/ HTTP/1.1" 200 -
+INFO:root:in update_leagues_db_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:29:24] "GET /get_name_from_country_id/46/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:29:31] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:29:31] "OPTIONS /get_team_info/Preston/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:29:31] "OPTIONS /get_last_matches_for_team/Preston/ HTTP/1.1" 200 -
+INFO:root:inside get_leagues
+INFO:root:in update_leagues_db_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:29:31] "GET /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:root:updating league 149 from fetch
+INFO:root:in update_league_db_standings_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:29:31] "GET /get_team_info/Preston/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:29:31] "GET /get_last_matches_for_team/Preston/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:29:31] "OPTIONS /get_name_from_country_id/41/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:29:31] "OPTIONS /get_name_from_country_id/46/ HTTP/1.1" 200 -
+INFO:root:in update_leagues_db_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:29:31] "GET /get_name_from_country_id/41/ HTTP/1.1" 200 -
+INFO:root:in update_leagues_db_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:29:31] "GET /get_name_from_country_id/46/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:47:17] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:47:17] "OPTIONS /get_team_info/undefined/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:47:17] "OPTIONS /get_team_info/undefined/ HTTP/1.1" 200 -
+INFO:root:inside get_leagues
+INFO:root:in update_leagues_db_from_fetch and data is fresh
+INFO:root:updating league 149 from fetch
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:47:17] "GET /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:root:in update_league_db_standings_from_fetch and data is fresh
+INFO:root:updating league 177 from fetch
+INFO:root:in update_league_db_standings_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:47:17] "GET /get_team_info/undefined/ HTTP/1.1" 200 -
+INFO:root:updating league 149 from fetch
+INFO:root:in update_league_db_standings_from_fetch and data is fresh
+INFO:root:updating league 177 from fetch
+INFO:root:in update_league_db_standings_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:47:17] "GET /get_team_info/undefined/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:51:30] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:51:30] "OPTIONS /get_team_info/undefined/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:51:30] "OPTIONS /get_team_info/Preston/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:51:30] "OPTIONS /get_last_matches_for_team/Preston/ HTTP/1.1" 200 -
+INFO:root:inside get_leagues
+INFO:root:in update_leagues_db_from_fetch data is stale
+INFO:root:updating league 149 from fetch
+INFO:root:in update_league_db_standings_from_fetch data is stale
+INFO:root:fetching from path: https://apiv2.apifootball.com/?action=get_standings&league_id=149&APIkey=9fe5c8415f9eda3d0abd11d51578518d6a7c48d172f82abed46bf5bd9fe2479f
 INFO:root:updating league 149 from fetch
 INFO:root:in update_league_db_standings_from_fetch data is stale
 INFO:root:fetching from path: https://apiv2.apifootball.com/?action=get_standings&league_id=149&APIkey=9fe5c8415f9eda3d0abd11d51578518d6a7c48d172f82abed46bf5bd9fe2479f
 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): apiv2.apifootball.com:443
-DEBUG:urllib3.connectionpool:https://apiv2.apifootball.com:443 "GET /?action=get_standings&league_id=149&APIkey=9fe5c8415f9eda3d0abd11d51578518d6a7c48d172f82abed46bf5bd9fe2479f HTTP/1.1" 200 None
-INFO:root:changed league_db_standings from the fetch for 149
-INFO:root:writing db to fisk at /Users/ollieloney/SoccerScores/databases/league_standings_149.csv
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:03:02] "GET /get_league_standings_db/149 HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:03:02] "OPTIONS /get_fixtures/149 HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:03:02] "GET /get_fixtures/149 HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:03:03] "OPTIONS /get_results/149 HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:03:03] "GET /get_results/149 HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:03:05] "OPTIONS /get_match/242313 HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:03:05] "GET /get_match/242313 HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:03:09] "OPTIONS /get_all_teams/ HTTP/1.1" 200 -
-INFO:root:in update_leagues_db_from_fetch data is stale
 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): apiv2.apifootball.com:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): apiv2.apifootball.com:443
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:51:30] "GET /get_last_matches_for_team/Preston/ HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:https://apiv2.apifootball.com:443 "GET /?action=get_standings&league_id=149&APIkey=9fe5c8415f9eda3d0abd11d51578518d6a7c48d172f82abed46bf5bd9fe2479f HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://apiv2.apifootball.com:443 "GET /?action=get_standings&league_id=149&APIkey=9fe5c8415f9eda3d0abd11d51578518d6a7c48d172f82abed46bf5bd9fe2479f HTTP/1.1" 200 None
 DEBUG:urllib3.connectionpool:https://apiv2.apifootball.com:443 "GET /?action=get_leagues&APIkey=9fe5c8415f9eda3d0abd11d51578518d6a7c48d172f82abed46bf5bd9fe2479f HTTP/1.1" 200 237
 INFO:root:writing db to fisk at /Users/ollieloney/SoccerScores/databases/leagues_db.csv
-INFO:root:updating league 149 from fetch
-INFO:root:in update_league_db_standings_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:51:31] "GET /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:root:changed league_db_standings from the fetch for 149
+INFO:root:writing db to fisk at /Users/ollieloney/SoccerScores/databases/league_standings_149.csv
+INFO:root:changed league_db_standings from the fetch for 149
+INFO:root:writing db to fisk at /Users/ollieloney/SoccerScores/databases/league_standings_149.csv
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:51:31] "GET /get_team_info/Preston/ HTTP/1.1" 200 -
 INFO:root:updating league 177 from fetch
 INFO:root:in update_league_db_standings_from_fetch data is stale
 INFO:root:fetching from path: https://apiv2.apifootball.com/?action=get_standings&league_id=177&APIkey=9fe5c8415f9eda3d0abd11d51578518d6a7c48d172f82abed46bf5bd9fe2479f
 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): apiv2.apifootball.com:443
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:51:31] "OPTIONS /get_name_from_country_id/41/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:51:31] "OPTIONS /get_name_from_country_id/46/ HTTP/1.1" 200 -
+INFO:root:in update_leagues_db_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:51:31] "GET /get_name_from_country_id/41/ HTTP/1.1" 200 -
+INFO:root:in update_leagues_db_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:51:31] "GET /get_name_from_country_id/46/ HTTP/1.1" 200 -
 DEBUG:urllib3.connectionpool:https://apiv2.apifootball.com:443 "GET /?action=get_standings&league_id=177&APIkey=9fe5c8415f9eda3d0abd11d51578518d6a7c48d172f82abed46bf5bd9fe2479f HTTP/1.1" 200 None
 INFO:root:changed league_db_standings from the fetch for 177
 INFO:root:writing db to fisk at /Users/ollieloney/SoccerScores/databases/league_standings_177.csv
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:03:09] "GET /get_all_teams/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:03:10] "OPTIONS /get_last_matches_for_team/Preston/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:03:10] "GET /get_last_matches_for_team/Preston/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:03:35] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:03:35] "OPTIONS /get_last_matches_for_team/Preston/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:51:31] "GET /get_team_info/undefined/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:51:31] "GET /get_last_matches_for_team/Preston/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:51:31] "OPTIONS /get_league_standings_db/undefined HTTP/1.1" 200 -
+ERROR:flask.app:Exception on /get_league_standings_db/undefined [GET]
+Traceback (most recent call last):
+  File "/Users/ollieloney/SoccerScores/venv/lib/python3.5/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/ollieloney/SoccerScores/venv/lib/python3.5/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/ollieloney/SoccerScores/venv/lib/python3.5/site-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/Users/ollieloney/SoccerScores/venv/lib/python3.5/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/ollieloney/SoccerScores/venv/lib/python3.5/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/Users/ollieloney/SoccerScores/venv/lib/python3.5/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/ollieloney/SoccerScores/venv/lib/python3.5/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "apiFootballMiddle.py", line 334, in get_league_standings_db
+    league_id=int(league_id)
+ValueError: invalid literal for int() with base 10: 'undefined'
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:51:31] "GET /get_league_standings_db/undefined HTTP/1.1" 500 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:52:18] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:52:18] "OPTIONS /get_team_info/undefined/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:52:18] "OPTIONS /get_team_info/Preston/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:52:18] "OPTIONS /get_last_matches_for_team/Preston/ HTTP/1.1" 200 -
 INFO:root:inside get_leagues
 INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:03:35] "GET /get_sidebar_info/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:03:35] "GET /get_last_matches_for_team/Preston/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:03:35] "OPTIONS /get_name_from_country_id/41/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:03:35] "OPTIONS /get_name_from_country_id/46/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:52:18] "GET /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:root:updating league 149 from fetch
+INFO:root:updating league 149 from fetch
+INFO:root:in update_league_db_standings_from_fetch and data is fresh
+INFO:root:in update_league_db_standings_from_fetch and data is fresh
+INFO:root:updating league 177 from fetch
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:52:18] "GET /get_team_info/Preston/ HTTP/1.1" 200 -
+INFO:root:in update_league_db_standings_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:52:18] "GET /get_team_info/undefined/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:52:18] "GET /get_last_matches_for_team/Preston/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:52:18] "OPTIONS /get_name_from_country_id/41/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:52:18] "OPTIONS /get_name_from_country_id/46/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:52:18] "OPTIONS /get_league_standings_db/undefined HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:52:18] "GET /get_last_matches_for_team/Preston/ HTTP/1.1" 200 -
 INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:03:35] "GET /get_name_from_country_id/41/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:52:18] "GET /get_name_from_country_id/41/ HTTP/1.1" 200 -
 INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:03:35] "GET /get_name_from_country_id/46/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:03:45] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:03:46] "OPTIONS /get_last_matches_for_team/Preston/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:52:18] "GET /get_name_from_country_id/46/ HTTP/1.1" 200 -
+ERROR:flask.app:Exception on /get_league_standings_db/undefined [GET]
+Traceback (most recent call last):
+  File "/Users/ollieloney/SoccerScores/venv/lib/python3.5/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/ollieloney/SoccerScores/venv/lib/python3.5/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/ollieloney/SoccerScores/venv/lib/python3.5/site-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/Users/ollieloney/SoccerScores/venv/lib/python3.5/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/ollieloney/SoccerScores/venv/lib/python3.5/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/Users/ollieloney/SoccerScores/venv/lib/python3.5/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/ollieloney/SoccerScores/venv/lib/python3.5/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "apiFootballMiddle.py", line 334, in get_league_standings_db
+    league_id=int(league_id)
+ValueError: invalid literal for int() with base 10: 'undefined'
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:52:18] "GET /get_league_standings_db/undefined HTTP/1.1" 500 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:59:07] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:59:07] "OPTIONS /get_team_info/undefined/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:59:07] "OPTIONS /get_team_info/Preston/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:59:07] "OPTIONS /get_last_matches_for_team/Preston/ HTTP/1.1" 200 -
 INFO:root:inside get_leagues
 INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:03:46] "GET /get_sidebar_info/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:03:46] "GET /get_last_matches_for_team/Preston/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:03:46] "OPTIONS /get_name_from_country_id/41/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:03:46] "OPTIONS /get_name_from_country_id/46/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:59:07] "GET /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:root:updating league 149 from fetch
+INFO:root:in update_league_db_standings_from_fetch and data is fresh
+INFO:root:updating league 177 from fetch
+INFO:root:in update_league_db_standings_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:59:07] "GET /get_team_info/undefined/ HTTP/1.1" 200 -
+INFO:root:updating league 149 from fetch
+INFO:root:in update_league_db_standings_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:59:07] "GET /get_team_info/Preston/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:59:07] "GET /get_last_matches_for_team/Preston/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:59:08] "OPTIONS /get_name_from_country_id/41/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:59:08] "OPTIONS /get_name_from_country_id/46/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:59:08] "OPTIONS /get_league_standings_db/undefined HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:59:08] "GET /get_last_matches_for_team/Preston/ HTTP/1.1" 200 -
 INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:03:46] "GET /get_name_from_country_id/41/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:59:08] "GET /get_name_from_country_id/41/ HTTP/1.1" 200 -
 INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:03:46] "GET /get_name_from_country_id/46/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:04:34] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:04:34] "OPTIONS /get_last_matches_for_team/Preston/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:59:08] "GET /get_name_from_country_id/46/ HTTP/1.1" 200 -
+ERROR:flask.app:Exception on /get_league_standings_db/undefined [GET]
+Traceback (most recent call last):
+  File "/Users/ollieloney/SoccerScores/venv/lib/python3.5/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/ollieloney/SoccerScores/venv/lib/python3.5/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/ollieloney/SoccerScores/venv/lib/python3.5/site-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/Users/ollieloney/SoccerScores/venv/lib/python3.5/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/ollieloney/SoccerScores/venv/lib/python3.5/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/Users/ollieloney/SoccerScores/venv/lib/python3.5/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/ollieloney/SoccerScores/venv/lib/python3.5/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "apiFootballMiddle.py", line 334, in get_league_standings_db
+    league_id=int(league_id)
+ValueError: invalid literal for int() with base 10: 'undefined'
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:59:08] "GET /get_league_standings_db/undefined HTTP/1.1" 500 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:59:32] "OPTIONS /get_league_standings_db/149 HTTP/1.1" 200 -
+INFO:root:updating league 149 from fetch
+INFO:root:in update_league_db_standings_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:59:32] "GET /get_league_standings_db/149 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:59:32] "OPTIONS /get_all_teams/ HTTP/1.1" 200 -
+INFO:root:in update_leagues_db_from_fetch and data is fresh
+INFO:root:updating league 149 from fetch
+INFO:root:in update_league_db_standings_from_fetch and data is fresh
+INFO:root:updating league 177 from fetch
+INFO:root:in update_league_db_standings_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:59:32] "GET /get_all_teams/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:59:34] "OPTIONS /get_team_info/undefined/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:59:34] "OPTIONS /get_team_info/Fulham/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:59:34] "OPTIONS /get_last_matches_for_team/Fulham/ HTTP/1.1" 200 -
+INFO:root:updating league 149 from fetch
+INFO:root:in update_league_db_standings_from_fetch and data is fresh
+INFO:root:updating league 177 from fetch
+INFO:root:in update_league_db_standings_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:59:34] "GET /get_team_info/undefined/ HTTP/1.1" 200 -
+INFO:root:updating league 149 from fetch
+INFO:root:in update_league_db_standings_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:59:34] "GET /get_team_info/Fulham/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:59:34] "GET /get_last_matches_for_team/Fulham/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:59:34] "OPTIONS /get_league_standings_db/undefined HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:59:34] "GET /get_last_matches_for_team/Fulham/ HTTP/1.1" 200 -
+ERROR:flask.app:Exception on /get_league_standings_db/undefined [GET]
+Traceback (most recent call last):
+  File "/Users/ollieloney/SoccerScores/venv/lib/python3.5/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/ollieloney/SoccerScores/venv/lib/python3.5/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/ollieloney/SoccerScores/venv/lib/python3.5/site-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/Users/ollieloney/SoccerScores/venv/lib/python3.5/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/ollieloney/SoccerScores/venv/lib/python3.5/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/Users/ollieloney/SoccerScores/venv/lib/python3.5/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/ollieloney/SoccerScores/venv/lib/python3.5/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "apiFootballMiddle.py", line 334, in get_league_standings_db
+    league_id=int(league_id)
+ValueError: invalid literal for int() with base 10: 'undefined'
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 19:59:34] "GET /get_league_standings_db/undefined HTTP/1.1" 500 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:02:12] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:02:12] "OPTIONS /get_team_info/undefined/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:02:12] "OPTIONS /get_team_info/Fulham/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:02:12] "OPTIONS /get_last_matches_for_team/Fulham/ HTTP/1.1" 200 -
 INFO:root:inside get_leagues
 INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:04:34] "GET /get_sidebar_info/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:04:34] "GET /get_last_matches_for_team/Preston/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:04:34] "OPTIONS /get_name_from_country_id/41/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:04:34] "OPTIONS /get_name_from_country_id/46/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:02:12] "GET /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:root:updating league 149 from fetch
+INFO:root:in update_league_db_standings_from_fetch and data is fresh
+INFO:root:updating league 177 from fetch
+INFO:root:in update_league_db_standings_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:02:12] "GET /get_team_info/undefined/ HTTP/1.1" 200 -
+INFO:root:updating league 149 from fetch
+INFO:root:in update_league_db_standings_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:02:12] "GET /get_team_info/Fulham/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:02:12] "GET /get_last_matches_for_team/Fulham/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:02:12] "OPTIONS /get_name_from_country_id/41/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:02:12] "OPTIONS /get_name_from_country_id/46/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:02:12] "GET /get_last_matches_for_team/Fulham/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:02:12] "OPTIONS /get_league_standings_db/undefined HTTP/1.1" 200 -
 INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:04:34] "GET /get_name_from_country_id/41/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:02:12] "GET /get_name_from_country_id/41/ HTTP/1.1" 200 -
 INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:04:34] "GET /get_name_from_country_id/46/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:05:11] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:05:12] "OPTIONS /get_last_matches_for_team/Preston/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:02:12] "GET /get_name_from_country_id/46/ HTTP/1.1" 200 -
+ERROR:flask.app:Exception on /get_league_standings_db/undefined [GET]
+Traceback (most recent call last):
+  File "/Users/ollieloney/SoccerScores/venv/lib/python3.5/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/ollieloney/SoccerScores/venv/lib/python3.5/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/ollieloney/SoccerScores/venv/lib/python3.5/site-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/Users/ollieloney/SoccerScores/venv/lib/python3.5/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/ollieloney/SoccerScores/venv/lib/python3.5/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/Users/ollieloney/SoccerScores/venv/lib/python3.5/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/ollieloney/SoccerScores/venv/lib/python3.5/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "apiFootballMiddle.py", line 334, in get_league_standings_db
+    league_id=int(league_id)
+ValueError: invalid literal for int() with base 10: 'undefined'
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:02:13] "GET /get_league_standings_db/undefined HTTP/1.1" 500 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:04:45] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:04:45] "OPTIONS /get_team_info/undefined/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:04:45] "OPTIONS /get_team_info/Fulham/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:04:45] "OPTIONS /get_last_matches_for_team/Fulham/ HTTP/1.1" 200 -
 INFO:root:inside get_leagues
 INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:05:12] "GET /get_sidebar_info/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:05:12] "GET /get_last_matches_for_team/Preston/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:05:12] "OPTIONS /get_name_from_country_id/41/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:05:12] "OPTIONS /get_name_from_country_id/46/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:04:45] "GET /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:root:updating league 149 from fetch
+INFO:root:in update_league_db_standings_from_fetch and data is fresh
+INFO:root:updating league 177 from fetch
+INFO:root:updating league 149 from fetch
+INFO:root:in update_league_db_standings_from_fetch and data is fresh
+INFO:root:in update_league_db_standings_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:04:45] "GET /get_team_info/undefined/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:04:46] "GET /get_team_info/Fulham/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:04:46] "GET /get_last_matches_for_team/Fulham/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:04:46] "OPTIONS /get_name_from_country_id/41/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:04:46] "OPTIONS /get_name_from_country_id/46/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:04:46] "OPTIONS /get_league_standings_db/undefined HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:04:46] "GET /get_last_matches_for_team/Fulham/ HTTP/1.1" 200 -
 INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:05:12] "GET /get_name_from_country_id/41/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:04:46] "GET /get_name_from_country_id/41/ HTTP/1.1" 200 -
 INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:05:12] "GET /get_name_from_country_id/46/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:06:37] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:06:37] "OPTIONS /get_last_matches_for_team/Preston/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:04:46] "GET /get_name_from_country_id/46/ HTTP/1.1" 200 -
+ERROR:flask.app:Exception on /get_league_standings_db/undefined [GET]
+Traceback (most recent call last):
+  File "/Users/ollieloney/SoccerScores/venv/lib/python3.5/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/ollieloney/SoccerScores/venv/lib/python3.5/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/ollieloney/SoccerScores/venv/lib/python3.5/site-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/Users/ollieloney/SoccerScores/venv/lib/python3.5/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/ollieloney/SoccerScores/venv/lib/python3.5/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/Users/ollieloney/SoccerScores/venv/lib/python3.5/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/ollieloney/SoccerScores/venv/lib/python3.5/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "apiFootballMiddle.py", line 334, in get_league_standings_db
+    league_id=int(league_id)
+ValueError: invalid literal for int() with base 10: 'undefined'
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:04:46] "GET /get_league_standings_db/undefined HTTP/1.1" 500 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:05:21] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:05:21] "OPTIONS /get_team_info/Fulham/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:05:21] "OPTIONS /get_team_info/Fulham/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:05:21] "OPTIONS /get_last_matches_for_team/Fulham/ HTTP/1.1" 200 -
 INFO:root:inside get_leagues
 INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:06:37] "GET /get_sidebar_info/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:06:37] "GET /get_last_matches_for_team/Preston/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:06:37] "OPTIONS /get_name_from_country_id/41/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:06:37] "OPTIONS /get_name_from_country_id/46/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:05:21] "GET /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:root:updating league 149 from fetch
+INFO:root:in update_league_db_standings_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:05:21] "GET /get_team_info/Fulham/ HTTP/1.1" 200 -
+INFO:root:updating league 149 from fetch
+INFO:root:in update_league_db_standings_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:05:21] "GET /get_team_info/Fulham/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:05:21] "GET /get_last_matches_for_team/Fulham/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:05:21] "OPTIONS /get_name_from_country_id/41/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:05:21] "OPTIONS /get_name_from_country_id/46/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:05:21] "OPTIONS /get_league_standings_db/149 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:05:21] "GET /get_last_matches_for_team/Fulham/ HTTP/1.1" 200 -
 INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:06:37] "GET /get_name_from_country_id/41/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:05:21] "GET /get_name_from_country_id/41/ HTTP/1.1" 200 -
 INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:06:37] "GET /get_name_from_country_id/46/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:06:45] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:06:45] "OPTIONS /get_last_matches_for_team/Preston/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:05:21] "GET /get_name_from_country_id/46/ HTTP/1.1" 200 -
+INFO:root:updating league 149 from fetch
+INFO:root:in update_league_db_standings_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:05:21] "GET /get_league_standings_db/149 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:07:59] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:07:59] "OPTIONS /get_team_info/Fulham/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:07:59] "OPTIONS /get_team_info/Fulham/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:07:59] "OPTIONS /get_last_matches_for_team/Fulham/ HTTP/1.1" 200 -
 INFO:root:inside get_leagues
 INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:06:45] "GET /get_sidebar_info/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:06:45] "GET /get_last_matches_for_team/Preston/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:06:45] "OPTIONS /get_name_from_country_id/41/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:06:45] "OPTIONS /get_name_from_country_id/46/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:07:59] "GET /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:root:updating league 149 from fetch
+INFO:root:in update_league_db_standings_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:07:59] "GET /get_team_info/Fulham/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:07:59] "GET /get_last_matches_for_team/Fulham/ HTTP/1.1" 200 -
+INFO:root:updating league 149 from fetch
+INFO:root:in update_league_db_standings_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:07:59] "GET /get_team_info/Fulham/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:07:59] "OPTIONS /get_name_from_country_id/41/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:07:59] "OPTIONS /get_name_from_country_id/46/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:07:59] "OPTIONS /get_league_standings_db/149 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:07:59] "GET /get_last_matches_for_team/Fulham/ HTTP/1.1" 200 -
 INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:06:46] "GET /get_name_from_country_id/41/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:07:59] "GET /get_name_from_country_id/41/ HTTP/1.1" 200 -
 INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:06:46] "GET /get_name_from_country_id/46/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:07:37] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:07:37] "OPTIONS /get_last_matches_for_team/Preston/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:07:59] "GET /get_name_from_country_id/46/ HTTP/1.1" 200 -
+INFO:root:updating league 149 from fetch
+INFO:root:in update_league_db_standings_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:07:59] "GET /get_league_standings_db/149 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:08:23] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:08:23] "OPTIONS /get_team_info/Fulham/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:08:23] "OPTIONS /get_team_info/Fulham/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:08:23] "OPTIONS /get_last_matches_for_team/Fulham/ HTTP/1.1" 200 -
 INFO:root:inside get_leagues
 INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:07:37] "GET /get_sidebar_info/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:07:37] "GET /get_last_matches_for_team/Preston/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:07:37] "OPTIONS /get_name_from_country_id/41/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:07:37] "OPTIONS /get_name_from_country_id/46/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:08:23] "GET /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:root:updating league 149 from fetch
+INFO:root:in update_league_db_standings_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:08:23] "GET /get_team_info/Fulham/ HTTP/1.1" 200 -
+INFO:root:updating league 149 from fetch
+INFO:root:in update_league_db_standings_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:08:23] "GET /get_team_info/Fulham/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:08:23] "GET /get_last_matches_for_team/Fulham/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:08:23] "OPTIONS /get_name_from_country_id/41/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:08:23] "OPTIONS /get_name_from_country_id/46/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:08:23] "OPTIONS /get_league_standings_db/149 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:08:23] "GET /get_last_matches_for_team/Fulham/ HTTP/1.1" 200 -
 INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:07:37] "GET /get_name_from_country_id/41/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:08:23] "GET /get_name_from_country_id/41/ HTTP/1.1" 200 -
 INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:07:37] "GET /get_name_from_country_id/46/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:07:52] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:07:52] "OPTIONS /get_last_matches_for_team/Preston/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:08:23] "GET /get_name_from_country_id/46/ HTTP/1.1" 200 -
+INFO:root:updating league 149 from fetch
+INFO:root:in update_league_db_standings_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:08:23] "GET /get_league_standings_db/149 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:09:22] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:09:22] "OPTIONS /get_team_info/Fulham/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:09:23] "OPTIONS /get_team_info/Fulham/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:09:23] "OPTIONS /get_last_matches_for_team/Fulham/ HTTP/1.1" 200 -
 INFO:root:inside get_leagues
 INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:07:52] "GET /get_sidebar_info/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:07:53] "GET /get_last_matches_for_team/Preston/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:07:53] "OPTIONS /get_name_from_country_id/41/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:07:53] "OPTIONS /get_name_from_country_id/46/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:09:23] "GET /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:root:updating league 149 from fetch
+INFO:root:in update_league_db_standings_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:09:23] "GET /get_team_info/Fulham/ HTTP/1.1" 200 -
+INFO:root:updating league 149 from fetch
+INFO:root:in update_league_db_standings_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:09:23] "GET /get_team_info/Fulham/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:09:23] "GET /get_last_matches_for_team/Fulham/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:09:23] "OPTIONS /get_name_from_country_id/41/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:09:23] "OPTIONS /get_name_from_country_id/46/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:09:23] "OPTIONS /get_league_standings_db/149 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:09:23] "GET /get_last_matches_for_team/Fulham/ HTTP/1.1" 200 -
 INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:07:53] "GET /get_name_from_country_id/41/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:09:23] "GET /get_name_from_country_id/41/ HTTP/1.1" 200 -
 INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:07:53] "GET /get_name_from_country_id/46/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:08:05] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:08:05] "OPTIONS /get_last_matches_for_team/Preston/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:09:23] "GET /get_name_from_country_id/46/ HTTP/1.1" 200 -
+INFO:root:updating league 149 from fetch
+INFO:root:in update_league_db_standings_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:09:23] "GET /get_league_standings_db/149 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:10:01] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:10:01] "OPTIONS /get_team_info/Fulham/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:10:01] "OPTIONS /get_team_info/Fulham/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:10:01] "OPTIONS /get_last_matches_for_team/Fulham/ HTTP/1.1" 200 -
 INFO:root:inside get_leagues
 INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:08:05] "GET /get_sidebar_info/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:08:05] "GET /get_last_matches_for_team/Preston/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:08:05] "OPTIONS /get_name_from_country_id/41/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:08:05] "OPTIONS /get_name_from_country_id/46/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:10:01] "GET /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:root:updating league 149 from fetch
+INFO:root:in update_league_db_standings_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:10:01] "GET /get_team_info/Fulham/ HTTP/1.1" 200 -
+INFO:root:updating league 149 from fetch
+INFO:root:in update_league_db_standings_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:10:01] "GET /get_team_info/Fulham/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:10:01] "GET /get_last_matches_for_team/Fulham/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:10:02] "OPTIONS /get_name_from_country_id/41/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:10:02] "OPTIONS /get_name_from_country_id/46/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:10:02] "OPTIONS /get_league_standings_db/149 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:10:02] "GET /get_last_matches_for_team/Fulham/ HTTP/1.1" 200 -
 INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:08:05] "GET /get_name_from_country_id/41/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:10:02] "GET /get_name_from_country_id/41/ HTTP/1.1" 200 -
 INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:08:05] "GET /get_name_from_country_id/46/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:08:46] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:08:46] "OPTIONS /get_last_matches_for_team/Preston/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:10:02] "GET /get_name_from_country_id/46/ HTTP/1.1" 200 -
+INFO:root:updating league 149 from fetch
+INFO:root:in update_league_db_standings_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:10:02] "GET /get_league_standings_db/149 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:10:33] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:10:33] "OPTIONS /get_team_info/Fulham/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:10:33] "OPTIONS /get_team_info/Fulham/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:10:33] "OPTIONS /get_last_matches_for_team/Fulham/ HTTP/1.1" 200 -
 INFO:root:inside get_leagues
 INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:08:46] "GET /get_sidebar_info/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:08:46] "GET /get_last_matches_for_team/Preston/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:08:47] "OPTIONS /get_name_from_country_id/41/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:08:47] "OPTIONS /get_name_from_country_id/46/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:10:33] "GET /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:root:updating league 149 from fetch
+INFO:root:in update_league_db_standings_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:10:33] "GET /get_team_info/Fulham/ HTTP/1.1" 200 -
+INFO:root:updating league 149 from fetch
+INFO:root:in update_league_db_standings_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:10:33] "GET /get_team_info/Fulham/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:10:33] "GET /get_last_matches_for_team/Fulham/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:10:33] "OPTIONS /get_name_from_country_id/41/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:10:33] "OPTIONS /get_name_from_country_id/46/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:10:33] "OPTIONS /get_league_standings_db/149 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:10:33] "GET /get_last_matches_for_team/Fulham/ HTTP/1.1" 200 -
 INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:08:47] "GET /get_name_from_country_id/41/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:10:33] "GET /get_name_from_country_id/41/ HTTP/1.1" 200 -
 INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:08:47] "GET /get_name_from_country_id/46/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:09:03] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:09:03] "OPTIONS /get_last_matches_for_team/Preston/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:10:33] "GET /get_name_from_country_id/46/ HTTP/1.1" 200 -
+INFO:root:updating league 149 from fetch
+INFO:root:in update_league_db_standings_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:10:33] "GET /get_league_standings_db/149 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:11:06] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:11:06] "OPTIONS /get_team_info/Fulham/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:11:06] "OPTIONS /get_team_info/Fulham/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:11:06] "OPTIONS /get_last_matches_for_team/Fulham/ HTTP/1.1" 200 -
 INFO:root:inside get_leagues
 INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:09:03] "GET /get_sidebar_info/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:09:03] "OPTIONS /get_name_from_country_id/41/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:09:03] "GET /get_last_matches_for_team/Preston/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:09:03] "OPTIONS /get_name_from_country_id/46/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:11:06] "GET /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:root:updating league 149 from fetch
+INFO:root:in update_league_db_standings_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:11:06] "GET /get_team_info/Fulham/ HTTP/1.1" 200 -
+INFO:root:updating league 149 from fetch
+INFO:root:in update_league_db_standings_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:11:06] "GET /get_team_info/Fulham/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:11:06] "GET /get_last_matches_for_team/Fulham/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:11:06] "OPTIONS /get_name_from_country_id/41/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:11:06] "OPTIONS /get_name_from_country_id/46/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:11:06] "OPTIONS /get_league_standings_db/149 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:11:06] "GET /get_last_matches_for_team/Fulham/ HTTP/1.1" 200 -
 INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:09:03] "GET /get_name_from_country_id/41/ HTTP/1.1" 200 -
 INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:09:03] "GET /get_name_from_country_id/46/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:09:51] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:09:51] "OPTIONS /get_last_matches_for_team/Preston/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:11:06] "GET /get_name_from_country_id/41/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:11:06] "GET /get_name_from_country_id/46/ HTTP/1.1" 200 -
+INFO:root:updating league 149 from fetch
+INFO:root:in update_league_db_standings_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:11:06] "GET /get_league_standings_db/149 HTTP/1.1" 200 -
 INFO:root:inside get_leagues
 INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:09:51] "GET /get_sidebar_info/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:09:51] "GET /get_last_matches_for_team/Preston/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:09:51] "OPTIONS /get_name_from_country_id/41/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:09:51] "OPTIONS /get_name_from_country_id/46/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:11:11] "GET /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:root:updating league 149 from fetch
+INFO:root:in update_league_db_standings_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:11:11] "GET /get_team_info/Fulham/ HTTP/1.1" 200 -
+INFO:root:updating league 149 from fetch
+INFO:root:in update_league_db_standings_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:11:11] "GET /get_team_info/Fulham/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:11:11] "GET /get_last_matches_for_team/Fulham/ HTTP/1.1" 200 -
 INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:09:51] "GET /get_name_from_country_id/41/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:11:11] "GET /get_name_from_country_id/41/ HTTP/1.1" 200 -
 INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:09:51] "GET /get_name_from_country_id/46/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:09:59] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:09:59] "OPTIONS /get_last_matches_for_team/Preston/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:11:11] "GET /get_name_from_country_id/46/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:11:11] "OPTIONS /get_last_matches_for_team/Fulham/ HTTP/1.1" 200 -
+INFO:root:updating league 149 from fetch
+INFO:root:in update_league_db_standings_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:11:11] "GET /get_league_standings_db/149 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:11:11] "GET /get_last_matches_for_team/Fulham/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:11:22] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:11:22] "OPTIONS /get_team_info/Fulham/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:11:22] "OPTIONS /get_team_info/Fulham/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:11:22] "OPTIONS /get_last_matches_for_team/Fulham/ HTTP/1.1" 200 -
 INFO:root:inside get_leagues
 INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:09:59] "GET /get_sidebar_info/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:09:59] "GET /get_last_matches_for_team/Preston/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:09:59] "OPTIONS /get_name_from_country_id/41/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:09:59] "OPTIONS /get_name_from_country_id/46/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:11:22] "GET /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:root:updating league 149 from fetch
+INFO:root:in update_league_db_standings_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:11:22] "GET /get_team_info/Fulham/ HTTP/1.1" 200 -
+INFO:root:updating league 149 from fetch
+INFO:root:in update_league_db_standings_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:11:22] "GET /get_team_info/Fulham/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:11:22] "GET /get_last_matches_for_team/Fulham/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:11:22] "OPTIONS /get_name_from_country_id/41/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:11:22] "OPTIONS /get_name_from_country_id/46/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:11:22] "GET /get_last_matches_for_team/Fulham/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:11:22] "OPTIONS /get_league_standings_db/149 HTTP/1.1" 200 -
 INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:09:59] "GET /get_name_from_country_id/41/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:11:22] "GET /get_name_from_country_id/41/ HTTP/1.1" 200 -
 INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:10:00] "GET /get_name_from_country_id/46/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:10:06] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:10:06] "OPTIONS /get_last_matches_for_team/Preston/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:11:22] "GET /get_name_from_country_id/46/ HTTP/1.1" 200 -
+INFO:root:updating league 149 from fetch
+INFO:root:in update_league_db_standings_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:11:22] "GET /get_league_standings_db/149 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:11:33] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:11:33] "OPTIONS /get_team_info/Fulham/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:11:33] "OPTIONS /get_team_info/Fulham/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:11:33] "OPTIONS /get_last_matches_for_team/Fulham/ HTTP/1.1" 200 -
 INFO:root:inside get_leagues
 INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:10:06] "GET /get_sidebar_info/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:10:06] "GET /get_last_matches_for_team/Preston/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:10:06] "OPTIONS /get_name_from_country_id/41/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:10:06] "OPTIONS /get_name_from_country_id/46/ HTTP/1.1" 200 -
+INFO:root:updating league 149 from fetch
+INFO:root:in update_league_db_standings_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:11:33] "GET /get_team_info/Fulham/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:11:33] "GET /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:root:updating league 149 from fetch
+INFO:root:in update_league_db_standings_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:11:33] "GET /get_team_info/Fulham/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:11:33] "GET /get_last_matches_for_team/Fulham/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:11:34] "OPTIONS /get_league_standings_db/149 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:11:34] "GET /get_last_matches_for_team/Fulham/ HTTP/1.1" 200 -
+INFO:root:updating league 149 from fetch
+INFO:root:in update_league_db_standings_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:11:34] "GET /get_league_standings_db/149 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:11:34] "OPTIONS /get_name_from_country_id/41/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:11:34] "OPTIONS /get_name_from_country_id/46/ HTTP/1.1" 200 -
 INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:10:06] "GET /get_name_from_country_id/41/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:11:34] "GET /get_name_from_country_id/41/ HTTP/1.1" 200 -
 INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:10:06] "GET /get_name_from_country_id/46/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:10:26] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:10:26] "OPTIONS /get_last_matches_for_team/Preston/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:11:34] "GET /get_name_from_country_id/46/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:11:43] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:11:43] "OPTIONS /get_team_info/Fulham/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:11:43] "OPTIONS /get_team_info/Fulham/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:11:43] "OPTIONS /get_last_matches_for_team/Fulham/ HTTP/1.1" 200 -
 INFO:root:inside get_leagues
 INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:10:27] "GET /get_sidebar_info/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:10:27] "GET /get_last_matches_for_team/Preston/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:10:27] "OPTIONS /get_name_from_country_id/41/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:10:27] "OPTIONS /get_name_from_country_id/46/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:11:44] "GET /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:root:updating league 149 from fetch
+INFO:root:in update_league_db_standings_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:11:44] "GET /get_team_info/Fulham/ HTTP/1.1" 200 -
+INFO:root:updating league 149 from fetch
+INFO:root:in update_league_db_standings_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:11:44] "GET /get_team_info/Fulham/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:11:44] "GET /get_last_matches_for_team/Fulham/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:11:44] "OPTIONS /get_name_from_country_id/41/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:11:44] "OPTIONS /get_name_from_country_id/46/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:11:44] "OPTIONS /get_league_standings_db/149 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:11:44] "GET /get_last_matches_for_team/Fulham/ HTTP/1.1" 200 -
 INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:10:27] "GET /get_name_from_country_id/41/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:11:44] "GET /get_name_from_country_id/41/ HTTP/1.1" 200 -
 INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:10:27] "GET /get_name_from_country_id/46/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:10:50] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:10:50] "OPTIONS /get_last_matches_for_team/Preston/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:11:44] "GET /get_name_from_country_id/46/ HTTP/1.1" 200 -
+INFO:root:updating league 149 from fetch
+INFO:root:in update_league_db_standings_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:11:44] "GET /get_league_standings_db/149 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:11:52] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:11:52] "OPTIONS /get_team_info/Fulham/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:11:52] "OPTIONS /get_team_info/Fulham/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:11:52] "OPTIONS /get_last_matches_for_team/Fulham/ HTTP/1.1" 200 -
 INFO:root:inside get_leagues
 INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:10:50] "GET /get_sidebar_info/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:10:50] "GET /get_last_matches_for_team/Preston/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:10:50] "OPTIONS /get_name_from_country_id/41/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:10:50] "OPTIONS /get_name_from_country_id/46/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:11:52] "GET /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:root:updating league 149 from fetch
+INFO:root:in update_league_db_standings_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:11:52] "GET /get_team_info/Fulham/ HTTP/1.1" 200 -
+INFO:root:updating league 149 from fetch
+INFO:root:in update_league_db_standings_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:11:52] "GET /get_team_info/Fulham/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:11:52] "GET /get_last_matches_for_team/Fulham/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:11:52] "OPTIONS /get_name_from_country_id/41/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:11:52] "OPTIONS /get_name_from_country_id/46/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:11:52] "GET /get_last_matches_for_team/Fulham/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:11:52] "OPTIONS /get_league_standings_db/149 HTTP/1.1" 200 -
 INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:10:50] "GET /get_name_from_country_id/41/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:11:52] "GET /get_name_from_country_id/41/ HTTP/1.1" 200 -
 INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:10:50] "GET /get_name_from_country_id/46/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:11:32] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:11:32] "OPTIONS /get_last_matches_for_team/Preston/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:11:52] "GET /get_name_from_country_id/46/ HTTP/1.1" 200 -
+INFO:root:updating league 149 from fetch
+INFO:root:in update_league_db_standings_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:11:52] "GET /get_league_standings_db/149 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:11:58] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:11:58] "OPTIONS /get_team_info/Fulham/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:11:58] "OPTIONS /get_team_info/Fulham/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:11:58] "OPTIONS /get_last_matches_for_team/Fulham/ HTTP/1.1" 200 -
 INFO:root:inside get_leagues
 INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:11:32] "GET /get_sidebar_info/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:11:32] "GET /get_last_matches_for_team/Preston/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:11:32] "OPTIONS /get_name_from_country_id/41/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:11:32] "OPTIONS /get_name_from_country_id/46/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:11:58] "GET /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:root:updating league 149 from fetch
+INFO:root:in update_league_db_standings_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:11:58] "GET /get_team_info/Fulham/ HTTP/1.1" 200 -
+INFO:root:updating league 149 from fetch
+INFO:root:in update_league_db_standings_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:11:58] "GET /get_team_info/Fulham/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:11:59] "GET /get_last_matches_for_team/Fulham/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:11:59] "OPTIONS /get_name_from_country_id/41/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:11:59] "OPTIONS /get_name_from_country_id/46/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:11:59] "OPTIONS /get_league_standings_db/149 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:11:59] "GET /get_last_matches_for_team/Fulham/ HTTP/1.1" 200 -
 INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:11:32] "GET /get_name_from_country_id/41/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:11:59] "GET /get_name_from_country_id/41/ HTTP/1.1" 200 -
 INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:11:32] "GET /get_name_from_country_id/46/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:13:12] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:13:12] "OPTIONS /get_last_matches_for_team/Preston/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:11:59] "GET /get_name_from_country_id/46/ HTTP/1.1" 200 -
+INFO:root:updating league 149 from fetch
+INFO:root:in update_league_db_standings_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:11:59] "GET /get_league_standings_db/149 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:12:04] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:12:04] "OPTIONS /get_team_info/Fulham/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:12:05] "OPTIONS /get_team_info/Fulham/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:12:05] "OPTIONS /get_last_matches_for_team/Fulham/ HTTP/1.1" 200 -
 INFO:root:inside get_leagues
 INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:13:12] "GET /get_sidebar_info/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:13:12] "GET /get_last_matches_for_team/Preston/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:13:12] "OPTIONS /get_name_from_country_id/41/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:13:12] "OPTIONS /get_name_from_country_id/46/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:12:05] "GET /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:root:updating league 149 from fetch
+INFO:root:in update_league_db_standings_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:12:05] "GET /get_team_info/Fulham/ HTTP/1.1" 200 -
+INFO:root:updating league 149 from fetch
+INFO:root:in update_league_db_standings_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:12:05] "GET /get_team_info/Fulham/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:12:05] "GET /get_last_matches_for_team/Fulham/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:12:05] "OPTIONS /get_league_standings_db/149 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:12:05] "GET /get_last_matches_for_team/Fulham/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:12:05] "OPTIONS /get_name_from_country_id/41/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:12:05] "OPTIONS /get_name_from_country_id/46/ HTTP/1.1" 200 -
+INFO:root:updating league 149 from fetch
+INFO:root:in update_league_db_standings_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:12:05] "GET /get_league_standings_db/149 HTTP/1.1" 200 -
 INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:13:12] "GET /get_name_from_country_id/41/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:12:05] "GET /get_name_from_country_id/41/ HTTP/1.1" 200 -
 INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:13:12] "GET /get_name_from_country_id/46/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:13:45] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:13:45] "OPTIONS /get_last_matches_for_team/Preston/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:12:05] "GET /get_name_from_country_id/46/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:12:26] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:12:26] "OPTIONS /get_team_info/Fulham/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:12:26] "OPTIONS /get_team_info/Fulham/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:12:26] "OPTIONS /get_last_matches_for_team/Fulham/ HTTP/1.1" 200 -
 INFO:root:inside get_leagues
 INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:13:45] "GET /get_sidebar_info/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:13:46] "GET /get_last_matches_for_team/Preston/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:13:46] "OPTIONS /get_name_from_country_id/41/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:13:46] "OPTIONS /get_name_from_country_id/46/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:12:26] "GET /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:root:updating league 149 from fetch
+INFO:root:in update_league_db_standings_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:12:26] "GET /get_team_info/Fulham/ HTTP/1.1" 200 -
+INFO:root:updating league 149 from fetch
+INFO:root:in update_league_db_standings_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:12:26] "GET /get_team_info/Fulham/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:12:26] "GET /get_last_matches_for_team/Fulham/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:12:27] "OPTIONS /get_name_from_country_id/41/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:12:27] "OPTIONS /get_name_from_country_id/46/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:12:27] "OPTIONS /get_league_standings_db/149 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:12:27] "GET /get_last_matches_for_team/Fulham/ HTTP/1.1" 200 -
 INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:13:46] "GET /get_name_from_country_id/41/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:12:27] "GET /get_name_from_country_id/41/ HTTP/1.1" 200 -
 INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:13:46] "GET /get_name_from_country_id/46/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:13:53] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:13:53] "OPTIONS /get_last_matches_for_team/Preston/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:12:27] "GET /get_name_from_country_id/46/ HTTP/1.1" 200 -
+INFO:root:updating league 149 from fetch
+INFO:root:in update_league_db_standings_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:12:27] "GET /get_league_standings_db/149 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:13:06] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:13:06] "OPTIONS /get_team_info/Fulham/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:13:06] "OPTIONS /get_team_info/Fulham/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:13:06] "OPTIONS /get_last_matches_for_team/Fulham/ HTTP/1.1" 200 -
 INFO:root:inside get_leagues
 INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:13:53] "GET /get_sidebar_info/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:13:54] "GET /get_last_matches_for_team/Preston/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:13:54] "OPTIONS /get_name_from_country_id/41/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:13:54] "OPTIONS /get_name_from_country_id/46/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:13:06] "GET /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:root:updating league 149 from fetch
+INFO:root:in update_league_db_standings_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:13:06] "GET /get_team_info/Fulham/ HTTP/1.1" 200 -
+INFO:root:updating league 149 from fetch
+INFO:root:in update_league_db_standings_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:13:06] "GET /get_team_info/Fulham/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:13:06] "GET /get_last_matches_for_team/Fulham/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:13:07] "OPTIONS /get_name_from_country_id/41/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:13:07] "OPTIONS /get_name_from_country_id/46/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:13:07] "OPTIONS /get_league_standings_db/149 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:13:07] "GET /get_last_matches_for_team/Fulham/ HTTP/1.1" 200 -
 INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:13:54] "GET /get_name_from_country_id/41/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:13:07] "GET /get_name_from_country_id/41/ HTTP/1.1" 200 -
 INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:13:54] "GET /get_name_from_country_id/46/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:15:18] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:15:18] "OPTIONS /get_last_matches_for_team/Preston/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:13:07] "GET /get_name_from_country_id/46/ HTTP/1.1" 200 -
+INFO:root:updating league 149 from fetch
+INFO:root:in update_league_db_standings_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:13:07] "GET /get_league_standings_db/149 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:13:13] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:13:13] "OPTIONS /get_team_info/Fulham/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:13:13] "OPTIONS /get_team_info/Fulham/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:13:13] "OPTIONS /get_last_matches_for_team/Fulham/ HTTP/1.1" 200 -
 INFO:root:inside get_leagues
 INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:15:18] "GET /get_sidebar_info/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:15:18] "GET /get_last_matches_for_team/Preston/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:15:19] "OPTIONS /get_name_from_country_id/41/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:15:19] "OPTIONS /get_name_from_country_id/46/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:13:13] "GET /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:root:updating league 149 from fetch
+INFO:root:in update_league_db_standings_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:13:13] "GET /get_team_info/Fulham/ HTTP/1.1" 200 -
+INFO:root:updating league 149 from fetch
+INFO:root:in update_league_db_standings_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:13:13] "GET /get_team_info/Fulham/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:13:13] "GET /get_last_matches_for_team/Fulham/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:13:13] "OPTIONS /get_name_from_country_id/41/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:13:13] "OPTIONS /get_name_from_country_id/46/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:13:13] "OPTIONS /get_league_standings_db/149 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:13:13] "GET /get_last_matches_for_team/Fulham/ HTTP/1.1" 200 -
 INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:15:19] "GET /get_name_from_country_id/41/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:13:13] "GET /get_name_from_country_id/41/ HTTP/1.1" 200 -
 INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:15:19] "GET /get_name_from_country_id/46/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:16:34] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:16:34] "OPTIONS /get_last_matches_for_team/Preston/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:13:13] "GET /get_name_from_country_id/46/ HTTP/1.1" 200 -
+INFO:root:updating league 149 from fetch
+INFO:root:in update_league_db_standings_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:13:13] "GET /get_league_standings_db/149 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:13:31] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:13:31] "OPTIONS /get_team_info/Fulham/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:13:31] "OPTIONS /get_team_info/Fulham/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:13:31] "OPTIONS /get_last_matches_for_team/Fulham/ HTTP/1.1" 200 -
 INFO:root:inside get_leagues
 INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:16:34] "GET /get_sidebar_info/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:16:34] "GET /get_last_matches_for_team/Preston/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:16:34] "OPTIONS /get_name_from_country_id/41/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:16:34] "OPTIONS /get_name_from_country_id/46/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:13:31] "GET /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:root:updating league 149 from fetch
+INFO:root:in update_league_db_standings_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:13:31] "GET /get_team_info/Fulham/ HTTP/1.1" 200 -
+INFO:root:updating league 149 from fetch
+INFO:root:in update_league_db_standings_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:13:31] "GET /get_team_info/Fulham/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:13:31] "GET /get_last_matches_for_team/Fulham/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:13:31] "OPTIONS /get_name_from_country_id/41/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:13:31] "OPTIONS /get_name_from_country_id/46/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:13:31] "OPTIONS /get_league_standings_db/149 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:13:31] "GET /get_last_matches_for_team/Fulham/ HTTP/1.1" 200 -
 INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:16:34] "GET /get_name_from_country_id/41/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:13:31] "GET /get_name_from_country_id/41/ HTTP/1.1" 200 -
 INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:16:34] "GET /get_name_from_country_id/46/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:17:06] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:17:06] "OPTIONS /get_last_matches_for_team/Preston/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:13:31] "GET /get_name_from_country_id/46/ HTTP/1.1" 200 -
+INFO:root:updating league 149 from fetch
+INFO:root:in update_league_db_standings_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:13:31] "GET /get_league_standings_db/149 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:13:43] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:13:44] "OPTIONS /get_team_info/Fulham/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:13:44] "OPTIONS /get_team_info/Fulham/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:13:44] "OPTIONS /get_last_matches_for_team/Fulham/ HTTP/1.1" 200 -
 INFO:root:inside get_leagues
 INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:17:06] "GET /get_sidebar_info/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:17:06] "GET /get_last_matches_for_team/Preston/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:17:07] "OPTIONS /get_name_from_country_id/41/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:17:07] "OPTIONS /get_name_from_country_id/46/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:13:44] "GET /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:root:updating league 149 from fetch
+INFO:root:in update_league_db_standings_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:13:44] "GET /get_team_info/Fulham/ HTTP/1.1" 200 -
+INFO:root:updating league 149 from fetch
+INFO:root:in update_league_db_standings_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:13:44] "GET /get_team_info/Fulham/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:13:44] "GET /get_last_matches_for_team/Fulham/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:13:44] "OPTIONS /get_name_from_country_id/41/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:13:44] "OPTIONS /get_name_from_country_id/46/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:13:44] "OPTIONS /get_league_standings_db/149 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:13:44] "GET /get_last_matches_for_team/Fulham/ HTTP/1.1" 200 -
 INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:17:07] "GET /get_name_from_country_id/41/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:13:44] "GET /get_name_from_country_id/41/ HTTP/1.1" 200 -
 INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:17:07] "GET /get_name_from_country_id/46/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:17:40] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:17:40] "OPTIONS /get_last_matches_for_team/Preston/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:13:44] "GET /get_name_from_country_id/46/ HTTP/1.1" 200 -
+INFO:root:updating league 149 from fetch
+INFO:root:in update_league_db_standings_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:13:44] "GET /get_league_standings_db/149 HTTP/1.1" 200 -
 INFO:root:inside get_leagues
 INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:17:40] "GET /get_sidebar_info/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:17:40] "GET /get_last_matches_for_team/Preston/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:17:40] "OPTIONS /get_name_from_country_id/41/ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:17:40] "OPTIONS /get_name_from_country_id/46/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:13:47] "GET /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:root:updating league 149 from fetch
+INFO:root:in update_league_db_standings_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:13:47] "GET /get_team_info/Fulham/ HTTP/1.1" 200 -
+INFO:root:updating league 149 from fetch
+INFO:root:in update_league_db_standings_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:13:47] "GET /get_team_info/Fulham/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:13:47] "GET /get_last_matches_for_team/Fulham/ HTTP/1.1" 200 -
 INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:17:40] "GET /get_name_from_country_id/41/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:13:47] "GET /get_name_from_country_id/41/ HTTP/1.1" 200 -
 INFO:root:in update_leagues_db_from_fetch and data is fresh
-INFO:werkzeug:127.0.0.1 - - [26/Nov/2019 16:17:40] "GET /get_name_from_country_id/46/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:13:47] "GET /get_name_from_country_id/46/ HTTP/1.1" 200 -
+INFO:root:updating league 149 from fetch
+INFO:root:in update_league_db_standings_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:13:47] "GET /get_last_matches_for_team/Fulham/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:13:47] "GET /get_league_standings_db/149 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:14:28] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:14:28] "OPTIONS /get_team_info/Fulham/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:14:28] "OPTIONS /get_team_info/Fulham/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:14:28] "OPTIONS /get_last_matches_for_team/Fulham/ HTTP/1.1" 200 -
+INFO:root:inside get_leagues
+INFO:root:in update_leagues_db_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:14:28] "GET /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:root:updating league 149 from fetch
+INFO:root:in update_league_db_standings_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:14:28] "GET /get_team_info/Fulham/ HTTP/1.1" 200 -
+INFO:root:updating league 149 from fetch
+INFO:root:in update_league_db_standings_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:14:28] "GET /get_last_matches_for_team/Fulham/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:14:28] "GET /get_team_info/Fulham/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:14:28] "OPTIONS /get_name_from_country_id/41/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:14:28] "OPTIONS /get_name_from_country_id/46/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:14:28] "OPTIONS /get_league_standings_db/149 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:14:28] "GET /get_last_matches_for_team/Fulham/ HTTP/1.1" 200 -
+INFO:root:in update_leagues_db_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:14:28] "GET /get_name_from_country_id/41/ HTTP/1.1" 200 -
+INFO:root:in update_leagues_db_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:14:28] "GET /get_name_from_country_id/46/ HTTP/1.1" 200 -
+INFO:root:updating league 149 from fetch
+INFO:root:in update_league_db_standings_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:14:28] "GET /get_league_standings_db/149 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:18:10] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:18:10] "OPTIONS /get_team_info/Fulham/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:18:10] "OPTIONS /get_team_info/Fulham/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:18:10] "OPTIONS /get_last_matches_for_team/Fulham/ HTTP/1.1" 200 -
+INFO:root:inside get_leagues
+INFO:root:in update_leagues_db_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:18:10] "GET /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:root:updating league 149 from fetch
+INFO:root:in update_league_db_standings_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:18:10] "GET /get_team_info/Fulham/ HTTP/1.1" 200 -
+INFO:root:updating league 149 from fetch
+INFO:root:in update_league_db_standings_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:18:10] "GET /get_team_info/Fulham/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:18:10] "GET /get_last_matches_for_team/Fulham/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:18:10] "OPTIONS /get_name_from_country_id/41/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:18:10] "OPTIONS /get_name_from_country_id/46/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:18:10] "OPTIONS /get_league_standings_db/149 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:18:10] "GET /get_last_matches_for_team/Fulham/ HTTP/1.1" 200 -
+INFO:root:in update_leagues_db_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:18:11] "GET /get_name_from_country_id/41/ HTTP/1.1" 200 -
+INFO:root:in update_leagues_db_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:18:11] "GET /get_name_from_country_id/46/ HTTP/1.1" 200 -
+INFO:root:updating league 149 from fetch
+INFO:root:in update_league_db_standings_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:18:11] "GET /get_league_standings_db/149 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:18:34] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:18:34] "OPTIONS /get_team_info/Fulham/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:18:34] "OPTIONS /get_team_info/Fulham/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:18:34] "OPTIONS /get_last_matches_for_team/Fulham/ HTTP/1.1" 200 -
+INFO:root:inside get_leagues
+INFO:root:in update_leagues_db_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:18:35] "GET /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:root:updating league 149 from fetch
+INFO:root:in update_league_db_standings_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:18:35] "GET /get_team_info/Fulham/ HTTP/1.1" 200 -
+INFO:root:updating league 149 from fetch
+INFO:root:in update_league_db_standings_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:18:35] "GET /get_team_info/Fulham/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:18:35] "GET /get_last_matches_for_team/Fulham/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:18:35] "OPTIONS /get_name_from_country_id/41/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:18:35] "OPTIONS /get_name_from_country_id/46/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:18:35] "GET /get_last_matches_for_team/Fulham/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:18:35] "OPTIONS /get_league_standings_db/149 HTTP/1.1" 200 -
+INFO:root:in update_leagues_db_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:18:35] "GET /get_name_from_country_id/41/ HTTP/1.1" 200 -
+INFO:root:in update_leagues_db_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:18:35] "GET /get_name_from_country_id/46/ HTTP/1.1" 200 -
+INFO:root:updating league 149 from fetch
+INFO:root:in update_league_db_standings_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:18:35] "GET /get_league_standings_db/149 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:19:00] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:19:00] "OPTIONS /get_team_info/Fulham/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:19:00] "OPTIONS /get_team_info/Fulham/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:19:00] "OPTIONS /get_last_matches_for_team/Fulham/ HTTP/1.1" 200 -
+INFO:root:inside get_leagues
+INFO:root:in update_leagues_db_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:19:00] "GET /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:root:updating league 149 from fetch
+INFO:root:in update_league_db_standings_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:19:00] "GET /get_team_info/Fulham/ HTTP/1.1" 200 -
+INFO:root:updating league 149 from fetch
+INFO:root:in update_league_db_standings_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:19:00] "GET /get_team_info/Fulham/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:19:00] "GET /get_last_matches_for_team/Fulham/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:19:00] "OPTIONS /get_name_from_country_id/41/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:19:00] "OPTIONS /get_name_from_country_id/46/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:19:01] "OPTIONS /get_league_standings_db/149 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:19:01] "GET /get_last_matches_for_team/Fulham/ HTTP/1.1" 200 -
+INFO:root:in update_leagues_db_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:19:01] "GET /get_name_from_country_id/41/ HTTP/1.1" 200 -
+INFO:root:in update_leagues_db_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:19:01] "GET /get_name_from_country_id/46/ HTTP/1.1" 200 -
+INFO:root:updating league 149 from fetch
+INFO:root:in update_league_db_standings_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:19:01] "GET /get_league_standings_db/149 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:19:33] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:19:33] "OPTIONS /get_team_info/Fulham/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:19:33] "OPTIONS /get_team_info/Fulham/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:19:33] "OPTIONS /get_last_matches_for_team/Fulham/ HTTP/1.1" 200 -
+INFO:root:inside get_leagues
+INFO:root:in update_leagues_db_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:19:34] "GET /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:root:updating league 149 from fetch
+INFO:root:in update_league_db_standings_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:19:34] "GET /get_team_info/Fulham/ HTTP/1.1" 200 -
+INFO:root:updating league 149 from fetch
+INFO:root:in update_league_db_standings_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:19:34] "GET /get_team_info/Fulham/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:19:34] "GET /get_last_matches_for_team/Fulham/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:19:34] "OPTIONS /get_name_from_country_id/41/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:19:34] "OPTIONS /get_name_from_country_id/46/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:19:34] "GET /get_last_matches_for_team/Fulham/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:19:34] "OPTIONS /get_league_standings_db/149 HTTP/1.1" 200 -
+INFO:root:in update_leagues_db_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:19:34] "GET /get_name_from_country_id/41/ HTTP/1.1" 200 -
+INFO:root:in update_leagues_db_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:19:34] "GET /get_name_from_country_id/46/ HTTP/1.1" 200 -
+INFO:root:updating league 149 from fetch
+INFO:root:in update_league_db_standings_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:19:34] "GET /get_league_standings_db/149 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:19:47] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:19:47] "OPTIONS /get_team_info/Fulham/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:19:47] "OPTIONS /get_team_info/Fulham/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:19:47] "OPTIONS /get_last_matches_for_team/Fulham/ HTTP/1.1" 200 -
+INFO:root:inside get_leagues
+INFO:root:in update_leagues_db_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:19:47] "GET /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:root:updating league 149 from fetch
+INFO:root:in update_league_db_standings_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:19:47] "GET /get_team_info/Fulham/ HTTP/1.1" 200 -
+INFO:root:updating league 149 from fetch
+INFO:root:in update_league_db_standings_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:19:47] "GET /get_team_info/Fulham/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:19:47] "GET /get_last_matches_for_team/Fulham/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:19:47] "OPTIONS /get_name_from_country_id/41/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:19:47] "OPTIONS /get_name_from_country_id/46/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:19:47] "OPTIONS /get_league_standings_db/149 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:19:47] "GET /get_last_matches_for_team/Fulham/ HTTP/1.1" 200 -
+INFO:root:in update_leagues_db_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:19:47] "GET /get_name_from_country_id/41/ HTTP/1.1" 200 -
+INFO:root:in update_leagues_db_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:19:47] "GET /get_name_from_country_id/46/ HTTP/1.1" 200 -
+INFO:root:updating league 149 from fetch
+INFO:root:in update_league_db_standings_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:19:47] "GET /get_league_standings_db/149 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:19:53] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:19:53] "OPTIONS /get_team_info/Fulham/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:19:53] "OPTIONS /get_team_info/Fulham/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:19:53] "OPTIONS /get_last_matches_for_team/Fulham/ HTTP/1.1" 200 -
+INFO:root:inside get_leagues
+INFO:root:in update_leagues_db_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:19:54] "GET /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:root:updating league 149 from fetch
+INFO:root:in update_league_db_standings_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:19:54] "GET /get_team_info/Fulham/ HTTP/1.1" 200 -
+INFO:root:updating league 149 from fetch
+INFO:root:in update_league_db_standings_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:19:54] "GET /get_team_info/Fulham/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:19:54] "GET /get_last_matches_for_team/Fulham/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:19:54] "OPTIONS /get_name_from_country_id/41/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:19:54] "OPTIONS /get_name_from_country_id/46/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:19:54] "OPTIONS /get_league_standings_db/149 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:19:54] "GET /get_last_matches_for_team/Fulham/ HTTP/1.1" 200 -
+INFO:root:in update_leagues_db_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:19:54] "GET /get_name_from_country_id/41/ HTTP/1.1" 200 -
+INFO:root:in update_leagues_db_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:19:54] "GET /get_name_from_country_id/46/ HTTP/1.1" 200 -
+INFO:root:updating league 149 from fetch
+INFO:root:in update_league_db_standings_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:19:54] "GET /get_league_standings_db/149 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:20:05] "OPTIONS /get_all_teams/ HTTP/1.1" 200 -
+INFO:root:in update_leagues_db_from_fetch and data is fresh
+INFO:root:updating league 149 from fetch
+INFO:root:in update_league_db_standings_from_fetch and data is fresh
+INFO:root:updating league 177 from fetch
+INFO:root:in update_league_db_standings_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:20:05] "GET /get_all_teams/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:20:08] "OPTIONS /get_team_info/Nottingham/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:20:08] "OPTIONS /get_last_matches_for_team/Nottingham/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:20:08] "OPTIONS /get_team_info/Nottingham/ HTTP/1.1" 200 -
+INFO:root:updating league 149 from fetch
+INFO:root:in update_league_db_standings_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:20:08] "GET /get_team_info/Nottingham/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:20:08] "GET /get_last_matches_for_team/Nottingham/ HTTP/1.1" 200 -
+INFO:root:updating league 149 from fetch
+INFO:root:in update_league_db_standings_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:20:08] "GET /get_team_info/Nottingham/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:20:08] "GET /get_last_matches_for_team/Nottingham/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:20:08] "OPTIONS /get_league_standings_db/149 HTTP/1.1" 200 -
+INFO:root:updating league 149 from fetch
+INFO:root:in update_league_db_standings_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:20:08] "GET /get_league_standings_db/149 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:20:37] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:20:37] "OPTIONS /get_team_info/Nottingham/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:20:38] "OPTIONS /get_team_info/Nottingham/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:20:38] "OPTIONS /get_last_matches_for_team/Nottingham/ HTTP/1.1" 200 -
+INFO:root:inside get_leagues
+INFO:root:in update_leagues_db_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:20:38] "GET /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:root:updating league 149 from fetch
+INFO:root:in update_league_db_standings_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:20:38] "GET /get_team_info/Nottingham/ HTTP/1.1" 200 -
+INFO:root:updating league 149 from fetch
+INFO:root:in update_league_db_standings_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:20:38] "GET /get_team_info/Nottingham/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:20:38] "GET /get_last_matches_for_team/Nottingham/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:20:38] "OPTIONS /get_name_from_country_id/41/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:20:38] "OPTIONS /get_name_from_country_id/46/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:20:38] "GET /get_last_matches_for_team/Nottingham/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:20:38] "OPTIONS /get_league_standings_db/149 HTTP/1.1" 200 -
+INFO:root:in update_leagues_db_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:20:38] "GET /get_name_from_country_id/41/ HTTP/1.1" 200 -
+INFO:root:in update_leagues_db_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:20:38] "GET /get_name_from_country_id/46/ HTTP/1.1" 200 -
+INFO:root:updating league 149 from fetch
+INFO:root:in update_league_db_standings_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:20:38] "GET /get_league_standings_db/149 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:20:57] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:20:57] "OPTIONS /get_team_info/Nottingham/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:20:57] "OPTIONS /get_team_info/Nottingham/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:20:57] "OPTIONS /get_last_matches_for_team/Nottingham/ HTTP/1.1" 200 -
+INFO:root:inside get_leagues
+INFO:root:in update_leagues_db_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:20:57] "GET /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:root:updating league 149 from fetch
+INFO:root:in update_league_db_standings_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:20:57] "GET /get_team_info/Nottingham/ HTTP/1.1" 200 -
+INFO:root:updating league 149 from fetch
+INFO:root:in update_league_db_standings_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:20:57] "GET /get_team_info/Nottingham/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:20:57] "GET /get_last_matches_for_team/Nottingham/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:20:57] "OPTIONS /get_name_from_country_id/41/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:20:57] "OPTIONS /get_name_from_country_id/46/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:20:57] "GET /get_last_matches_for_team/Nottingham/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:20:57] "OPTIONS /get_league_standings_db/149 HTTP/1.1" 200 -
+INFO:root:in update_leagues_db_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:20:57] "GET /get_name_from_country_id/41/ HTTP/1.1" 200 -
+INFO:root:in update_leagues_db_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:20:57] "GET /get_name_from_country_id/46/ HTTP/1.1" 200 -
+INFO:root:updating league 149 from fetch
+INFO:root:in update_league_db_standings_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:20:57] "GET /get_league_standings_db/149 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:21:20] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:21:20] "OPTIONS /get_team_info/Nottingham/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:21:20] "OPTIONS /get_team_info/Nottingham/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:21:20] "OPTIONS /get_last_matches_for_team/Nottingham/ HTTP/1.1" 200 -
+INFO:root:inside get_leagues
+INFO:root:in update_leagues_db_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:21:20] "GET /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:root:updating league 149 from fetch
+INFO:root:in update_league_db_standings_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:21:20] "GET /get_team_info/Nottingham/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:21:20] "GET /get_last_matches_for_team/Nottingham/ HTTP/1.1" 200 -
+INFO:root:updating league 149 from fetch
+INFO:root:in update_league_db_standings_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:21:20] "GET /get_team_info/Nottingham/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:21:20] "OPTIONS /get_name_from_country_id/41/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:21:20] "OPTIONS /get_name_from_country_id/46/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:21:21] "GET /get_last_matches_for_team/Nottingham/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:21:21] "OPTIONS /get_league_standings_db/149 HTTP/1.1" 200 -
+INFO:root:in update_leagues_db_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:21:21] "GET /get_name_from_country_id/41/ HTTP/1.1" 200 -
+INFO:root:in update_leagues_db_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:21:21] "GET /get_name_from_country_id/46/ HTTP/1.1" 200 -
+INFO:root:updating league 149 from fetch
+INFO:root:in update_league_db_standings_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:21:21] "GET /get_league_standings_db/149 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:21:45] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:21:45] "OPTIONS /get_team_info/Nottingham/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:21:45] "OPTIONS /get_team_info/Nottingham/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:21:45] "OPTIONS /get_last_matches_for_team/Nottingham/ HTTP/1.1" 200 -
+INFO:root:inside get_leagues
+INFO:root:in update_leagues_db_from_fetch data is stale
+INFO:root:updating league 149 from fetch
+INFO:root:in update_league_db_standings_from_fetch data is stale
+INFO:root:fetching from path: https://apiv2.apifootball.com/?action=get_standings&league_id=149&APIkey=9fe5c8415f9eda3d0abd11d51578518d6a7c48d172f82abed46bf5bd9fe2479f
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): apiv2.apifootball.com:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): apiv2.apifootball.com:443
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:21:45] "GET /get_last_matches_for_team/Nottingham/ HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:https://apiv2.apifootball.com:443 "GET /?action=get_leagues&APIkey=9fe5c8415f9eda3d0abd11d51578518d6a7c48d172f82abed46bf5bd9fe2479f HTTP/1.1" 200 237
+INFO:root:writing db to fisk at /Users/ollieloney/SoccerScores/databases/leagues_db.csv
+DEBUG:urllib3.connectionpool:https://apiv2.apifootball.com:443 "GET /?action=get_standings&league_id=149&APIkey=9fe5c8415f9eda3d0abd11d51578518d6a7c48d172f82abed46bf5bd9fe2479f HTTP/1.1" 200 None
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:21:46] "GET /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:root:changed league_db_standings from the fetch for 149
+INFO:root:writing db to fisk at /Users/ollieloney/SoccerScores/databases/league_standings_149.csv
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:21:46] "GET /get_team_info/Nottingham/ HTTP/1.1" 200 -
+INFO:root:updating league 149 from fetch
+INFO:root:in update_league_db_standings_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:21:46] "GET /get_team_info/Nottingham/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:21:46] "OPTIONS /get_name_from_country_id/41/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:21:46] "OPTIONS /get_name_from_country_id/46/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:21:46] "GET /get_last_matches_for_team/Nottingham/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:21:46] "OPTIONS /get_league_standings_db/149 HTTP/1.1" 200 -
+INFO:root:in update_leagues_db_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:21:46] "GET /get_name_from_country_id/41/ HTTP/1.1" 200 -
+INFO:root:in update_leagues_db_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:21:46] "GET /get_name_from_country_id/46/ HTTP/1.1" 200 -
+INFO:root:updating league 149 from fetch
+INFO:root:in update_league_db_standings_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:21:46] "GET /get_league_standings_db/149 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:24:11] "OPTIONS /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:24:11] "OPTIONS /get_team_info/Nottingham/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:24:11] "OPTIONS /get_team_info/Nottingham/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:24:11] "OPTIONS /get_last_matches_for_team/Nottingham/ HTTP/1.1" 200 -
+INFO:root:inside get_leagues
+INFO:root:in update_leagues_db_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:24:11] "GET /get_sidebar_info/ HTTP/1.1" 200 -
+INFO:root:updating league 149 from fetch
+INFO:root:in update_league_db_standings_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:24:11] "GET /get_team_info/Nottingham/ HTTP/1.1" 200 -
+INFO:root:updating league 149 from fetch
+INFO:root:in update_league_db_standings_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:24:11] "GET /get_team_info/Nottingham/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:24:11] "GET /get_last_matches_for_team/Nottingham/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:24:11] "OPTIONS /get_name_from_country_id/41/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:24:11] "OPTIONS /get_name_from_country_id/46/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:24:11] "OPTIONS /get_league_standings_db/149 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:24:11] "GET /get_last_matches_for_team/Nottingham/ HTTP/1.1" 200 -
+INFO:root:in update_leagues_db_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:24:11] "GET /get_name_from_country_id/41/ HTTP/1.1" 200 -
+INFO:root:in update_leagues_db_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:24:11] "GET /get_name_from_country_id/46/ HTTP/1.1" 200 -
+INFO:root:updating league 149 from fetch
+INFO:root:in update_league_db_standings_from_fetch and data is fresh
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2019 20:24:11] "GET /get_league_standings_db/149 HTTP/1.1" 200 -

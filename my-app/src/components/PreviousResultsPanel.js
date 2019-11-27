@@ -55,7 +55,7 @@ export default class PreviousResultsPanel extends React.Component {
 
     return (
       <div>
-        <Paper style={{width:'220px', margin:'3px', elevation:2}}>
+        <Paper style={{width:'220px', elevation:2}}>
             <b>
                 Previous results
             </b>

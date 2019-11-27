@@ -12,8 +12,8 @@ class ClubIcon extends React.Component {
     return (
       <div>
         <img
-            height='25px'
-            width='25px'
+            height={this.props.height ? this.props.height : '25px'}
+            width={this.props.width ? this.props.width : '25px'}
             src={("").concat("/images/ClubLogos/",this.props.clubName,".png")}
             alt={""}
             />
@@ -30,4 +30,6 @@ export default connect(mapStateToProps)(ClubIcon);
 
 ClubIcon.propTypes = {
   clubName: PropTypes.string.isRequired,
+  height: PropTypes.number,
+  width: PropTypes.number
 };

@@ -24,7 +24,7 @@ export default class PreviousResultsPanel extends React.Component {
 
 
     return (
-      <Paper style={{width:'220px', margin:'3px', elevation:2}}>
+      <Paper style={{width:'220px', margin:'3px 0px', elevation:2}}>
 
         <div style={{margin:'7px 0px', display:'inline-block', verticalAlign:'top'}}>
             <EventIcon
