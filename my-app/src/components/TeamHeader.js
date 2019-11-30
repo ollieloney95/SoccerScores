@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import Paper from '@material-ui/core/Paper';
 import ScoreIcon from 'components/ScoreIcon';
 import ClubIcon from 'components/ClubIcon';
+import AddToFavorites from 'components/AddToFavorites'
+
 
 export default class TeamHeader extends React.Component {
 
@@ -33,9 +35,14 @@ export default class TeamHeader extends React.Component {
     return (
       <Paper style={{height:'100px', margin:'3px'}}>
         <div style={{float:'left', textAlign:'left'}}>
-            <b style={{fontSize:24}}>
-                {this.props.teamName}
-            </b>
+            <div>
+                <b style={{fontSize:24, display:'inline-block', verticalAlign:'top'}}>
+                    {this.props.teamName}
+                </b>
+                <div style={{marginTop:'5px', display:'inline-block', verticalAlign:'top'}}>
+                    <AddToFavorites teamName={this.props.teamName} />
+                </div>
+            </div>
 
             <p style={{fontSize:17, margin:'10px'}}>
                 {this.state.teamInfo ? this.state.teamInfo['country_name'] : null}

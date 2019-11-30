@@ -9,6 +9,9 @@ class ClubIcon extends React.Component {
     }
 
     handleClick = (e) => {
+        if(this.props.blockLink){
+            return
+        }
         this.props.changeTeam(this.props.clubName)
         window.location.href='/TeamPage'
     }
@@ -49,5 +52,6 @@ export default connect(mapStateToProps, mapDispatchToProps)(ClubIcon);
 ClubIcon.propTypes = {
   clubName: PropTypes.string.isRequired,
   height: PropTypes.number,
-  width: PropTypes.number
+  width: PropTypes.number,
+  blockLink: PropTypes.bool
 };

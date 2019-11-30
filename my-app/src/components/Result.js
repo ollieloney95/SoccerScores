@@ -52,7 +52,7 @@ class Result extends React.Component {
 
             <div style={{margin:'0px 5px', display:'inline-block', position: 'absolute', right:'calc(50% + 50px)', verticalAlign:'top'}}>
                 <div style={{margin:'0 5px', display:'inline-block', verticalAlign:'top'}}>
-                    <ClubIcon clubName={this.props.matchInfo['match_hometeam_name']} />
+                    <ClubIcon clubName={this.props.matchInfo['match_hometeam_name']} blockLink={true}/>
                 </div>
                 <p style={{margin:'5px', display:'inline-block', fontSize:'10px', fontWeight:'bold', verticalAlign:'top'}}>
                     {this.props.matchInfo['match_hometeam_name']}
@@ -81,13 +81,12 @@ class Result extends React.Component {
                 </div>
             </div>
 
-            {/* club icon and club name - home */}
             <div style={{margin:'0px 5px', display:'inline-block', position: 'absolute', verticalAlign:'top'}}>
                 <p style={{margin:'5px', display:'inline-block', fontSize:'10px', fontWeight:'bold', verticalAlign:'top'}}>
                     {this.props.matchInfo['match_awayteam_name']}
                 </p>
                 <div style={{margin:'0 5px', display:'inline-block', verticalAlign:'top'}}>
-                    <ClubIcon clubName={this.props.matchInfo['match_awayteam_name']} />
+                    <ClubIcon clubName={this.props.matchInfo['match_awayteam_name']} blockLink={true}/>
                 </div>
             </div>
       </Paper>
