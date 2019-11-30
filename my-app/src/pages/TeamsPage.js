@@ -4,7 +4,6 @@ import Autocomplete from '@material-ui/lab/Autocomplete';
 import TextField from '@material-ui/core/TextField';
 import Paper from '@material-ui/core/Paper';
 import { connect, Provider } from 'react-redux';
-import { Redirect } from 'react-router';
 
 
 class TeamsPage extends React.Component {
@@ -40,14 +39,11 @@ class TeamsPage extends React.Component {
     handleSelect = (e) => {
        console.log('selected', e.target.textContent)
        this.props.changeTeam(e.target.textContent)
-       this.setState({redirect:true})
+       window.location.href='/TeamPage'
     }
 
 
   render() {
-    if(this.state.redirect){
-        return <Redirect push to="/TeamPage" />;
-    }
     return (
       <Paper>
          <b>

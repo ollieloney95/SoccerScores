@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
-class ClubIcon extends React.Component {
+class ClubName extends React.Component {
 
     constructor(props) {
         super(props);
@@ -15,14 +15,8 @@ class ClubIcon extends React.Component {
 
   render() {
     return (
-      <div>
-        <img
-            height={this.props.height ? this.props.height : '25px'}
-            width={this.props.width ? this.props.width : '25px'}
-            src={("").concat("/images/ClubLogos/",this.props.clubName,".png")}
-            alt={""}
-            onClick={this.handleClick}
-            />
+      <div onClick={this.handleClick}>
+        {this.props.clubName}
       </div>
     );
   }
@@ -43,11 +37,9 @@ function mapDispatchToProps(dispatch) {
  }
 
 
-export default connect(mapStateToProps, mapDispatchToProps)(ClubIcon);
+export default connect(mapStateToProps, mapDispatchToProps)(ClubName);
 
 
-ClubIcon.propTypes = {
+ClubName.propTypes = {
   clubName: PropTypes.string.isRequired,
-  height: PropTypes.number,
-  width: PropTypes.number
 };

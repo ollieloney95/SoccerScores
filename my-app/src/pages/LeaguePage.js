@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import LeagueTable from '../components/LeagueTable';
 import FixturesByDay from 'pages/FixturesByDay';
-import ResultsByDay from 'pages/ResultsByDay';
 import { connect } from 'react-redux';
 import { Provider } from 'react-redux'
 import Tabs from '@material-ui/core/Tabs';
@@ -29,8 +28,8 @@ class LeaguePage extends React.Component {
     let leagueResultsTab
 
     leagueTableTab = <LeagueTable league_id = {this.props.store.league_id} country_name = {this.props.store.country_name} style={{width:'90%',marginLeft:'5%'}}/>
-    leagueResultsTab = <ResultsByDay league_id = {this.props.store.league_id} />
-    leagueFixturesTab = <FixturesByDay league_id = {this.props.store.league_id} />
+    leagueResultsTab = <FixturesByDay league_id = {this.props.store.league_id} daysBack={14} daysForward={0} sortAscending={true}/>
+    leagueFixturesTab = <FixturesByDay league_id = {this.props.store.league_id} daysBack={0} daysForward={14} sortAscending={false}/>
 
     return (
       <div>

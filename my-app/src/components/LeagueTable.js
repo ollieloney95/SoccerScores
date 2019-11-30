@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { Column, Table } from 'react-virtualized';
-import { connect } from 'react-redux';
-import { Provider } from 'react-redux'
+import { connect, Provider } from 'react-redux';
 import ClubIcon from './ClubIcon'
+import ClubName from './ClubName'
 import {onGridSizeChanged} from 'utils/AGGridUtils'
 import { AgGridReact } from 'ag-grid-react';
 import 'ag-grid-community/dist/styles/ag-grid.css';
@@ -38,7 +38,7 @@ class LeagueTable extends React.Component {
                   columnDefs: [{
                           headerName: "Pos", field: "position", width: 60, pinned: 'left', cellStyle: {textAlign: 'right'}, sort:'asc'
                         }, {
-                          headerName: "Team", field: "team", width: 100, pinned: 'left', cellStyle: {textAlign: 'right'}
+                          headerName: "Team", field: "team", width: 100, pinned: 'left', cellStyle: {textAlign: 'right'},  cellRenderer:'clubNameCellRenderer'
                         }, {
                           headerName: "Club", field: "team", width: 60, cellRenderer:'clubIconCellRenderer', sortable: false
                         }, {
@@ -66,14 +66,6 @@ class LeagueTable extends React.Component {
               }
     }
 
-    clubIconCellRenderer = (cellData) =>{
-            return (
-              <div>
-                <ClubIcon clubName={cellData} country_name={this.props.country_name}/>
-              </div>
-            );
-    }
-
     fetch_get_standings(league_id){
             console.log('fetch_get_standings: ', process.env.REACT_APP_BACKEND_HOST + ':' + process.env.REACT_APP_BACKEND_PORT_MIDDLE  + "/get_league_standings_db/" + league_id)
             fetch(process.env.REACT_APP_BACKEND_HOST + ':' + process.env.REACT_APP_BACKEND_PORT_MIDDLE  + "/get_league_standings_db/" + league_id, {
@@ -88,6 +80,10 @@ class LeagueTable extends React.Component {
 
     clubIconCellRenderer = (params) => {
         return(<ClubIcon clubName={params.value} country_name={this.props.country_name}/>)
+    }
+
+    clubNameCellRenderer = (params) => {
+        return(<ClubName clubName={params.value}/>)
     }
 
 
@@ -138,7 +134,8 @@ class LeagueTable extends React.Component {
                   defaultColDef={this.state.defaultColDef}
                   components={{'clubIcon': this.clubIcon_}}
                   suppressColumnVirtualisation={true}
-                  frameworkComponents={{clubIconCellRenderer:this.clubIconCellRenderer}}
+                  frameworkComponents={{clubIconCellRenderer: this.clubIconCellRenderer,
+                                        clubNameCellRenderer: this.clubNameCellRenderer}}
                   onGridSizeChanged={onGridSizeChanged}
                   >
         </AgGridReact>

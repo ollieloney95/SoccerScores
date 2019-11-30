@@ -356,12 +356,18 @@ def get_fixtures(league_id):
     return jsonify(db_con.get_events(league_id=league_id, date_from=date_from, date_to=date_to))
 
 
-@app.route('/get_results/<league_id>', methods=['GET'])
-def get_results(league_id):
-    league_id = int(league_id)
-    date_from = datetime.now() - timedelta(days=14)
-    date_to = datetime.now()
-    return jsonify(db_con.get_events(league_id=league_id, date_from=date_from, date_to=date_to))
+@app.route('/get_results/<identifier>/<days_back>/<days_forward>/', methods=['GET'])
+def get_results(identifier, days_back, days_forward):
+    days_back, days_forward = int(days_back), int(days_forward)
+    date_from = datetime.now() - timedelta(days=days_back)
+    date_to = datetime.now() + timedelta(days=days_forward)
+
+    # identifier could be league_id or a team name
+    if identifier.isnumeric():
+        return jsonify(db_con.get_events(league_id=int(identifier), date_from=date_from, date_to=date_to))
+
+    # must be a team name
+    return jsonify(db_con.get_events(team_name=identifier, date_from=date_from, date_to=date_to))
 
 
 @app.route('/get_match/<match_id>', methods=['GET'])

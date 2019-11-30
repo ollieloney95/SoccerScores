@@ -16,7 +16,6 @@ class Result extends React.Component {
     }
 
     handleClick = (match_id) => {
-        console.log('handle click to set ', match_id)
         this.props.changeMatchId(match_id)
         this.setState({redirect: true});
     }
@@ -25,10 +24,7 @@ class Result extends React.Component {
   onMouseOut = () => this.setState({ shadow: 0 });
 
   render() {
-        let homeScore
-        let awayScore
-
-        console.log('match status ', this.props.matchInfo['match_status'])
+        let homeScore, awayScore
 
         if(this.props.matchInfo['match_hometeam_score'] !== "" && this.props.matchInfo['match_awayteam_score'] !== ""){
             homeScore = <ScoreIcon
@@ -54,7 +50,6 @@ class Result extends React.Component {
             onClick={() => {this.handleClick(this.props.matchInfo['match_id']); console.log('matchInfo', this.props.matchInfo)}}
         >
 
-            {/* club icon and club name - home */}
             <div style={{margin:'0px 5px', display:'inline-block', position: 'absolute', right:'calc(50% + 50px)', verticalAlign:'top'}}>
                 <div style={{margin:'0 5px', display:'inline-block', verticalAlign:'top'}}>
                     <ClubIcon clubName={this.props.matchInfo['match_hometeam_name']} />
