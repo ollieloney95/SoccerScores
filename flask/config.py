@@ -1,6 +1,7 @@
 #PATHS
 path_home = '/Users/ollieloney/SoccerScores'
 path_user_db = path_home + '/databases/user_db.csv'
+path_favorites_db = path_home + '/databases/favorites_db.csv'
 path_leagues_db = path_home + '/databases/leagues_db.csv'
 path_favorites = path_home + '/databases/favorites_db.csv'
 path_league_standings_stem = path_home + '/databases/league_standings_'    # -> tables saves as csvs with the league id
@@ -18,3 +19,4 @@ refresh_time_mins = 30
 
 server_port = 5000
 middleware_port = 5001
+favorites_port = 5002
