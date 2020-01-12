@@ -7,6 +7,8 @@ import Tabs from '@material-ui/core/Tabs';
 import PropTypes from 'prop-types';
 import Tab from '@material-ui/core/Tab';
 import AppBar from '@material-ui/core/AppBar';
+import { AddToFavoritesTeam, AddToFavoritesLeague } from 'components/AddToFavorites'
+
 
 class LeaguePage extends React.Component {
 
@@ -34,9 +36,16 @@ class LeaguePage extends React.Component {
     return (
       <div>
         <AppBar position="static"  color="default" style={{width:'100%'}}>
-          <h4 style={{display:'inline', height:'10px', textAlign:'left', margin:'0px', padding:'10px'}}>
-            {this.props.store.country_name + ' - ' + this.props.store.league_name}
-          </h4>
+          <div>
+              <h4 style={{display:'inline', height:'10px', textAlign:'left', margin:'0px', padding:'10px', display:'inline-block', verticalAlign:'top'}}>
+                {this.props.store.country_name + ' - ' + this.props.store.league_name}
+              </h4>
+              <div style={{margin:'5px', display:'inline-block', verticalAlign:'top'}}>
+                  <AddToFavoritesLeague leagueId={this.props.store.league_id} />
+              </div>
+          </div>
+
+
           <Tabs style={{display:'inline',width:'100%'}} variant="fullWidth" centered value={this.state.whichTab} onChange={this.handleChange}>
             <Tab label="Table" />
             <Tab label="Fixtures" />

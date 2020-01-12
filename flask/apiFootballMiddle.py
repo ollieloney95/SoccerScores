@@ -419,14 +419,16 @@ def get_team_info(team_name):
         if team_name not in list(league_standing['team_name']):
             continue
         info_in_league = league_standing.loc[league_standing['team_name'] == team_name].iloc[0]
-        return jsonify({
+        team_info = {
             'country_name': league.country_name,
-            'country_id': league.country_id,
-            'league_id': league.league_id,
+            'country_id': str(league.country_id),
+            'league_id': str(league.league_id),
             'league_name': league.league_name,
-            'team_id': info_in_league.team_id,
-            'pos': info_in_league.overall_league_position
-        })
+            'team_id': str(info_in_league.team_id),
+            'pos': str(info_in_league.overall_league_position)
+        }
+        logging.info('found this team info {}'.format(team_info))
+        return jsonify(team_info)
     return jsonify({'no info for team': team_name})
 
 

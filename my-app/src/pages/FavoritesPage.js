@@ -5,6 +5,9 @@ import Tabs from '@material-ui/core/Tabs';
 import PropTypes from 'prop-types';
 import Tab from '@material-ui/core/Tab';
 import AppBar from '@material-ui/core/AppBar';
+import TeamInfoRow from 'components/TeamInfoRow';
+import LeagueInfoRow from 'components/LeagueInfoRow';
+import {getFavorite} from 'utils/Requests'
 
 class FavoritesPage extends React.Component {
 
@@ -13,8 +16,17 @@ class FavoritesPage extends React.Component {
         this.state = {
               standingsData: null,
               whichTab:0,
+              teams:[],
+              leagues:[],
           }
     };
+
+    componentWillMount(){
+        let favs = getFavorite(this.props.store.username)
+        favs.then(res => {
+            this.setState({teams: res['teams'], leagues: res['leagues']})
+        })
+    }
 
   handleChange = (event, value) => {
     this.setState({whichTab:value});
@@ -26,7 +38,25 @@ class FavoritesPage extends React.Component {
     let Players
 
     Leagues = <div style={{height:'1000px', width:'80%', marginLeft:'10%', backgroundColor:'red'}}></div>
-    Teams = <div style={{height:'1000px', width:'80%', marginLeft:'10%', backgroundColor:'blue'}}></div>
+
+
+    Leagues = (<div style={{height:'1000px', width:'80%', marginLeft:'10%'}}>
+                    {this.state.leagues.map(leagueId =>
+                        <div style={{margin: '5px'}}>
+                            <LeagueInfoRow leagueId={leagueId}/>
+                        </div>
+                        )
+                    }
+                 </div>)
+
+    Teams = (<div style={{height:'1000px', width:'80%', marginLeft:'10%'}}>
+                {this.state.teams.map(teamName =>
+                    <div style={{margin: '5px'}}>
+                        <TeamInfoRow teamName={teamName}/>
+                    </div>
+                    )
+                }
+             </div>)
     Players = <div style={{height:'1000px', width:'80%', marginLeft:'10%', backgroundColor:'red'}}></div>
 
 
@@ -35,14 +65,12 @@ class FavoritesPage extends React.Component {
         <AppBar position="static"  color="default" style={{width:'100%'}}>
           <h4 style={{display:'inline',width:'20%', marginBottom:'0px', paddingBottom:'0px'}}>Favorites</h4>
           <Tabs style={{display:'inline',width:'100%'}}fullWidth centered value={this.state.whichTab} onChange={this.handleChange}>
-            <Tab label="Leagues" />
             <Tab label="Teams" />
-            <Tab label="Players" href="#basic-tabs" />
+            <Tab label="Leagues" />
           </Tabs>
         </AppBar>
-        {this.state.whichTab === 0 && <div>{Leagues}</div>}
-        {this.state.whichTab === 1 && <div>{Teams}</div>}
-        {this.state.whichTab === 2 && <div>{Players}</div>}
+        {this.state.whichTab === 0 && <div>{Teams}</div>}
+        {this.state.whichTab === 1 && <div>{Leagues}</div>}
 
 
       </div>

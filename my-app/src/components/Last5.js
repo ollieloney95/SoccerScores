@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import Paper from '@material-ui/core/Paper';
-import ResultCompressed from 'components/ResultCompressed';
+import ResultVeryCompressed from 'components/ResultVeryCompressed';
 
-export default class PreviousResultsPanel extends React.Component {
+export default class Last5 extends React.Component {
 
     constructor(props) {
         super(props);
@@ -44,7 +44,7 @@ export default class PreviousResultsPanel extends React.Component {
     }
 
     let results = this.state.previousMatchData.map((d) =>
-        <ResultCompressed
+        <ResultVeryCompressed
             teamName = {d['team_name']}
             opponentName = {d['opponent']}
             home = {d['home']}
@@ -61,6 +61,6 @@ export default class PreviousResultsPanel extends React.Component {
 }
 
 
-PreviousResultsPanel.propTypes = {
+Last5.propTypes = {
   teamName: PropTypes.string.isRequired,
 };

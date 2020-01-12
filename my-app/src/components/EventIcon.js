@@ -9,7 +9,6 @@ export default class EventIcon extends React.Component {
     }
 
   render() {
-    console.log('this.props.event', this.props.event)
     return (
       <div style={{display:'inline-block'}}>
         <img

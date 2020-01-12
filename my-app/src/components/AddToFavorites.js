@@ -2,54 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { withSnackbar } from 'notistack';
-
-
-const fetchGet = async function(url){
-    console.log('fetching: ', url)
-    let response = await fetch(url, {
-          method: 'GET',
-          headers: {
-            'Accept': 'application/json',
-            'Content-Type': 'application/json',
-          }})
-    let json = await response.json();
-    return json
-}
-
-const toggleTeamFavorite = function(username, teamName){
-    let url = process.env.REACT_APP_BACKEND_HOST + ':' + process.env.REACT_APP_BACKEND_PORT_FAVORITES  + "/toggleTeam/" + username + "/" + teamName + "/"
-    return fetchGet(url)
-}
-
-const toggleLeagueFavorite = function(username, leagueId){
-    let url = process.env.REACT_APP_BACKEND_HOST + ':' + process.env.REACT_APP_BACKEND_PORT_FAVORITES  + "/toggleLeague/" + username + "/" + leagueId + "/"
-    return fetchGet(url)
-}
-
-const getFavorite = function(username){
-     let url = process.env.REACT_APP_BACKEND_HOST + ':' + process.env.REACT_APP_BACKEND_PORT_FAVORITES  + "/getFavorites/" + username + "/"
-     return fetchGet(url)
- }
-
-const getFavoriteTeamState = function(username, teamName){
-     return getFavorite(username).then(ret => {
-        if(ret['teams'].includes(teamName)){
-            return true
-        }else{
-            return false
-        }
-     })
-}
-
-const getFavoriteLeagueState = function(username, leagueId){
-     return getFavorite(username).then(ret => {
-        if(ret['leagues'].includes(leagueId)){
-            return true
-        }else{
-            return false
-        }
-     })
-}
+import {getFavoriteTeamState, getFavoriteLeagueState, toggleTeamFavorite, toggleLeagueFavorite} from 'utils/Requests';
 
 
 class AddToFavorites extends React.Component {
@@ -69,12 +22,12 @@ class AddToFavorites extends React.Component {
 
     handleClick = (e) => {
         if(this.state.favorite){
-            this.props.enqueueSnackbar("removed " + this.props.teamName + " from favorites", {variant:'warning', autoHideDuration:700})
+            this.props.enqueueSnackbar("removed " + this.props.identifier + " from favorites", {variant:'warning', autoHideDuration:700})
         }else{
-            this.props.enqueueSnackbar("added " + this.props.teamName + " to favorites", {variant:'success', autoHideDuration:700})
+            this.props.enqueueSnackbar("added " + this.props.identifier + " to favorites", {variant:'success', autoHideDuration:700})
         }
         this.setState({favorite: !this.state.favorite})
-        this.props.toggleFavorite(this.props.teamName)
+        this.props.toggleFavorite(this.props.identifier)
     }
 
     handleMouseEnter = (e) => {
@@ -107,8 +60,11 @@ class AddToFavorites extends React.Component {
     );
   }
 }
-
 const AddToFavorites_ = withSnackbar(AddToFavorites);
+
+
+
+
 
 class AddToFavoritesTeam extends React.Component {
 
@@ -120,7 +76,7 @@ class AddToFavoritesTeam extends React.Component {
         return(
             <div>
                 <AddToFavorites_
-                    teamName={this.props.teamName}
+                    identifier={this.props.teamName}
                     toggleFavorite={(teamName) => {toggleTeamFavorite(this.props.username, teamName)}}
                     startFavorite={getFavoriteTeamState(this.props.username, this.props.teamName)}
                     />
@@ -129,20 +85,44 @@ class AddToFavoritesTeam extends React.Component {
     }
 }
 
-function mapStateToProps(state) {
-    return state;
+class AddToFavoritesLeague extends React.Component {
+
+    constructor(props) {
+        super(props)
+    }
+
+    render() {
+        return(
+            <div>
+                <AddToFavorites_
+                    identifier={String(this.props.leagueId)}
+                    toggleFavorite={(leagueId) => {toggleLeagueFavorite(this.props.username, String(leagueId))}}
+                    startFavorite={getFavoriteLeagueState(this.props.username, String(this.props.leagueId))}
+                    />
+            </div>
+        )
+    }
 }
 
-const AddToFavoritesTeam_ = connect(mapStateToProps)(withSnackbar(AddToFavoritesTeam));
+const AddToFavoritesTeam_ = connect((state)=>state)(withSnackbar(AddToFavoritesTeam));
+const AddToFavoritesLeague_ = connect((state)=>state)(withSnackbar(AddToFavoritesLeague));
 
-export {AddToFavoritesTeam_ as AddToFavoritesTeam , AddToFavorites_}
+export {AddToFavoritesTeam_ as AddToFavoritesTeam, AddToFavoritesLeague_ as AddToFavoritesLeague, AddToFavorites_}
+
+
+
+
 
 AddToFavoritesTeam.propTypes = {
   teamName: PropTypes.string.isRequired,
 };
 
+AddToFavoritesLeague.propTypes = {
+  leagueId: PropTypes.number.isRequired,
+};
+
 AddToFavorites.propTypes = {
-  teamName: PropTypes.string.isRequired,
+  identifier: PropTypes.string.isRequired,
   // a function which toggle the favorite
   toggleFavorite: PropTypes.func.isRequired,
   // if true we start with item as a favorite

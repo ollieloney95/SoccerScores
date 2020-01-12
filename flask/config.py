@@ -15,7 +15,7 @@ apifootball_host = 'https://apiv2.apifootball.com'
 
 
 #configs
-refresh_time_mins = 30
+refresh_time_mins = 1
 
 server_port = 5000
 middleware_port = 5001

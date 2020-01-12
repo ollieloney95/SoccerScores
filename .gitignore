@@ -1,6 +1,10 @@
 .gitignore
 *.log
 .DS_Store
+.BuildServer
+.idea
+.pynb_checkpoints
+
 databases/.DS_Store
 .idea/workspace.xml
 /node_modules

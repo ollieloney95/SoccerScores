@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Paper from '@material-ui/core/Paper';
 import ScoreIcon from 'components/ScoreIcon';
 import ClubIcon from 'components/ClubIcon';
-import { AddToFavoritesTeam } from 'components/AddToFavorites'
+import { AddToFavoritesTeam, AddToFavoritesLeague } from 'components/AddToFavorites'
 
 
 export default class TeamHeader extends React.Component {
@@ -44,11 +44,18 @@ export default class TeamHeader extends React.Component {
                 </div>
             </div>
 
-            <p style={{fontSize:17, margin:'10px'}}>
-                {this.state.teamInfo ? this.state.teamInfo['country_name'] : null}
-                {' / '}
-                {this.state.teamInfo ? this.state.teamInfo['league_name'] : null}
-            </p>
+            <div>
+                <p style={{fontSize:17, margin:'10px', display:'inline-block', verticalAlign:'top'}}>
+                    {this.state.teamInfo ? this.state.teamInfo['country_name'] : null}
+                    {' / '}
+                    {this.state.teamInfo ? this.state.teamInfo['league_name'] : null}
+                </p>
+                <div style={{marginTop:'11px', display:'inline-block', verticalAlign:'top'}}>
+                    {this.state.teamInfo ?
+                        <AddToFavoritesLeague leagueId={this.state.teamInfo['league_id']} /> : null
+                    }
+                </div>
+            </div>
 
             <p style={{fontSize:17, margin:'0px 10px'}}>
                 {'league position: '}

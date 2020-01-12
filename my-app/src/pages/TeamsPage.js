@@ -15,7 +15,7 @@ class TeamsPage extends React.Component {
           }
     };
 
-    componentWillMount(){
+    componentDidMount(){
         this.fetch_get_teams()
     }
 
@@ -32,13 +32,14 @@ class TeamsPage extends React.Component {
     }
 
     format_team_data = (data) => {
-        console.log('data', data)
         this.setState({teams:data})
     }
 
-    handleSelect = (e) => {
-       console.log('selected', e.target.textContent)
-       this.props.changeTeam(e.target.textContent)
+    handleSelect = (e, v) => {
+       if (!v){
+        return
+       }
+       this.props.changeTeam(v.team_name)
        window.location.href='/TeamPage'
     }
 
