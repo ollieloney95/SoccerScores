@@ -1,9 +1,0 @@
-[core]
-	symlinks = false
-	repositoryformatversion = 0
-	filemode = true
-	bare = true
-	logallrefupdates = false
-	precomposeunicode = true
-[teamcity]
-	remote = https://github.com/ollieloney95/SoccerScores

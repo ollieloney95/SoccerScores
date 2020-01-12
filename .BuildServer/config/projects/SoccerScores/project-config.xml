@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="ff2773b9-12f3-42e4-8a20-3f27b4e58d4a" xsi:noNamespaceSchemaLocation="https://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
-  <name>SoccerScores</name>
-  <parameters />
-  <cleanup />
-</project>
-
